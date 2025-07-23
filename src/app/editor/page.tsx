@@ -1,9 +1,11 @@
 import { DataJSON } from "@/assets";
+import EditorSection from "./components/editor";
+import ArticlePreviewSection from "./components/article-preview";
 
 export default function EditorPage() {
-  
-    return <main className="editor-page">
-        <section className="">{JSON.stringify(DataJSON)}</section>
-        <section className=""></section>
+
+    return <main className="">
+        <EditorSection />
+        <ArticlePreviewSection />
     </main>
 }

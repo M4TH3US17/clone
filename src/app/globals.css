@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* FONTE PADRAO (Jakarta) */
 @font-face {
     font-family: plus-jakarta;
     src: url('../assets/Fonte/PlusJakartaSans-Regular.ttf') format('truetype');
@@ -23,4 +24,53 @@
     src: url('../assets/Fonte/PlusJakartaSans-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+}
+
+/* CORES PADRAO */
+@layer base {
+    :root {
+        --color-primary: #000000;
+        --color-secondary: #252525;
+        --color-neutral: #F5F5F5;
+        --color-light: #FFFFFF;
+    }
+}
+
+@layer utilities {
+
+    /* Backgrounds */
+    .bg-primary {
+        background-color: var(--color-primary);
+    }
+
+    .bg-secondary {
+        background-color: var(--color-secondary);
+    }
+
+    .bg-neutral {
+        background-color: var(--color-neutral);
+    }
+
+    /* Texts */
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+
+    .text-on-dark {
+        /* Para texto claro sobre fundo escuro */
+        color: var(--color-light);
+    }
+
+    /* Borders */
+    .border-primary {
+        border-color: var(--color-primary);
+    }
+
+    .border-neutral {
+        border-color: var(--color-neutral);
+    }
 }
