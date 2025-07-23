@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* FONTE PADRAO (Jakarta) */
 @font-face {
     font-family: plus-jakarta;
     src: url('../assets/Fonte/PlusJakartaSans-Regular.ttf') format('truetype');

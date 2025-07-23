@@ -1,7 +1,8 @@
 
 
 export default function EditorPage() {
-    return <main>
-       <p>Editor Page</p> 
+    return <main className="">
+        <section className=""></section>
+        <section className=""></section>
     </main>
 }
