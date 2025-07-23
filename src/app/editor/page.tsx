@@ -4,7 +4,7 @@ import ArticlePreviewSection from "./components/article-preview";
 
 export default function EditorPage() {
 
-    return <main className="">
+    return <main className="bg-neutral flex h-[100vh]">
         <EditorSection />
         <ArticlePreviewSection />
     </main>
