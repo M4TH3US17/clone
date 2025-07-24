@@ -1,8 +1,11 @@
-
+import { DataJSON } from "@/assets";
+import EditorSection from "./components/editor";
+import ArticlePreviewSection from "./components/article-preview";
 
 export default function EditorPage() {
-    return <main className="">
-        <section className=""></section>
-        <section className=""></section>
+
+    return <main className="bg-neutral flex h-[100vh]">
+        <EditorSection />
+        <ArticlePreviewSection />
     </main>
 }
