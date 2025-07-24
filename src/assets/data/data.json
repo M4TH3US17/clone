@@ -1,0 +1,167 @@
+{
+    "topics": [
+        {
+            "en": {},
+            "es": {},
+            "pt": {
+                "icon": "ICONE_DO_TOPICO_BASE_64",
+                "title": "TITULO_DO_TOPICO",
+                "subtitle": "SUBTITULO_DO_TOPICO",
+                "quantityArticles": 1,
+                "description": {
+                    "texts": [
+                        {
+                            "text": "DESCRICAO_DO_TOPICO",
+                            "order": 1
+                        }
+                    ]
+                },
+                "articles": [
+                    {
+                        "metadados": {
+                            "title": "TITULO_DO_ARTIGO",
+                            "subtitle": "SUBTITULO_DO_ARTIGO",
+                            "description": {
+                                "texts": [
+                                    {
+                                        "text": "DESCRICAO_DO_ARTIGO"
+                                    }
+                                ]
+                            },
+                            "details": {
+                                "createdAt": "2023-01-01T00:00:00.000Z",
+                                "createdBy": "AUTOR_DO_ARTIGO"
+                            },
+                            "summary": [
+                                {
+                                    "titleSection": "ITEM_1_DO_SUMARIO",
+                                    "idSection": "#SECAO1"
+                                },
+                                {
+                                    "titleSection": "ITEM_2_DO_SUMARIO",
+                                    "idSection": "#SECAO2"
+                                }
+                            ],
+                            "sections": [
+                                {
+                                    "section": {
+                                        "idSection": "TITULO_DA_SECAO_1",
+                                        "title": "TITULO_DA_SECAO_1",
+                                        "subtitle": "SUBTITULO_DA_SECAO_1",
+                                        "description": {
+                                            "texts": [
+                                                {
+                                                    "text": "DESCRICAO_DA_SECAO_1",
+                                                    "links": [
+                                                        {
+                                                            "breakpoint": "#breakpoint1",
+                                                            "text": "TEXTO_DO_LINK_1",
+                                                            "href": "link"
+                                                        },
+                                                        {
+                                                            "breakpoint": "#breakpoint2",
+                                                            "text": "TEXTO_DO_LINK_2",
+                                                            "href": "link"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "content": {
+                                            "title": "TITULO_DO_CONTEUDO_1",
+                                            "subtitle": "SUBTITULO_DO_CONTEUDO_1",
+                                            "description": {
+                                                "texts": [
+                                                    {
+                                                        "text": "DESCRICAO_1",
+                                                        "links": [
+                                                            {
+                                                                "breakpoint": "#breakpoint1",
+                                                                "text": "TEXTO_DO_LINK_1",
+                                                                "href": "link"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "tables": [
+                                                {
+                                                    "table": {
+                                                        "title": "TITULO_TABELA_1",
+                                                        "subtitle": "SUBTITULO_TABELA_1",
+                                                        "description": {
+                                                            "texts": [
+                                                                {
+                                                                    "text": "DESCRICAO_TABELA_1"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "row": {
+                                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
+                                                            "description": "DESCRICAO_DO_FIELD",
+                                                            "example": "EXEMPLO_DE_USO (JSON)",
+                                                            "field": "NOME_DO_CAMPO",
+                                                            "fields": [
+                                                                {
+                                                                    "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
+                                                                    "description": "DESCRICAO_DO_FIELD",
+                                                                    "field": "NOME_DO_CAMPO",
+                                                                    "fields": [
+                                                                        {
+                                                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
+                                                                            "description": "DESCRICAO_DO_FIELD",
+                                                                            "field": "NOME_DO_CAMPO"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "medias": [
+                                                {
+                                                    "media": {
+                                                        "type": "GIF VIDEO IMAGEM ETC (enum)",
+                                                        "title": "TITULO_MIDIA_1",
+                                                        "subtitle": "SUBTITULO_MIDIA_1",
+                                                        "description": {
+                                                            "texts": [
+                                                                {
+                                                                    "text": "DESCRICAO_MIDIA_1"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "base64": "BASE64_DA_MIDIA_1"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "section": {
+                                        "idSection": "TITULO_DA_SECAO_2",
+                                        "title": "TITULO_DA_SECAO_2",
+                                        "content": {
+                                            "title": "TITULO_DO_CONTEUDO_2",
+                                            "description": {
+                                                "position": "TOP",
+                                                "texts": [
+                                                    {
+                                                        "text": "DESCRICAO_UNICA_SECAO_2"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "markdown": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
