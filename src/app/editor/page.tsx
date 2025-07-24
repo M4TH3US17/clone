@@ -1,4 +1,3 @@
-import { DataJSON } from "@/assets";
 import EditorSection from "./components/editor";
 import ArticlePreviewSection from "./components/article-preview";
 
