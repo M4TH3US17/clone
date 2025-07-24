@@ -1,8 +1,17 @@
+'use client';
+
 import CategoriesHome from "@/components/categories-home";
 import clsx from "clsx";
 import { Search } from "lucide-react";
+import { useState } from "react";
+import { returnData } from "../../public/assets/data/data-utils";
+import '../../public/i18next/i18n';
+import { useLanguageStore } from "@/store/languageStore";
 
 export default function Home() {
+  const currentLanguage = useLanguageStore((state) => state.language);
+  const [data, setData] = useState<object>(returnData(currentLanguage))
+
   return (
     <div className=" flex flex-col justify-center items-center">
       <div
@@ -15,11 +24,12 @@ export default function Home() {
       >
         <section className="text-center">
           <h1 className="text-5xl lg:text-6xl text-gray-700 font-bold">Como podemos ajudar?</h1>
+          <p>{}</p>
           <p
             className="text-gray-600 text-xl mb-8 lg:mb-6 leading-relaxed"
-            
+
           >
-            Encontre respostas, compreenda melhor e aprenda a <br/> trabalhar de forma mais agil no Pass.
+            Encontre respostas, compreenda melhor e aprenda a <br /> trabalhar de forma mais agil no Pass.
           </p>
 
           {/* Main Search - Agora abre o modal ao clicar */}
@@ -30,7 +40,7 @@ export default function Home() {
                 "rounded-xl border border-gray-200",
                 "flex justify-between items-center",
                 "text-gray-500 hover:text-gray-700"
-                
+
               )
             }
           >
