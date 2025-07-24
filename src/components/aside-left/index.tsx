@@ -1,85 +1,87 @@
 'use client'
 import clsx from "clsx";
-import { ChevronRight,  List } from "lucide-react";
+import { ChevronRight, List } from "lucide-react";
 import { Accordion } from "radix-ui";
 import { AccordionContent, AccordionTrigger } from "@radix-ui/react-accordion";
 import { FC, ReactElement, useState } from "react";
 import LogoPass from "../ui/logo-pass";
 import { sidebar } from "@/data/sidebar";
 import { SidebarSubitem } from "@/types/sidebar";
+import { useDataStore } from "@/store/dataStore";
+import { useLanguageStore } from "@/store/languageStore";
 
 const AsideLeft = () => {
-
     const [openValue, setOpenValue] = useState<string>();
     const [openValueCategories, setOpenValueCategories] = useState<string>();
 
-    const SideBarItem: FC<{ name: string, icon: ReactElement, subitems: SidebarSubitem[], isOpen: boolean}> = ({name, icon, subitems, isOpen}) => {
-        
+    const { t } = useLanguageStore();
+    const sidebarTopics = useDataStore((state) => state.data.topics);
+
+    const SideBarItem: FC<{ name: string, icon: ReactElement, subitems: any[], isOpen: boolean }> = ({ name, icon, subitems, isOpen }) => {
+
         return (
             <Accordion.Item className="AccordionItem cursor-pointer " value={name}>
-                <AccordionTrigger className=" w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 rounded-xl p-2 px-3 cursor-pointer"> 
-                <div className="flex items-center gap-2">
-                    {icon}
-                    {name}
-                </div>
-                <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
-                <ChevronRight
-                    className={
-                    clsx(
-                        "w-5 h-5 transition-transform duration-200",
-                        isOpen ? "rotate-90" : "rotate-0"
-                    )
-                    }
-                />
+                <AccordionTrigger className=" w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 rounded-xl p-2 px-3 cursor-pointer">
+                    <div className="flex items-center gap-2">
+                        {icon}
+                        {name}
+                    </div>
+                    <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
+                        <ChevronRight
+                            className={
+                                clsx(
+                                    "w-5 h-5 transition-transform duration-200",
+                                    isOpen ? "rotate-90" : "rotate-0"
+                                )
+                            }
+                        />
 
-                </div>
+                    </div>
                 </AccordionTrigger>
-                <AccordionContent>  
-                { subitems && (
-                    <ul className="ml-7 mt-1 space-y-4">
-                    {
-                        subitems.map((subitem) => (
-                        <li key={subitem.title} className={
-                            clsx(
-                                "text-gray-500 hover:text-gray-700",
-                                "w-full",
-                                "overflow-hidden whitespace-nowrap",
-                                "truncate font-semibold"
-                            )
-                        }>
-                            {subitem.title}
-                        </li>
-                        ))
-                    }
-                    </ul>
-                )}
+                <AccordionContent>
+                    {subitems && (
+                        <ul className="ml-7 mt-1 space-y-4">
+                            {
+                                subitems.map((subitem, index) => (
+                                    <li key={index} className={
+                                        clsx(
+                                            "text-gray-500 hover:text-gray-700",
+                                            "w-full",
+                                            "overflow-hidden whitespace-nowrap",
+                                            "truncate font-semibold"
+                                        )
+                                    }>
+                                        {subitem.metadados.title}
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    )}
                 </AccordionContent>
             </Accordion.Item>
         )
     }
-    
+
     const SideBarAccordion = () => {
         return (
-          <Accordion.Root
-            className="AccordionRoot space-y-2"
-            type="single"
-            value={openValue}
-            onValueChange={(val) => setOpenValue(val)}
-            collapsible
-          >
-            {
-              sidebar.items.map(
-                item => (
-                  <SideBarItem 
-                    name={item.title}
-                    icon={item.iconHtml}
-                    subitems={item.subitems ?? []}
-                    isOpen={openValue === item.title}
-                  />
-                )
-              )
-            }
-          </Accordion.Root>
+            <Accordion.Root
+                className="AccordionRoot space-y-2"
+                type="single"
+                value={openValue}
+                onValueChange={(val) => setOpenValue(val)}
+                collapsible
+            >
+                {
+                    sidebarTopics.map((topic: any, index: number) => (<SideBarItem
+                        name={topic.title}
+                        icon={topic.iconHtml}
+                        subitems={topic.articles ?? []}
+                        isOpen={openValue === topic.title}
+                        key={index}
+                    />
+                    ))
+                }
+            </Accordion.Root>
         )
     }
 
@@ -93,24 +95,24 @@ const AsideLeft = () => {
                 collapsible
             >
                 <Accordion.Item className="AccordionItem cursor-pointer " value={"categories"}>
-                    <AccordionTrigger className=" w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 p-2 px-3 border-b border-gray-200"> 
+                    <AccordionTrigger className=" w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 p-2 px-3 border-b border-gray-200">
                         <div className="flex items-center gap-2">
                             <List />
                             Categories
                         </div>
                         <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
                             <ChevronRight
-                            className={
-                                clsx(
-                                "w-5 h-5 transition-transform duration-200",
-                                openValueCategories === "categories" ? "rotate-90" : "rotate-0"
-                                )
-                            }
+                                className={
+                                    clsx(
+                                        "w-5 h-5 transition-transform duration-200",
+                                        openValueCategories === "categories" ? "rotate-90" : "rotate-0"
+                                    )
+                                }
                             />
 
                         </div>
                     </AccordionTrigger>
-                    <AccordionContent>  
+                    <AccordionContent>
                         <SideBarAccordion />
                     </AccordionContent>
                 </Accordion.Item>
@@ -134,8 +136,8 @@ const AsideLeft = () => {
                         justifyContent: "space-between"
                     }}
                 >
-                <LogoPass className="w-[100px]"/>
-                <div className="border-r border-gray-300"></div>
+                    <LogoPass className="w-[100px]" />
+                    <div className="border-r border-gray-300"></div>
                     <span
                         className={
                             clsx(
