@@ -69,7 +69,7 @@ const AsideLeft = () => {
     const SideBarAccordion = () => {
         return (
             <Accordion.Root
-                className="AccordionRoot space-y-2"
+                className="AccordionRoot space-y-2 lg:h-[85vh] lg:overflow-y-auto lg:pb-2 xl:h-auto"
                 type="single"
                 value={openValue}
                 onValueChange={(val) => setOpenValue(val)}
