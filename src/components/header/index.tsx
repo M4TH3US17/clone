@@ -11,7 +11,7 @@ const Header = () => {
                 clsx(
                 "sticky top-0",
                 "border-b border-gray-200 px-6 xl:px-6 py-2.5 primary-bg-color",
-                "bg-[#F5F5F5]" ,
+                "bg-[#F5F5F5]",
                 "border-b border-l border-gray-200"
                 )
             }

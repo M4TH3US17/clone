@@ -1,19 +1,20 @@
-import { sidebar } from "@/data/sidebar";
 import { useDataStore } from "@/store/dataStore";
-import { useLanguageStore } from "@/store/languageStore";
-import { SidebarItem } from "@/types/sidebar";
+import { HelpCenterData, Topic } from "@/types/sidebar";
 import clsx from "clsx";
 import Link from "next/link";
+import { getLucideIcon } from "../ui/icon-wrapper";
 
 const CategoriesHome = () => {
-  const { t } = useLanguageStore();
-  const sidebarTopics = useDataStore((state) => state.data.topics);
 
-  const CategoryItem = ({ category }: { category: any }) => {
-    console.log(category)
+  const sidebarTopics: HelpCenterData = useDataStore((state) => state.data.topics);
+
+  const TopicItem = ({ topic }: { topic: Topic }) => {
+
+    const Icon = getLucideIcon(topic.icon);
+    
     return (
       <Link
-        href={category.title}
+        href={topic.title}
         className={clsx(
           "bg-white rounded-xl border border-gray-200 cursor-pointer flex flex-col p-3",
           "flex-1 min-w-[250px]  md:max-w-[350px]"
@@ -24,13 +25,13 @@ const CategoriesHome = () => {
           <div
             className={
               clsx(
-                "rounded-full bg-[#374151] p-2",
+                "rounded-full bg-gray-100 p-2",
                 "flex items-center justify-center",
                 "w-15 h-15 lg:w-10 lg:h-10 text-gray-100"
               )
             }
           >
-            {/* {category.iconHtml} */}
+            <Icon className="w-6 h-6 text-gray-600" />
           </div>
 
           <h3
@@ -42,9 +43,9 @@ const CategoriesHome = () => {
             }
 
           >
-            {category.title}
+            {topic.title}
           </h3>
-          {category.subtitle && (
+          {topic.subtitle && (
             <p
               className={
                 clsx(
@@ -53,7 +54,7 @@ const CategoriesHome = () => {
                 )
               }
             >
-              {category.subtitle}
+              {topic.subtitle}
             </p>
           )}
           <p
@@ -63,7 +64,7 @@ const CategoriesHome = () => {
               )
             }
           >
-          { `(${category.articles.length} ARTIGOS)` }
+          { `(${topic.articles.length} ARTIGOS)` }
           </p>
         </div>
       </Link>
@@ -89,8 +90,8 @@ const CategoriesHome = () => {
           "flex flex-wrap justify-center gap-5 w-full max-w-screen-xl mx-auto px-4"
         )}
       >
-        {sidebarTopics.map((category: any, index: number) => (
-          <CategoryItem key={index} category={category} />
+        {sidebarTopics.map((topic: Topic, index: number) => (
+          <TopicItem key={index} topic={topic} />
         ))}
       </div>
     </section>
