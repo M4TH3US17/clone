@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Search, CircleCheck, ExternalLink } from "lucide-react";
 import Button from "../ui/button";
 import LogoPass from "../ui/logo-chumbo-pass";
+import { MdAccordionCategories } from "../aside-left";
 
 const Header = () => {
 
@@ -10,18 +11,19 @@ const Header = () => {
             className={
                 clsx(
                     "sticky top-0",
-                    "border-b border-gray-200 px-6 xl:px-6 py-2.5 bg-neutral",
+                    "border-b border-gray-200 py-2.5 bg-neutral",
                     "border-b border-l border-gray-200 z-3"
                 )
             }
         >
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center px-6 pb-3 justify-between w-full">
                 <div className="items-center gap-3 flex lg:hidden">
                     <LogoPass className="w-[110px]" />
                     <div className="border-r border-gray-400"></div>
                     <span
                         className={
                             clsx(
+                                "hidden sm:block",
                                 "mt-1 py-1 px-2",
                                 "text-secondary font-bold text-xs flex",
                                 "bg-white cursor-pointer rounded"
@@ -43,7 +45,13 @@ const Header = () => {
                     <Search
                         className="text-black w-3.5 h-3.5"
                     />
-                    <p className="text-gray-500 mr-24 text-xs">Search</p>
+                    <p className={
+                        clsx(
+                            "text-gray-500 ",
+                            "mr-0 sm:mr-24",
+                            "text-sm sm:text-xs"
+                        )
+                    }>Search</p>
                     <div className="flex gap-1">
                         <span
                             className={clsx(
@@ -75,6 +83,7 @@ const Header = () => {
 
                 </div>
             </div>
+            <MdAccordionCategories/>
         </header>
     )
 }

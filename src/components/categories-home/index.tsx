@@ -77,6 +77,7 @@ const CategoriesHome = () => {
       className={
         clsx(
           "relative",
+          "px-4 md:px-0"
         )
       }
     >
@@ -87,7 +88,7 @@ const CategoriesHome = () => {
       }> Todas as categorias </h2>
       <div
         className={clsx(
-          "flex flex-wrap justify-center gap-5 xl:max-w-[1084px]"
+          "flex flex-wrap justify-center gap-5 xl:max-w-[1084px]",
         )}
       >
         {sidebarTopics.map((topic: Topic, index: number) => (
