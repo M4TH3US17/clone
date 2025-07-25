@@ -13,21 +13,25 @@ export default function Home() {
   const [data, setData] = useState<object>(returnData(currentLanguage))
 
   return (
-    <div className=" flex flex-col justify-center items-center">
+    <div className=" flex flex-col justify-center items-center bg-neutral pb-[130px] lg:px-[12%] xl:px-[12%]">
       <div
         className={clsx(
           "font-jakarta",
           "flex flex-col items-center",
-          "gap-2 mt-20",
+          "gap-2 mt-20 lg:w-1",
         )}
 
       >
-        <section className="text-center">
-          <h1 className="text-5xl lg:text-6xl text-gray-700 font-bold">Como podemos ajudar?</h1>
-          <p>{}</p>
+        <section className="text-center lg:mb-[50px] xl:mb-[60px]">
+          <h1
+            className={clsx(
+              "lg:text-5xl xl:text-[3.25rem] text-gray-700 ",
+              "font-bold mb-2.5 whitespace-nowrap"
+            )}
+          >Como podemos ajudar?</h1>
+          
           <p
-            className="text-gray-600 text-xl mb-8 lg:mb-6 leading-relaxed"
-
+            className="text-gray-600 text-md mb-6.5 xl:mb-7 leading-relaxed leading-snug"
           >
             Encontre respostas, compreenda melhor e aprenda a <br /> trabalhar de forma mais agil no Pass.
           </p>
@@ -36,13 +40,14 @@ export default function Home() {
           <div
             className={
               clsx(
-                "relative mx-10 px-4 cursor-pointer",
-                "rounded-xl border border-gray-200",
+                "relative lg:mx-0 px-4 cursor-pointer",
+                "rounded-lg ",
                 "flex justify-between items-center",
-                "text-gray-500 hover:text-gray-700"
-
+                "text-primary text-secondary",
+                "xl:mx-10 bg-white border border-gray-400 "
               )
             }
+            // style={{border: "solid gray 1px"}}
           >
             <div className="flex items-center">
               <Search
@@ -50,8 +55,8 @@ export default function Home() {
               />
               <div className={
                 clsx(
-                  "pl-2 py-3 w-full",
-                  "text-[13px] font-semibold"
+                  "pl-2.5 py-3 w-full",
+                  "text-[13px] text-gray-600"
                 )
               }>
                 Procure ajuda nos artigos (ex: como configurar seu site)
@@ -68,7 +73,7 @@ export default function Home() {
                 className={
                   clsx(
                     "bg-gray-100",
-                    "rounded p-2"
+                    "rounded-full px-2.5 py-1.5 text-[11px]"
                   )
                 }
               >
@@ -78,7 +83,7 @@ export default function Home() {
                 className={
                   clsx(
                     "bg-gray-100",
-                    "rounded p-2"
+                    "rounded px-2.5 py-1.5 text-[11px]"
                   )
                 }
               >
