@@ -1,8 +1,18 @@
 import { FC } from "react";
 
-export const ArticleContent: FC<{ sections: any[] }> = ({ sections }) => {
+export const ArticleContent: FC<{ article: any }> = ({ article }) => {
+    console.log(article)
 
     return <div className="">
-        {JSON.stringify(sections)}
+        <h2>TITULO: {article.title}</h2>
+        <h3>SUBTITULO: {article.subtitle}</h3>
+
+        {
+            article.description.texts.map((textObject: any, index: number) => <p key={index}>
+                PARAGRAFO {index + 1}: { textObject.text }
+            </p>)
+        }
+
+        
     </div>
 }

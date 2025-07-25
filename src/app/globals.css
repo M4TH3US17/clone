@@ -13,6 +13,7 @@
     --font-mono: var(--font-geist-mono);
     --color-teste: #c23b3b;
     --color-chumbo: #333333;
+    --color-neutral: #F5F5F5;
 }
 
 /* DARK MODE */
@@ -30,7 +31,7 @@ body {
 }
 
 /* FONTE PADRAO (Jakarta) */
-@font-face {
+/* @font-face {
     font-family: plus-jakarta;
     src: url('../../public/assets/Fonte/PlusJakartaSans-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -49,7 +50,7 @@ body {
     src: url('../../public/assets/Fonte/PlusJakartaSans-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-}
+} */
 
 /* CORES PADRAO */
 @layer base {

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
-      <body className={`${jakarta.variable} font-sans font-normal relative antialiased lg:ml-72 bg-neutral`}>
+      <body className={`${jakarta.variable} flex  flex-col min-h-screen font-sans font-normal relative antialiased lg:ml-72 bg-neutral`}>
         <Header />
         <AsideLeft />
         {children}
