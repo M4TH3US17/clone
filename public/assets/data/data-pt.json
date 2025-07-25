@@ -1,8 +1,9 @@
 {
     "topics": [
         {
-            "icon": "",
+            "icon": "BookOpen",
             "title": "Introducao ao Pass",
+            "slug": "introducao-ao-pass",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -16,6 +17,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -120,8 +122,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Footprints",
             "title": "Primeiros Passos",
+            "slug": "primeiros-pass",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -135,6 +138,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -239,8 +243,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "LayoutDashboard",
             "title": "Portal Pass",
+            "slug": "portal-pass",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -254,6 +259,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -358,8 +364,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "ShoppingCart",
             "title": "Ecommerce PASS",
+            "slug": "ecommerce-pass",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -373,6 +380,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -477,8 +485,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "CreditCard",
             "title": "POS PASS",
+            "slug": "pos-pass",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -492,6 +501,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -596,8 +606,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Banknote",
             "title": "Modulo Financeiro (PASS Pay)",
+            "slug": "modulo-financeiro",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -611,6 +622,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -715,8 +727,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "FileText",
             "title": "Modulo Office",
+            "slug": "modulo-office",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -730,6 +743,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -834,8 +848,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Boxes",
             "title": "Gestao de produtos & Servicos",
+            "slug": "gestao-de-produtos-e-servicos",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -849,6 +864,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -953,8 +969,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Users",
             "title": "Gestao de Clientes e Usuarios",
+            "slug": "gestao-clientes-usuarios",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -968,6 +985,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1072,8 +1090,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "BadgePercent",
             "title": "Gestao de Comissoes",
+            "slug": "gestao-comissoes",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1087,6 +1106,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1191,8 +1211,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "BarChart2",
             "title": "Relatorios e Inteligencia",
+            "slug": "relatorios-inteligencia",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1206,6 +1227,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1310,8 +1332,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Plug",
             "title": "Integracao (PASS Connect)",
+            "slug": "integracao",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1325,6 +1348,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1429,8 +1453,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Smartphone",
             "title": "Aplicativo Mobile",
+            "slug": "aplicativo-mobile",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1444,6 +1469,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1548,8 +1574,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "GraduationCap",
             "title": "PASS Academy",
+            "slug": "pass-academy",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1563,6 +1590,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1667,8 +1695,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "MessageCircle",
             "title": "PASS Social",
+            "slug": "pos-social",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1682,6 +1711,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1786,8 +1816,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "ShieldCheck",
             "title": "Seguranca SAML & SCIM",
+            "slug": "seguranca",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1801,6 +1832,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -1905,8 +1937,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "HelpCircle",
             "title": "FAQ (Duvidas Frequentes)",
+            "slug": "faq",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -1920,6 +1953,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -2024,8 +2058,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "ScrollText",
             "title": "Termos & Politicas",
+            "slug": "termos-politicas",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -2039,6 +2074,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -2143,8 +2179,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "History",
             "title": "Atualizacoes de Produto",
+            "slug": "atualizacoes-de-produtos",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -2158,6 +2195,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [
@@ -2262,8 +2300,9 @@
             ]
         },
         {
-            "icon": "",
+            "icon": "Headset",
             "title": "Fale com o Suporte",
+            "slug": "fale-com-o-suporte",
             "subtitle": "SUBTITULO_DO_TOPICO",
             "quantityArticles": 1,
             "description": {
@@ -2277,6 +2316,7 @@
                 {
                     "metadados": {
                         "title": "TITULO_DO_ARTIGO",
+                        "slug": "titulo-do-artigo",
                         "subtitle": "SUBTITULO_DO_ARTIGO",
                         "description": {
                             "texts": [

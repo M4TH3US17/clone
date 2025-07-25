@@ -3,28 +3,38 @@ import clsx from "clsx";
 import { ChevronRight, List } from "lucide-react";
 import { Accordion } from "radix-ui";
 import { AccordionContent, AccordionTrigger } from "@radix-ui/react-accordion";
-import { FC, ReactElement, useState } from "react";
+import { FC, useState } from "react";
 import LogoPass from "../ui/logo-pass";
-import { sidebar } from "@/data/sidebar";
-import { SidebarSubitem } from "@/types/sidebar";
 import { useDataStore } from "@/store/dataStore";
-import { useLanguageStore } from "@/store/languageStore";
+import { HelpCenterData, Topic } from "@/types/sidebar";
+import { getLucideIcon } from "../ui/icon-wrapper";
+import { useRouter } from "next/navigation";
 
 const AsideLeft = () => {
     const [openValue, setOpenValue] = useState<string>();
     const [openValueCategories, setOpenValueCategories] = useState<string>();
 
-    const { t } = useLanguageStore();
-    const sidebarTopics = useDataStore((state) => state.data.topics);
+    const router = useRouter();
 
-    const SideBarItem: FC<{ name: string, icon: ReactElement, subitems: any[], isOpen: boolean }> = ({ name, icon, subitems, isOpen }) => {
+    const sidebarTopics: HelpCenterData = useDataStore((state) => state.data.topics);
+
+    const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) => {
+
+        const Icon = getLucideIcon(topic.icon);
 
         return (
-            <Accordion.Item className="AccordionItem cursor-pointer " value={name}>
-                <AccordionTrigger className=" w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 rounded-xl p-2 px-3 cursor-pointer">
-                    <div className="flex items-center gap-2">
-                        {icon}
-                        {name}
+            <Accordion.Item className="AccordionItem cursor-pointer " value={topic.title}>
+                <AccordionTrigger className="w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 rounded-xl p-2 px-3 cursor-pointer">
+                    <div className="flex w-full items-center gap-2">
+                        <Icon className="w-6 h-6 text-gray-600" />
+                        <p className={
+                            clsx(
+                                "text-gray-600 hover:text-gray-800",
+                                "max-w-44 text-[14px]",
+                                "overflow-hidden whitespace-nowrap",
+                                "truncate font-semibold"
+                            )
+                        }>{topic.title}</p>
                     </div>
                     <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
                         <ChevronRight
@@ -39,18 +49,24 @@ const AsideLeft = () => {
                     </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                    {subitems && (
+                    {topic.articles && (
                         <ul className="ml-7 mt-1 space-y-4">
                             {
-                                subitems.map((subitem, index) => (
-                                    <li key={index} className={
-                                        clsx(
-                                            "text-gray-500 hover:text-gray-700",
-                                            "w-full",
-                                            "overflow-hidden whitespace-nowrap",
-                                            "truncate font-semibold"
-                                        )
-                                    }>
+                                topic.articles.map((subitem, index) => (
+                                    <li 
+                                        key={index}
+                                        onClick={() => {
+                                            router.push(`/${topic.slug}/${subitem.metadados.slug}`)
+                                        }}
+                                        className={
+                                            clsx(
+                                                "text-gray-500 hover:text-gray-700",
+                                                "w-full",
+                                                "overflow-hidden whitespace-nowrap",
+                                                "truncate font-semibold"
+                                            )
+                                        }
+                                    >
                                         {subitem.metadados.title}
                                     </li>
                                 ))
@@ -72,13 +88,12 @@ const AsideLeft = () => {
                 collapsible
             >
                 {
-                    sidebarTopics.map((topic: any, index: number) => (<SideBarItem
-                        name={topic.title}
-                        icon={topic.iconHtml}
-                        subitems={topic.articles ?? []}
-                        isOpen={openValue === topic.title}
-                        key={index}
-                    />
+                    sidebarTopics.map((topic: Topic, index: number) => (
+                        <SideBarItem
+                            topic={topic}
+                            isOpen={openValue === topic.title}
+                            key={index}
+                        />
                     ))
                 }
             </Accordion.Root>
