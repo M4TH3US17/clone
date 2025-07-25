@@ -24,7 +24,7 @@ const AsideLeft = () => {
 
         return (
             <Accordion.Item className="AccordionItem cursor-pointer " value={topic.title}>
-                <AccordionTrigger className="w-full flex items-center justify-between gap-1 font-semibold text-gray-600 rounded-xl py-1 px-3 cursor-pointer">
+                <AccordionTrigger className="w-full flex items-center justify-between gap-1 text-black-700 rounded-xl py-1 px-3 cursor-pointer">
                     <div className="flex w-full items-center gap-2">
                         <Icon className="w-4 h-4 text-secondary" />
                         <p className={
@@ -51,7 +51,7 @@ const AsideLeft = () => {
                                             clsx(
                                                 "w-full text-primary",
                                                 "overflow-hidden whitespace-nowrap",
-                                                "truncate font-semibold text-xs"
+                                                "truncate text-xs"
                                             )
                                         }
                                     >
