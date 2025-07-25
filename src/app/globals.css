@@ -1,23 +1,17 @@
-/* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
-
 @import "tailwindcss";
-/* 
-LIGHT MODE */
+
+/* LIGHT MODE */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #F5F5F5;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-teste: #c23b3b;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-teste: #c23b3b;
 }
 
 /* DARK MODE */
@@ -81,6 +75,10 @@ body {
         background-color: var(--color-neutral);
     }
 
+    .bg-white {
+        background-color: var(--color-light);
+    }
+
     /* Texts */
     .text-primary {
         color: var(--color-primary);
@@ -98,6 +96,10 @@ body {
     /* Borders */
     .border-primary {
         border-color: var(--color-primary);
+    }
+
+    .border-secondary {
+        border-color: var(--color-secondary);
     }
 
     .border-neutral {

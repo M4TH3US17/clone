@@ -4,7 +4,7 @@ import { ChevronRight, List } from "lucide-react";
 import { Accordion } from "radix-ui";
 import { AccordionContent, AccordionTrigger } from "@radix-ui/react-accordion";
 import { FC, useState } from "react";
-import LogoPass from "../ui/logo-pass";
+import LogoPass from "../ui/logo-chumbo-pass";
 import { useDataStore } from "@/store/dataStore";
 import { HelpCenterData, Topic } from "@/types/sidebar";
 import { getLucideIcon } from "../ui/icon-wrapper";
@@ -24,28 +24,17 @@ const AsideLeft = () => {
 
         return (
             <Accordion.Item className="AccordionItem cursor-pointer " value={topic.title}>
-                <AccordionTrigger className="w-full flex items-center justify-between gap-1 font-semibold text-gray-600 hover:bg-gray-200 rounded-xl p-2 px-3 cursor-pointer">
+                <AccordionTrigger className="w-full flex items-center justify-between gap-1 text-black-700 rounded-xl py-1 px-3 cursor-pointer">
                     <div className="flex w-full items-center gap-2">
-                        <Icon className="w-6 h-6 text-gray-600" />
+                        <Icon className="w-4 h-4 text-secondary" />
                         <p className={
                             clsx(
-                                "text-gray-600 hover:text-gray-800",
-                                "max-w-44 text-[14px]",
+                                "text-secondary",
+                                "max-w-44 text-xs",
                                 "overflow-hidden whitespace-nowrap",
-                                "truncate font-semibold"
+                                "truncate"
                             )
                         }>{topic.title}</p>
-                    </div>
-                    <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
-                        <ChevronRight
-                            className={
-                                clsx(
-                                    "w-5 h-5 transition-transform duration-200",
-                                    isOpen ? "rotate-90" : "rotate-0"
-                                )
-                            }
-                        />
-
                     </div>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -60,10 +49,9 @@ const AsideLeft = () => {
                                         }}
                                         className={
                                             clsx(
-                                                "text-gray-500 hover:text-gray-700",
-                                                "w-full",
+                                                "w-full text-primary",
                                                 "overflow-hidden whitespace-nowrap",
-                                                "truncate font-semibold"
+                                                "truncate text-xs"
                                             )
                                         }
                                     >
@@ -81,7 +69,7 @@ const AsideLeft = () => {
     const SideBarAccordion = () => {
         return (
             <Accordion.Root
-                className="AccordionRoot space-y-2"
+                className="AccordionRoot space-y-2 lg:h-[85vh] lg:overflow-y-auto lg:pb-2 xl:h-auto"
                 type="single"
                 value={openValue}
                 onValueChange={(val) => setOpenValue(val)}
@@ -145,19 +133,19 @@ const AsideLeft = () => {
             >
                 {/* Sidebar Header */}
                 <div
-                    className="border-gray-200 pl-7 pr-5 py-2"
+                    className="border-gray-200 pl-4 pr-3 pb-3.5 pt-0.5"
                     style={{
                         display: "flex",
                         justifyContent: "space-between"
                     }}
                 >
                     <LogoPass className="w-[100px]" />
-                    <div className="border-r border-gray-300"></div>
+                    <div className="border-r border-gray-200"></div>
                     <span
                         className={
                             clsx(
-                                "mt-1 py-1 px-2",
-                                "text-gray-700 hover:text-gray-500 font-bold text-xs",
+                                "mt-1 rounded-full px-3 py-2",
+                                "text-primary font-bold text-[11px]",
                                 "bg-white cursor-pointer rounded"
                             )
                         }

@@ -11,13 +11,14 @@ const CategoriesHome = () => {
   const TopicItem = ({ topic }: { topic: Topic }) => {
 
     const Icon = getLucideIcon(topic.icon);
-    
+
     return (
       <Link
         href={topic.title}
         className={clsx(
-          "bg-white rounded-xl border border-gray-200 cursor-pointer flex flex-col p-3",
-          "flex-1 min-w-[250px]  md:max-w-[350px]"
+          "bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-3",
+          "flex-1 min-w-[220px] md:max-w-[350px] max-h-[240px]",
+          "aspect-square"
         )}
 
       >
@@ -64,7 +65,7 @@ const CategoriesHome = () => {
               )
             }
           >
-          { `(${topic.articles.length} ARTIGOS)` }
+            {`(${topic.articles.length} ARTIGOS)`}
           </p>
         </div>
       </Link>
@@ -81,13 +82,12 @@ const CategoriesHome = () => {
     >
       <h2 className={
         clsx(
-          "text-xl font-semibold text-gray-600 mb-6 p-4",
+          "text-xl font-semibold text-gray-600 mb-5",
         )
       }> Todas as categorias </h2>
       <div
         className={clsx(
-          "p-3",
-          "flex flex-wrap justify-center gap-5 w-full max-w-screen-xl mx-auto px-4"
+          "flex flex-wrap justify-center gap-5 xl:max-w-[1084px]"
         )}
       >
         {sidebarTopics.map((topic: Topic, index: number) => (
