@@ -10,7 +10,7 @@ const LogoPass: FC<{ className?: string, onClick?():void }> = ({ className, onCl
             viewBox="0 0 956.72 124.35"
             className={
                 clsx(
-                    "h-auto text-light dark:text-dark fill-current cursor-pointer hover:opacity-[0.8]",
+                    "h-auto text-chumbo dark:text-chumbo fill-current cursor-pointer hover:opacity-[0.8]",
                     className ? className : "w-30"
                 )
             }
