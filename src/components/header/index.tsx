@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Search, CircleCheck, ExternalLink } from "lucide-react";
 import Button from "../ui/button";
-import LogoPass from "../ui/logo-pass";
+import LogoPass from "../ui/logo-chumbo-pass";
 
 const Header = () => {
 
@@ -23,7 +23,7 @@ const Header = () => {
                         className={
                             clsx(
                                 "mt-1 py-1 px-2",
-                                "text-gray-700 hover:text-gray-500 font-bold text-[13px] lg:text-xs",
+                                "text-secondary font-bold text-xs flex",
                                 "bg-white cursor-pointer rounded"
                             )
                         }
@@ -34,8 +34,8 @@ const Header = () => {
                     className={
                         clsx(
                             "relative flex justify-between items-center",
-                            "border border-gray-400 rounded-lg",
-                            "p-2 gap-2 bg-white px-3.5"
+                            "border border-gray-300 rounded-lg",
+                            "py-1.5 gap-2 bg-white px-3.5"
                         )
                     }
                 >
@@ -62,15 +62,16 @@ const Header = () => {
 
                 <div className="hidden lg:flex items-center space-x-2 lg:space-x-3">
                     <div className="flex items-center space-x-1">
-                        <CircleCheck size={20} className="text-gray-500" />
+                        <CircleCheck size={20} className="text-primary" />
                         <span
-                            className="text-gray-500 font-semibold text-xs"
+                            className="text-primary font-semibold text-xs"
                         >All systems go</span>
                     </div>
                     <Button
                         label="Open app"
-                        className=""
-                        icon={<ExternalLink className="text-gray-600 w-4 h-4" />} />
+                        className="rounded-full text-primary border-none py-1.5 px-2"
+                        icon={<ExternalLink className="text-primary w-4 h-4" />}
+                    />
 
                 </div>
             </div>

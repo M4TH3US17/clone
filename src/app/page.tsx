@@ -18,7 +18,7 @@ export default function Home() {
         className={clsx(
           "font-jakarta",
           "flex flex-col items-center",
-          "gap-2 mt-20 lg:w-1",
+          "gap-2 mt-20 w-[100%]",
         )}
 
       >
@@ -44,7 +44,7 @@ export default function Home() {
                 "rounded-lg ",
                 "flex justify-between items-center",
                 "text-primary text-secondary",
-                "xl:mx-10 bg-white border border-gray-400 "
+                "xl:mx-10 bg-white border border-gray-300 "
               )
             }
             // style={{border: "solid gray 1px"}}
@@ -55,7 +55,7 @@ export default function Home() {
               />
               <div className={
                 clsx(
-                  "pl-2.5 py-3 w-full",
+                  "pl-2.5 py-2.5 w-full",
                   "text-[13px] text-gray-600"
                 )
               }>

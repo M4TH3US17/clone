@@ -16,7 +16,7 @@ const CategoriesHome = () => {
       <Link
         href={topic.title}
         className={clsx(
-          "bg-white rounded-xl border border-gray-200 cursor-pointer flex flex-col p-3",
+          "bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-3",
           "flex-1 min-w-[220px] md:max-w-[350px] max-h-[240px]",
           "aspect-square"
         )}
