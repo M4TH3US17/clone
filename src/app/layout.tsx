@@ -1,19 +1,14 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 import AsideLeft from "@/components/aside-left";
 import Header from "@/components/header";
-import { returnData } from "../../public/assets/data/data-utils";
-import { useLanguageStore } from "@/store/languageStore";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500"], // regular / medium
+  variable: "--font-jakarta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased lg:ml-72 bg-neutral`}>
+      <body className={`${jakarta.variable} font-sans font-normal relative antialiased lg:ml-72 bg-neutral`}>
         <Header />
         <AsideLeft />
         {children}

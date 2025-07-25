@@ -25,13 +25,18 @@ export default function Home() {
         <section className="text-center lg:mb-[50px] xl:mb-[60px]">
           <h1
             className={clsx(
-              "lg:text-5xl xl:text-[3.25rem] text-gray-700 ",
-              "font-bold mb-2.5 whitespace-nowrap"
+              "text-5xl md:text-4xl lg:text-5xl xl:text-[3.25rem] text-gray-700 ",
+              "font-bold mb-2.5 "
             )}
           >Como podemos ajudar?</h1>
           
           <p
-            className="text-gray-600 text-md mb-6.5 xl:mb-7 leading-relaxed leading-snug"
+            className={
+              clsx(
+                "text-gray-600 text-md mb-6.5 xl:mb-7",
+                "px-1 md:px-0"
+              )
+            }
           >
             Encontre respostas, compreenda melhor e aprenda a <br /> trabalhar de forma mais agil no Pass.
           </p>
@@ -40,7 +45,7 @@ export default function Home() {
           <div
             className={
               clsx(
-                "relative lg:mx-0 px-4 cursor-pointer",
+                "relative mx-4 lg:mx-0 px-4 cursor-pointer",
                 "rounded-lg ",
                 "flex justify-between items-center",
                 "text-primary text-secondary",
@@ -56,10 +61,11 @@ export default function Home() {
               <div className={
                 clsx(
                   "pl-2.5 py-2.5 w-full",
-                  "text-[13px] text-gray-600"
+                  "text-lg md:text-[13px] text-gray-600"
                 )
               }>
-                Procure ajuda nos artigos (ex: como configurar seu site)
+                <span className="block md:hidden">Procure ajuda nos artigos</span>
+                <span className="hidden md:block">Procure ajuda nos artigos (ex: como configurar seu site)</span>
               </div>
             </div>
 
