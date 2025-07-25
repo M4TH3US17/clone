@@ -16,9 +16,9 @@ const CategoriesHome = () => {
       <Link
         href={topic.title}
         className={clsx(
-          "bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-3",
+          "relative bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-3",
           "flex-1 min-w-[220px] md:max-w-[350px] max-h-[240px]",
-          "aspect-square"
+          "aspect-square px-5 py-4"
         )}
 
       >
@@ -28,7 +28,7 @@ const CategoriesHome = () => {
               clsx(
                 "rounded-full bg-gray-100 p-2",
                 "flex items-center justify-center",
-                "w-15 h-15 lg:w-10 lg:h-10 text-gray-100"
+                "w-15 h-15 lg:w-10 lg:h-10 text-gray-100 mb-3"
               )
             }
           >
@@ -38,8 +38,8 @@ const CategoriesHome = () => {
           <h3
             className={
               clsx(
-                " mb-2 lg:mb-3  leading-tight",
-                "font-semibold text-gray-600 text-2xl lg:text-base"
+                "mb-0.5 leading-5",
+                "font-semibold text-gray-600 text-xl"
               )
             }
 
@@ -50,7 +50,7 @@ const CategoriesHome = () => {
             <p
               className={
                 clsx(
-                  "mb-2 lg:mb-3 leading-relaxed flex-1",
+                  "mb-2 lg:mb-3 leading-4.5 flex-1",
                   "text-gray-600 text-[1rem] lg:text-sm",
                 )
               }
@@ -61,7 +61,7 @@ const CategoriesHome = () => {
           <p
             className={
               clsx(
-                "text-xs text-gray-400 font-medium tracking-wide mt-auto",
+                "absolute bottom-0 mb-4 text-[9px] text-black font-medium tracking-wide",
               )
             }
           >
@@ -83,7 +83,7 @@ const CategoriesHome = () => {
     >
       <h2 className={
         clsx(
-          "text-xl font-semibold text-gray-600 mb-5",
+          "text-xl font-semibold text-gray-600 mb-4",
         )
       }> Todas as categorias </h2>
       <div

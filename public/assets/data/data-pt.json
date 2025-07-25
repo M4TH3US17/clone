@@ -4,15 +4,7 @@
             "icon": "BookOpen",
             "title": "Introducao ao Pass",
             "slug": "introducao-ao-pass",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Conheca o que e o PASS, seus modulos e como ele conecta",
             "articles": [
                 {
                     "metadados": {
@@ -125,15 +117,7 @@
             "icon": "Footprints",
             "title": "Primeiros Passos",
             "slug": "primeiros-pass",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Aprenda a configurar sua conta e comecar a usar o Pass.",
             "articles": [
                 {
                     "metadados": {
@@ -246,15 +230,7 @@
             "icon": "LayoutDashboard",
             "title": "Portal Pass",
             "slug": "portal-pass",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Configure e personalize seu portal B2B de vendas.",
             "articles": [
                 {
                     "metadados": {
@@ -368,14 +344,6 @@
             "title": "Ecommerce PASS",
             "slug": "ecommerce-pass",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -488,15 +456,7 @@
             "icon": "CreditCard",
             "title": "POS PASS",
             "slug": "pos-pass",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Realize vendas presenciais e acompanhe o caixa.",
             "articles": [
                 {
                     "metadados": {
@@ -609,15 +569,7 @@
             "icon": "Banknote",
             "title": "Modulo Financeiro (PASS Pay)",
             "slug": "modulo-financeiro",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Configure contas, receba pagamentos e antecipe.",
             "articles": [
                 {
                     "metadados": {
@@ -730,15 +682,7 @@
             "icon": "FileText",
             "title": "Modulo Office",
             "slug": "modulo-office",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Organize compras, contabilidade e CRM no PASS.",
             "articles": [
                 {
                     "metadados": {
@@ -851,15 +795,7 @@
             "icon": "Boxes",
             "title": "Gestao de produtos & Servicos",
             "slug": "gestao-de-produtos-e-servicos",
-            "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
+            "subtitle": "Cadastre, edite e organize produtos e pacotes.",
             "articles": [
                 {
                     "metadados": {
@@ -973,14 +909,6 @@
             "title": "Gestao de Clientes e Usuarios",
             "slug": "gestao-clientes-usuarios",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1094,14 +1022,6 @@
             "title": "Gestao de Comissoes",
             "slug": "gestao-comissoes",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1215,14 +1135,6 @@
             "title": "Relatorios e Inteligencia",
             "slug": "relatorios-inteligencia",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1336,14 +1248,6 @@
             "title": "Integracao (PASS Connect)",
             "slug": "integracao",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1457,14 +1361,6 @@
             "title": "Aplicativo Mobile",
             "slug": "aplicativo-mobile",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1578,14 +1474,6 @@
             "title": "PASS Academy",
             "slug": "pass-academy",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1699,14 +1587,6 @@
             "title": "PASS Social",
             "slug": "pos-social",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1820,14 +1700,6 @@
             "title": "Seguranca SAML & SCIM",
             "slug": "seguranca",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -1941,14 +1813,6 @@
             "title": "FAQ (Duvidas Frequentes)",
             "slug": "faq",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -2062,14 +1926,6 @@
             "title": "Termos & Politicas",
             "slug": "termos-politicas",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -2183,14 +2039,6 @@
             "title": "Atualizacoes de Produto",
             "slug": "atualizacoes-de-produtos",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
@@ -2304,14 +2152,6 @@
             "title": "Fale com o Suporte",
             "slug": "fale-com-o-suporte",
             "subtitle": "SUBTITULO_DO_TOPICO",
-            "quantityArticles": 1,
-            "description": {
-                "texts": [
-                    {
-                        "text": "DESCRICAO_DO_TOPICO"
-                    }
-                ]
-            },
             "articles": [
                 {
                     "metadados": {
