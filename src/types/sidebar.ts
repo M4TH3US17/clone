@@ -11,11 +11,6 @@ export type HelpCenterData = Topic[];
   }
   
   export interface Article {
-    metadados: Metadata;
-    markdown: string;
-  }
-  
-  export interface Metadata {
     title: string;
     slug: string;
     subtitle: string;

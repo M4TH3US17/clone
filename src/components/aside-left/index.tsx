@@ -40,7 +40,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                                 <li 
                                     key={index}
                                     onClick={() => {
-                                        router.push(`/${topic.slug}/${subitem.metadados.slug}`)
+                                        router.push(`/${topic.slug}/${subitem.slug}`)
                                     }}
                                     className={
                                         clsx(
@@ -50,7 +50,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                                         )
                                     }
                                 >
-                                    {subitem.metadados.title}
+                                    {subitem.title}
                                 </li>
                             ))
                         }
