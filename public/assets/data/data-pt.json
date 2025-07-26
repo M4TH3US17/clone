@@ -7,13 +7,13 @@
             "subtitle": "Conheca o que e o PASS, seus modulos e como ele conecta",
             "articles": [
                 {
-                    "title": "TITULO_DO_ARTIGO",
+                    "title": "Getting started with sequence diagrams",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
                     "description": {
                         "texts": [
                             {
-                                "text": "DESCRICAO_DO_ARTIGO"
+                                "text": "A sequence diagram is a type of UML (Unified Modeling Language) diagram that shows the interactions between various components or objects in a system. It provides a visual representation of the order of messages or events over time."
                             }
                         ]
                     },

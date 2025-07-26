@@ -5,9 +5,10 @@ export const ArticleContent: FC<{ article: any }> = ({ article }) => {
     console.log(article)
 
     return <div className={clsx(
-        "w-[100%] lg:w-[50%] bg-amber-100"
+        " bg-amber-100 w-[100%] ",
+        " lg:max-w-[700px] xl:max-w-[688px]"
     )}>
-        <h2>TITULO: {article.title}</h2>
+        <h2 className="text-5xl text-primary font-extrabold">{article.title}</h2>
         <h3>SUBTITULO: {article.subtitle}</h3>
 
         {
@@ -19,3 +20,4 @@ export const ArticleContent: FC<{ article: any }> = ({ article }) => {
         
     </div>
 }
+// 

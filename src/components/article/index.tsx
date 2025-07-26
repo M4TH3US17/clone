@@ -10,7 +10,11 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
         "bg-neutral text-primary",
         "flex min-h-screen flex-[1] relative"
     )}>
-        <div className="bg-amber-500 flex justify-center w-[100%]  xl:w-[calc(100%-13rem)]">
+        <div className={clsx(
+            "bg-amber-500 flex justify-center w-full",
+            "lg:px-[8%] xl:px-[6%]",
+            "xl:w-[calc(100%-13rem)]"
+        )}>
             <ArticleContent article={article} />
         </div>
         <ArticleSummary sections={article.sections} />
@@ -40,3 +44,4 @@ const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
         </ul>
     </aside>
 }
+// bg-amber-500 
