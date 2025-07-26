@@ -4,26 +4,24 @@ import { Article, HelpCenterData } from "@/types/sidebar";
 import { notFound, useRouter } from "next/navigation";
 
 const TopicPage = ({ params }: any) => {
-    
     const helpCenter: HelpCenterData = useDataStore((state) => state.data.topics);
-
     const topic = helpCenter.find(t => t.slug === params.topic);
-
     const router = useRouter();
 
-    if (!topic) return notFound();
+    if (!topic)
+        return notFound();
     
     const handleCLick = (article: Article) => {
-        router.push(`/${topic.slug}/${article.metadados.slug}`)
+        router.push(`/${topic.slug}/${article.slug}`)
     }
   
         return (
-        <div>
+        <div className="">
             <h2>{topic.title}</h2>
             <ul>
                 {topic.articles.map(article => (
-                    <li key={article.metadados.title} onClick={() => handleCLick(article)}>
-                        {article.metadados.title}
+                    <li key={article.title} onClick={() => handleCLick(article)}>
+                        {article.title}
                     </li>
                 ))}
             </ul>
