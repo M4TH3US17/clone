@@ -11,7 +11,7 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
         "flex min-h-screen flex-[1] relative"
     )}>
         <div className={clsx(
-            "bg-amber-500 flex justify-center w-full",
+            "flex justify-center w-full",
             "lg:px-[8%] xl:px-[6%]",
             "xl:w-[calc(100%-13rem)]"
         )}>
