@@ -43,6 +43,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 2,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -112,6 +113,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 1,
                                     "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -120,7 +122,7 @@
                                             "text": "DESCRICAO_MIDIA_1"
                                         }
                                     ],
-                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/db095f79a0534e91821fc7e33ec4dd69ebbf13bd-768x527.png"
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/5f8f16d4684b35658b6392de21d855d33448079d-1014x638.gif"
                                 }
                             ]
                         }
@@ -171,6 +173,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -204,6 +207,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -263,6 +267,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -296,6 +301,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -355,6 +361,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -388,6 +395,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -447,6 +455,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -480,6 +489,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -539,6 +549,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -572,6 +583,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -631,6 +643,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -664,6 +677,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -723,6 +737,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -756,6 +771,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -815,6 +831,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -848,6 +865,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -907,6 +925,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -940,6 +959,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -999,6 +1019,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1032,6 +1053,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1091,6 +1113,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1124,6 +1147,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1183,6 +1207,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1216,6 +1241,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1275,6 +1301,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1308,6 +1335,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1367,6 +1395,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1400,6 +1429,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1459,6 +1489,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1492,6 +1523,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1551,6 +1583,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1584,6 +1617,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1643,6 +1677,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1676,6 +1711,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1735,6 +1771,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1768,6 +1805,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
@@ -1827,6 +1865,7 @@
                             ],
                             "tables": [
                                 {
+                                    "order": 1,
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
                                     "description": [
@@ -1860,6 +1899,7 @@
                             ],
                             "medias": [
                                 {
+                                    "order": 2,
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",

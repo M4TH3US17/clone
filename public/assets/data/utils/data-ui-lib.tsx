@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { IDescriptionProps, ISectionProps } from "./data-interfaces";
+import { IDescriptionProps, IMediaProps, ISectionProps, ITableProps } from "./data-interfaces";
 import parse from 'html-react-parser';
 
 
@@ -35,24 +35,36 @@ export function returnArticleSection(section: any, props?: ISectionProps, key?: 
         }
 
         {
-            sectionBody(section.tables, section.medias)
+            sectionBody(section, props)
         }
 
     </div>
 }
 
-function sectionBody(tables: any, medias: any) {
-    console.log(tables)
-    console.log(medias)
+function sectionBody(section: any, props?: ISectionProps) {
+    const blocksInSection = (section.tables || [])
+        .concat(section.medias || [])
+        .sort((a: any, b: any) => (a.order || 0) - (b.order || 0));
 
     return <>
-        {table(tables[0])}
-        {media(medias[0])}
+        {blocksInSection.map((item: any, index: number) => {
+            const isTable = Object.prototype.hasOwnProperty.call(item, "rows");  // ou outra condição que identifique tabelas
+            const isMedia = Object.prototype.hasOwnProperty.call(item, "type");   // ou outra condição que identifique mídias
+
+            if (isTable) 
+                return table(item, props?.tables);
+
+            if (isMedia) 
+                return media(item, props?.medias);
+
+            return null; 
+        })}
     </>
 }
-export function table(table: any) {
+
+export function table(table: any, props?: ITableProps[]) {
     return <div className="w-full overflow-x-scroll">
-        <table className="w-full">
+        <table className="w-full" key={table.order}>
             <thead className="">
                 <tr>
                     <th className="text-left text-[0.8rem] text-secondary">Campo</th>
@@ -115,22 +127,15 @@ export function table(table: any) {
     </div>
 }
 
-export function media(media: any) {
-    if (media.type === "IMAGE") {
-        return <img src={media.link} />
+export function media(media: any, props?: IMediaProps[]) {
+                    console.log(props)
+    if (media.type === "IMAGE" || media.type === "GIF") {
+        return <img src={media.link} key={media.order}/>
     }
-
-    if (media.type === "GIF") {
-        return <></>
-    }
-
 
     if (media.type === "VIDEO") {
-        return <></>
+        return <>Video Not Found</>
     }
-
-
-    return <></>
 }
 
 /* Funcoes de utilidades gerais */
