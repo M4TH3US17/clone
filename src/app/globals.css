@@ -30,28 +30,6 @@ body {
     font-family: var(--font-jakarta), sans-serif;
 }
 
-/* FONTE PADRAO (Jakarta) */
-/* @font-face {
-    font-family: plus-jakarta;
-    src: url('../../public/assets/Fonte/PlusJakartaSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: plus-jakarta;
-    src: url('../../public/assets/Fonte/PlusJakartaSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: plus-jakarta;
-    src: url('../../public/assets/Fonte/PlusJakartaSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-} */
-
 /* CORES PADRAO */
 @layer base {
     :root {
@@ -107,4 +85,17 @@ body {
     .border-neutral {
         border-color: var(--color-neutral);
     }
+}
+
+td, tr, th {
+    border: 1px solid #e5e5e5;
+    background: var(--color-light);
+}
+
+th {}
+
+td,th {
+    height: 36px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }

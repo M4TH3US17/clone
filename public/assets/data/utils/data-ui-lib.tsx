@@ -1,0 +1,130 @@
+import clsx from "clsx";
+import { IDescriptionProps, ISectionProps } from "./data-interfaces";
+import parse from 'html-react-parser';
+
+
+/* Funcoes de Manipulacao da Descricao */
+export function returnArticleDescription(description: any, props?: IDescriptionProps) {
+    const is_paragraph = (description.length !== 1)
+
+    if (is_paragraph) {
+        const paragraphs = description.map((paragraph: any, index: number) => <p key={index} className={`mb-2 ${props?.className}`}> {parse(paragraph.text)} </p>)
+        if (props?.box) return box(paragraphs, props.box.className)
+        return <div className="mb-9">{paragraphs}</div>
+
+    } else {
+        const text = parse(description[0].text)
+        if (props?.box) return box(text, props.box.className)
+        return <p className={`mb-9 ${props?.className}`}>{parse(description[0].text)}</p>;
+    }
+}
+
+/* Funcoes de Manipulacao das Secoes do Artigo */
+export function returnArticleSection(section: any, props?: ISectionProps, key?: number) {
+    return <div
+        key={key}
+        className={clsx(
+            "mb-9",
+            props?.className
+        )}>
+
+        <h2 className="text-xl font-semibold text-gray-600">{section.title}</h2>
+        <h3>{section.subtitle}</h3>
+        {
+            returnArticleDescription(section.description, { box: { className: "bg-amber-500" } })
+        }
+
+        {
+            sectionBody(section.tables, section.medias)
+        }
+
+    </div>
+}
+
+function sectionBody(tables: any, medias: any) {
+    console.log(tables)
+    console.log(medias)
+
+    return table(tables[0])
+}
+export function table(table: any) {
+    console.log(table)
+    return <div className="w-full overflow-x-scroll">
+        <table className="w-full">
+            <thead className="">
+                <tr>
+                    <th className="text-left text-[0.8rem] text-secondary">Campo</th>
+                    <th className="text-left text-[0.8rem] text-secondary">Tipo</th>
+                    <th className="text-left text-[0.8rem] text-secondary">Descrição</th>
+                    {/* <th className="text-left text-gray-500">Exemplo</th> */}
+                </tr>
+            </thead>
+
+            <tbody className="bg-white divide-y divide-gray-200">
+                {
+                    table.rows.map((row: any, index: number) => {
+                        if ('fields' in row) {
+                            return <tr key={`row-${index}`}>
+                                <td className="whitespace-nowrap text-[0.8rem]">{row.field}</td>
+                                <td className="whitespace-nowrap text-[0.8rem] ">object</td>
+                                <td className="" colSpan={2}>
+                                    <div className="p-2">
+                                        {
+                                            <p className="mb-2 text-[0.8rem] text-secondary font-semibold">{row.description}</p>
+                                        }
+                                        <table className="w-full divide-y divide-gray-200">
+                                            <thead className=" bg-gray-100">
+                                                <tr>
+                                                    <th className="text-left text-[0.8rem] text-secondary">Campo</th>
+                                                    <th className="text-left text-[0.8rem] text-secondary">Tipo</th>
+                                                    <th className="text-left text-[0.8rem] text-secondary">Descrição</th>
+                                                    {/* <th className="text-left  uppercase">Exemplo</th> */}
+                                                </tr>
+                                            </thead>
+
+                                            <tbody className=" bg-white divide-y divide-gray-200">
+                                                {
+                                                    row.fields.map((subRow: any, subIndex: number) => (
+                                                        <tr key={`subrow-${index}-${subIndex}`} className="">
+                                                            <td className="whitespace-nowrap text-[0.8rem]">{subRow.field}</td>
+                                                            <td className="whitespace-nowrap text-[0.8rem] ">{subRow.type}</td>
+                                                            <td className=" text-[0.8rem]">{subRow.description}</td>
+                                                            {/* <td className="whitespace-nowrap ">{subRow.example}</td> */}
+                                                        </tr>
+                                                    ))
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        } else {
+                            return (<tr key={`row-${index}`} className="">
+                                <td className="whitespace-nowrap text-[0.8rem]">{row.field}</td>
+                                <td className="whitespace-nowrap text-[0.8rem] ">{row.type}</td>
+                                <td className=" text-[0.8rem]">{row.description}</td>
+                                {/* <td className="whitespace-nowrap text-gray-500">{row.example}</td> */}
+                            </tr>)
+                        }
+                    })
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+export function media() {
+    return <></>
+}
+
+/* Funcoes de utilidades gerais */
+function box(body: any, className: any) {
+    return <div
+        style={{ borderRadius: "0.700rem" }}
+        className={clsx("border-gray-200 p-6 px-6", className)}
+    >{body}</div>
+}
+
+function list() {
+    return <></>
+}

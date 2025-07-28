@@ -19,20 +19,10 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
-                            "title": "Comecando com sequencia de diagramas",
+                            "title": "Research, brainstorming & ideation",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -62,22 +52,58 @@
                                     ],
                                     "rows": [
                                         {
-                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                            "description": "DESCRICAO_DO_FIELD",
+                                            "type": "string",
+                                            "description": "Codigo IATA do aeroporto (3 letras maiusculas)",
+                                            "example": "",
+                                            "field": "iata"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Tipo de local (Sempre 'airport' para voos)",
+                                            "example": "",
+                                            "field": "type"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Nome oficial do aeroporto",
+                                            "example": "",
+                                            "field": "name"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Cidade sede do aeroporto",
+                                            "example": "",
+                                            "field": "city"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Unidade federativa (UF)",
+                                            "example": "",
+                                            "field": "state"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Pais por extenso",
+                                            "example": "",
+                                            "field": "country"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "description": "Geolocalizacao precisa do aeroporto",
                                             "example": "EXEMPLO_DE_USO (JSON)",
-                                            "field": "NOME_DO_CAMPO",
+                                            "field": "Coordinates",
                                             "fields": [
                                                 {
-                                                    "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                    "description": "DESCRICAO_DO_FIELD",
-                                                    "field": "NOME_DO_CAMPO",
-                                                    "fields": [
-                                                        {
-                                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                            "description": "DESCRICAO_DO_FIELD",
-                                                            "field": "NOME_DO_CAMPO"
-                                                        }
-                                                    ]
+                                                    "type": "number",
+                                                    "description": "Latitude em graus decimais",
+                                                    "field": "lat",
+                                                    "example": ""
+                                                },
+                                                {
+                                                    "type": "number",
+                                                    "description": "Longitude em graus decimais",
+                                                    "field": "lng",
+                                                    "example": ""
                                                 }
                                             ]
                                         }
@@ -121,16 +147,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -223,16 +239,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -325,16 +331,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -427,16 +423,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -529,16 +515,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -631,16 +607,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -733,16 +699,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -835,16 +791,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -937,16 +883,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1039,16 +975,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1141,16 +1067,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1243,16 +1159,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1345,16 +1251,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1447,16 +1343,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1549,16 +1435,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1651,16 +1527,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1753,16 +1619,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1855,16 +1711,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
@@ -1957,16 +1803,6 @@
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",

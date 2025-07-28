@@ -1,5 +1,4 @@
-import { text } from "stream/consumers"
-import { DataENJSON, DataESJSON, DataPTJSON } from ".."
+import { DataENJSON, DataESJSON, DataPTJSON } from "../.."
 
 export function returnData(currentLanguage: string): object {
     let data = {}
