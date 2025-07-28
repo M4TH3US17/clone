@@ -4,7 +4,7 @@ import CategoriesHome from "@/components/categories-home";
 import clsx from "clsx";
 import { Search } from "lucide-react";
 import { useState } from "react";
-import { returnData } from "../../public/assets/data/data-utils";
+import { returnData } from "../../public/assets/data/utils/data-utils";
 import '../../public/i18next/i18n';
 import { useLanguageStore } from "@/store/languageStore";
 

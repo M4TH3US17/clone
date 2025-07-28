@@ -7,83 +7,103 @@
             "subtitle": "Conheca o que e o PASS, seus modulos e como ele conecta",
             "articles": [
                 {
-                    "title": "TITULO_DO_ARTIGO",
+                    "title": "Getting started with sequence diagrams",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "A sequence diagram is a type of UML (Unified Modeling Language) diagram that shows the interactions between various components or objects in a system. It provides a visual representation of the order of messages or events over time."
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
-                            "title": "Comecando com sequencia de diagramas",
+                            "title": "Research, brainstorming & ideation",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1 #breakpoint1 DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
-                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                            "description": "DESCRICAO_DO_FIELD",
+                                            "type": "string",
+                                            "description": "Codigo IATA do aeroporto (3 letras maiusculas)",
+                                            "example": "",
+                                            "field": "iata"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Tipo de local (Sempre 'airport' para voos)",
+                                            "example": "",
+                                            "field": "type"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Nome oficial do aeroporto",
+                                            "example": "",
+                                            "field": "name"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Cidade sede do aeroporto",
+                                            "example": "",
+                                            "field": "city"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Unidade federativa (UF)",
+                                            "example": "",
+                                            "field": "state"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "Pais por extenso",
+                                            "example": "",
+                                            "field": "country"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "description": "Geolocalizacao precisa do aeroporto",
                                             "example": "EXEMPLO_DE_USO (JSON)",
-                                            "field": "NOME_DO_CAMPO",
+                                            "field": "Coordinates",
                                             "fields": [
                                                 {
-                                                    "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                    "description": "DESCRICAO_DO_FIELD",
-                                                    "field": "NOME_DO_CAMPO",
-                                                    "fields": [
-                                                        {
-                                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                            "description": "DESCRICAO_DO_FIELD",
-                                                            "field": "NOME_DO_CAMPO"
-                                                        }
-                                                    ]
+                                                    "type": "number",
+                                                    "description": "Latitude em graus decimais",
+                                                    "field": "lat",
+                                                    "example": ""
+                                                },
+                                                {
+                                                    "type": "number",
+                                                    "description": "Longitude em graus decimais",
+                                                    "field": "lng",
+                                                    "example": ""
                                                 }
                                             ]
                                         }
@@ -92,17 +112,15 @@
                             ],
                             "medias": [
                                 {
-                                    "type": "GIF VIDEO IMAGEM ETC (enum)",
+                                    "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
-                                    "link": "BASE64_DA_MIDIA_1"
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/db095f79a0534e91821fc7e33ec4dd69ebbf13bd-768x527.png"
                                 }
                             ]
                         }
@@ -120,62 +138,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -205,13 +207,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -230,62 +230,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -315,13 +299,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -340,62 +322,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -425,13 +391,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -450,62 +414,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -535,13 +483,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -560,62 +506,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -645,13 +575,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -670,62 +598,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -755,13 +667,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -780,62 +690,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -865,13 +759,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -890,62 +782,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -975,13 +851,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1000,62 +874,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1085,13 +943,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1110,62 +966,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1195,13 +1035,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1220,62 +1058,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1305,13 +1127,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1330,62 +1150,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1415,13 +1219,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1440,62 +1242,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1525,13 +1311,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1550,62 +1334,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1635,13 +1403,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1660,62 +1426,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1745,13 +1495,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1770,62 +1518,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1855,13 +1587,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1880,62 +1610,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -1965,13 +1679,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -1990,62 +1702,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -2075,13 +1771,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]
@@ -2100,62 +1794,46 @@
                     "title": "TITULO_DO_ARTIGO",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
-                    "description": {
-                        "texts": [
-                            {
-                                "text": "DESCRICAO_DO_ARTIGO"
-                            }
-                        ]
-                    },
+                    "description": [
+                        {
+                            "text": "DESCRICAO_DO_ARTIGO"
+                        }
+                    ],
                     "details": {
                         "createdAt": "2023-01-01T00:00:00.000Z",
                         "createdBy": "AUTOR_DO_ARTIGO"
                     },
-                    "summary": [
-                        {
-                            "titleSection": "ITEM_1_DO_SUMARIO",
-                            "idSection": "#SECAO1"
-                        },
-                        {
-                            "titleSection": "ITEM_2_DO_SUMARIO",
-                            "idSection": "#SECAO2"
-                        }
-                    ],
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
-                            "description": {
-                                "texts": [
-                                    {
-                                        "text": "DESCRICAO_DA_SECAO_1",
-                                        "links": [
-                                            {
-                                                "breakpoint": "#breakpoint1",
-                                                "text": "TEXTO_DO_LINK_1",
-                                                "href": "link"
-                                            },
-                                            {
-                                                "breakpoint": "#breakpoint2",
-                                                "text": "TEXTO_DO_LINK_2",
-                                                "href": "link"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
+                            "description": [
+                                {
+                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        },
+                                        {
+                                            "breakpoint": "#breakpoint2",
+                                            "text": "TEXTO_DO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ],
                             "tables": [
                                 {
                                     "title": "TITULO_TABELA_1",
                                     "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_TABELA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
                                     "rows": [
                                         {
                                             "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
@@ -2185,13 +1863,11 @@
                                     "type": "GIF VIDEO IMAGEM ETC (enum)",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": {
-                                        "texts": [
-                                            {
-                                                "text": "DESCRICAO_MIDIA_1"
-                                            }
-                                        ]
-                                    },
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
                                     "link": "BASE64_DA_MIDIA_1"
                                 }
                             ]

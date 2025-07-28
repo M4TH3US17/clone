@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { returnData } from '../../public/assets/data/data-utils';
+import { returnData } from '../../public/assets/data/utils/data-utils';
 import { useLanguageStore } from './languageStore'; // Importe seu store de idioma
 
 type DataState = {
