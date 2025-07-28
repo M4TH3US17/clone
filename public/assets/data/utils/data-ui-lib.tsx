@@ -28,7 +28,7 @@ export function returnArticleSection(section: any, props?: ISectionProps, key?: 
             props?.className
         )}>
 
-        <h2 className="text-xl font-semibold text-gray-600">{section.title}</h2>
+        <h2 className="text-xl font-semibold text-gray-600 mb-7">{section.title}</h2>
         <h3>{section.subtitle}</h3>
         {
             returnArticleDescription(section.description, { box: { className: "bg-amber-500" } })
@@ -45,10 +45,12 @@ function sectionBody(tables: any, medias: any) {
     console.log(tables)
     console.log(medias)
 
-    return table(tables[0])
+    return <>
+        {table(tables[0])}
+        {media(medias[0])}
+    </>
 }
 export function table(table: any) {
-    console.log(table)
     return <div className="w-full overflow-x-scroll">
         <table className="w-full">
             <thead className="">
@@ -113,7 +115,21 @@ export function table(table: any) {
     </div>
 }
 
-export function media() {
+export function media(media: any) {
+    if (media.type === "IMAGE") {
+        return <img src={media.link} />
+    }
+
+    if (media.type === "GIF") {
+        return <></>
+    }
+
+
+    if (media.type === "VIDEO") {
+        return <></>
+    }
+
+
     return <></>
 }
 

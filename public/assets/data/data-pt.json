@@ -112,7 +112,7 @@
                             ],
                             "medias": [
                                 {
-                                    "type": "GIF VIDEO IMAGEM ETC (enum)",
+                                    "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
                                     "description": [
@@ -120,7 +120,7 @@
                                             "text": "DESCRICAO_MIDIA_1"
                                         }
                                     ],
-                                    "link": "BASE64_DA_MIDIA_1"
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/db095f79a0534e91821fc7e33ec4dd69ebbf13bd-768x527.png"
                                 }
                             ]
                         }
