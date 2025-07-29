@@ -10,18 +10,18 @@ import { returnData } from "../../../public/assets/data/utils/data-utils";
 export default function Home() {
 
   const currentLanguage = useLanguageStore((state) => state.language);
-  
+
   const [data, setData] = useState<object>(returnData(currentLanguage))
 
   return (
-    <div  id="content-main" className={
+    <div id="content-main" className={
       clsx(
         "flex flex-col justify-center items-center",
         "bg-neutral",
-        "pb-[130px] ",
+        "px-[16px] pb-[130px] ",
         "ml-0 lg:bg-red-700",
         "lg:ml-[18.72rem]",
-        "3xl:ml-[0rem] lg:px-[32px]",
+        "3xl:ml-[0rem] lg:px-[32px]"
       )
     }>
       <div
@@ -32,20 +32,22 @@ export default function Home() {
         )}
 
       >
-        <section className="text-center lg:mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
+        <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
           <h1
             className={clsx(
               "text-4xl xl:leading-[4rem] 2lg:text-[3.4rem] text-gray-700 ",
-              "font-bold mb-2.5 "
+              "font-bold mb-2.5 text-left md:text-center"
             )}
           >Como podemos ajudar?</h1>
-          
+
           <p
             className={
               clsx(
                 "text-gray-600 mb-6.5 xl:mb-7",
-                "px-1 md:px-0 lg:leading-[1.5rem] xl:leading-[1.6rem]",
-                "text-lg max-w-[400px] m-auto "
+                "px-1 md:px-0 text-left",       // Base (mobile)
+                "lg:leading-[1.5rem]",          // lg: ≥1024px
+                "xl:leading-[1.6rem]",          // xl: ≥1280px
+                "text-lg max-w-[400px] m-auto md:text-center"
               )
             }
           >
@@ -56,14 +58,14 @@ export default function Home() {
           <div
             className={
               clsx(
-                "relative mx-4 lg:mx-0 py-1 px-4 cursor-pointer",
+                "relative mx-0 lg:mx-0 py-1 px-4 cursor-pointer",
                 "rounded-lg ",
                 "flex justify-between items-center",
                 "text-primary text-secondary",
                 "xl:mx-10 bg-white border border-gray-300 "
               )
             }
-            // style={{border: "solid gray 1px"}}
+          // style={{border: "solid gray 1px"}}
           >
             <div className="flex items-center">
               <Search
