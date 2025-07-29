@@ -18,7 +18,7 @@ const CategoriesHome = () => {
         className={clsx(
           "relative bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-3",
           "flex-1 min-w-[220px] md:max-w-[350px] max-h-[240px]",
-          "aspect-square px-5 py-4"
+          "aspect-square py-4"
         )}
 
       >
@@ -77,14 +77,14 @@ const CategoriesHome = () => {
       className={
         clsx(
           "relative",
-          "mx-0 px-4",
-          "xl:px-[12%]"
+          "mx-0",
+          "lg:max-w-[532px] 2lg:max-w-[808px] xl:max-w-[1084px]"
         )
       }
     >
       <h2 className={
         clsx(
-          "text-xl font-medium text-gray-600 mb-4",
+          "lg:mb-3 lg:text-[1.1rem] text-xl font-medium text-gray-600 mb-4",
         )
       }> Todas as categorias </h2>
       <div
