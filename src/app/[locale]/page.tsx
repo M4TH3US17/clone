@@ -21,21 +21,21 @@ export default function Home() {
         "pb-[130px] ",
         "ml-0 lg:bg-red-700",
         "lg:ml-[18.72rem]",
-        "3xl:ml-[0rem]",
+        "3xl:ml-[0rem] lg:px-[32px]",
       )
     }>
       <div
         className={clsx(
           "font-jakarta",
           "flex flex-col items-center",
-          "gap-2 mt-20 w-[100%]",
+          "gap-2 mt-20 w-[100%] ",
         )}
 
       >
-        <section className="text-center lg:mb-[50px] xl:mb-[60px]">
+        <section className="text-center lg:mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
           <h1
             className={clsx(
-              "text-5xl xl:text-6xl text-gray-700 ",
+              "text-4xl xl:leading-[4rem] 2lg:text-[3.4rem] text-gray-700 ",
               "font-bold mb-2.5 "
             )}
           >Como podemos ajudar?</h1>
@@ -44,12 +44,12 @@ export default function Home() {
             className={
               clsx(
                 "text-gray-600 mb-6.5 xl:mb-7",
-                "px-1 md:px-0",
-                "text-lg "
+                "px-1 md:px-0 lg:leading-[1.5rem] xl:leading-[1.6rem]",
+                "text-lg max-w-[400px] m-auto "
               )
             }
           >
-            Encontre respostas, compreenda melhor e aprenda a <br /> trabalhar de forma mais agil no Pass.
+            Encontre respostas, compreenda melhor e aprenda a trabalhar de forma mais agil no Pass.
           </p>
 
           {/* Main Search - Agora abre o modal ao clicar */}
@@ -67,7 +67,7 @@ export default function Home() {
           >
             <div className="flex items-center">
               <Search
-                className="w-5 h-5"
+                className="w-4 h-4 font-semibold"
               />
               <div className={
                 clsx(
@@ -90,7 +90,7 @@ export default function Home() {
                 className={
                   clsx(
                     "bg-gray-100",
-                    "rounded-full px-2.5 py-1.5 text-[11px]"
+                    "rounded-[0.3rem] px-2.5 py-1.5 text-[11px]"
                   )
                 }
               >
@@ -100,7 +100,7 @@ export default function Home() {
                 className={
                   clsx(
                     "bg-gray-100",
-                    "rounded px-2 py-1.5 text-[11px]"
+                    "rounded-[0.3rem] px-2 py-1.5 text-[11px]"
                   )
                 }
               >

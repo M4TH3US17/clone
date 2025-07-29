@@ -7,10 +7,15 @@
 }
 
 @theme inline {
-    --breakpoint-lg: 1024px;   /* Valor padrão ou personalizado para 'lg' */
-  --breakpoint-xl: 1280px;   /* Valor padrão ou personalizado para 'xl' */
-  --breakpoint-2xl: 1536px;  /* Valor padrão ou personalizado para '2xl' */
-    --breakpoint-3xl: 1800px; 
+    --breakpoint-lg: 1024px;
+    /* Valor padrão ou personalizado para 'lg-1100px' */
+    --breakpoint-2lg: 1100px;
+    /* Valor padrão ou personalizado para 'lg' */
+    --breakpoint-xl: 1440px;
+    /* Valor padrão ou personalizado para 'xl' */
+    --breakpoint-2xl: 1536px;
+    /* Valor padrão ou personalizado para '2xl' */
+    --breakpoint-3xl: 1800px;
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-geist-sans);
@@ -92,14 +97,17 @@ body {
     }
 }
 
-td, tr, th {
+td,
+tr,
+th {
     border: 1px solid #e5e5e5;
     background: var(--color-light);
 }
 
 th {}
 
-td,th {
+td,
+th {
     height: 36px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;

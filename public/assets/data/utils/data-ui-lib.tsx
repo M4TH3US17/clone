@@ -63,6 +63,7 @@ function sectionBody(section: any, props?: ISectionProps) {
 }
 
 export function table(table: any, props?: ITableProps[]) {
+    // console.log(props)
     return <div className="w-full overflow-x-scroll">
         <table className="w-full" key={table.order}>
             <thead className="">
@@ -128,7 +129,7 @@ export function table(table: any, props?: ITableProps[]) {
 }
 
 export function media(media: any, props?: IMediaProps[]) {
-                    console.log(props)
+    // console.log(props)
     if (media.type === "IMAGE" || media.type === "GIF") {
         return <img src={media.link} key={media.order}/>
     }
