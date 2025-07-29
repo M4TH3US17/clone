@@ -9,6 +9,7 @@ import { useDataStore } from "@/store/dataStore";
 import { HelpCenterData, Topic } from "@/types/sidebar";
 import { getLucideIcon } from "../ui/icon-wrapper";
 import { useRouter } from "next/navigation";
+import DialogHiddenScroll from "../ui/dialog/hidden-scroll";
 
 const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) => {
 
@@ -18,23 +19,47 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
 
     return (
         <Accordion.Item className="AccordionItem cursor-pointer " value={topic.title}>
-            <AccordionTrigger className="w-full flex items-center justify-between gap-1 text-black-700 rounded-xl py-1 px-3 cursor-pointer">
+            <AccordionTrigger className={
+                clsx(
+                    "text-black-700 rounded-xl cursor-pointer",
+                    "flex items-center justify-between gap-1",
+                    "py-1 pl-3 w-full "
+                )
+            }>
                 <div className="flex w-full items-center gap-2">
                     <Icon className="w-4 h-4 text-secondary" />
                     <p className={
                         clsx(
                             "text-secondary",
-                            "max-w-44",
-                            "text-lg sm:text-xs",
-                            "overflow-hidden whitespace-nowrap",
-                            "truncate"
+                            "max-w-[11rem]",
+                            "text-lg sm:text-[1rem]",
+                            "lg::overflow-hidden whitespace-nowrap",
+                            "lg:truncate"
                         )
                     }>{topic.title}</p>
+                </div>
+                <div className={
+                    clsx(
+                        "bg-[#eeeeee] hover:bg-gray-200",
+                        "group-hover:bg-gray-200",
+                        "cursor-pointer",
+                        "rounded-[6px] p-1" 
+                    )
+                }>
+                    <ChevronRight
+                        className={
+                            clsx(
+                                "w-5 h-5 transition-transform duration-200",
+                                isOpen ? "rotate-90" : "rotate-0"
+                            )
+                        }
+                    />
+
                 </div>
             </AccordionTrigger>
             <AccordionContent>
                 {topic.articles && (
-                    <ul className="ml-7 mt-1 space-y-4">
+                    <ul className="ml-7 mt-1">
                         {
                             topic.articles.map((subitem, index) => (
                                 <li 
@@ -69,7 +94,12 @@ const SideBarAccordion = () => {
 
     return (
         <Accordion.Root
-            className="AccordionRoot space-y-2 lg:h-[85vh] lg:overflow-y-auto lg:pb-2 xl:h-auto"
+            className={
+                clsx(
+                    "AccordionRoot lg:max-h-[96%] overflow-y-auto xl:h-auto",
+                    "pt-4 lg:pb-2 space-y-2"
+                )
+            }
             type="single"
             value={openValue}
             onValueChange={(val) => setOpenValue(val)}
@@ -96,7 +126,7 @@ const AsideLeft = () => {
                 clsx(
                     "hidden lg:block",
                     "bg-[#F5F5F5] border-r border-gray-200",
-                    "p-3 w-72",
+                    "pl-5 pr-3 py-2 w-[18.72rem]",
                     "fixed inset-y-0 left-0 z-50",
                     "transform transition-transform duration-300 ease-in-out xl:transform-none",
                 )
@@ -104,11 +134,12 @@ const AsideLeft = () => {
         >
             {/* Sidebar Header */}
             <div
-                className="border-gray-200 pl-4 pr-3 pb-3.5 pt-0.5"
-                style={{
-                    display: "flex",
-                    justifyContent: "space-between"
-                }}
+                className={
+                    clsx(
+                        "rounded-full text-primary border-none py-1.5 px-3",
+                        "flex justify-between"
+                    )
+                }
             >
                 <LogoPass className="w-[100px]" />
                 <div className="border-r border-gray-200"></div>
@@ -116,7 +147,7 @@ const AsideLeft = () => {
                     className={
                         clsx(
                             "mt-1 rounded-full px-3 py-2",
-                            "text-primary font-bold text-[11px]",
+                            "text-primary font-bold text-[12px]",
                             "bg-white cursor-pointer rounded"
                         )
                     }
@@ -133,25 +164,40 @@ export const MdAccordionCategories = () => {
    
     return (   
         <Accordion.Root
-            className="AccordionRoot space-y-2 sticky top-0 z-50 lg:hidden"
+            className={
+                clsx(
+                    "space-y-2 z-20",
+                    "AccordionRoot",
+                    "top-0 sticky lg:hidden"
+                )
+            }
             type="single"
             value={openValueCategories}
             onValueChange={(val) => setOpenValueCategories(val)}
             collapsible
         >
+            <DialogHiddenScroll isOpen={openValueCategories ? true : false}/>
             <Accordion.Item className="AccordionItem cursor-pointer " value={"categories"}>
                 <AccordionTrigger className={
                     clsx(
-                        "w-full flex items-center justify-between gap-1 p-3 pr-5 ",
-                        "hover:bg-gray-200 border-t border-gray-300",
+                        "w-full flex items-center justify-between gap-1",
+                        "p-3 py-[0.74rem] cursor-pointer",
+                        "group hover:bg-gray-100 border-t border-gray-300",
                         "font-semibold text-gray-600",
                     )
                 }>
-                    <div className="flex items-center gap-2">
-                        <List />
+                    <div className="flex items-center font-normal gap-2">
+                        <List size={20}/>
                         Categories
                     </div>
-                    <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
+                    <div className={
+                        clsx(
+                            "bg-[#eeeeee] hover:bg-gray-200",
+                            "group-hover:bg-gray-200",
+                            "cursor-pointer",
+                            "rounded-[6px] p-2" 
+                        )
+                    }>
                         <ChevronRight
                             className={
                                 clsx(

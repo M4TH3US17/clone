@@ -1,3 +1,7 @@
 {
-    "idf.pythonInstallPath": "C:\\Users\\maysa\\.espressif\\tools\\idf-python\\3.11.2\\python.exe"
+    "idf.pythonInstallPath": "C:\\Users\\maysa\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
+    "i18n-ally.localesPaths": [
+        "src/i18n",
+        "src/languages"
+    ]
 }
