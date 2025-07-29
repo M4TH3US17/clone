@@ -1,0 +1,274 @@
+{
+  "footer": {
+    "about": {
+      "title": "About",
+      "pass": "O Pass",
+      "infrastructure": "Infrastructure",
+      "security": "Security",
+      "faq": "FAQ"
+    },
+    "products": {
+      "title": "Products",
+      "connect": "Connect",
+      "office": "Office",
+      "pay": "Pay",
+      "talk": "Talk"
+    },
+    "resources": {
+      "title": "Resources",
+      "blog": "Blog",
+      "career": "Career",
+      "compare": "Compare",
+      "help": "Help Center"
+    },
+    "services": {
+      "title": "Services",
+      "billing": "Billing",
+      "receipt": "Receipt",
+      "credit": "Credit",
+      "expense": "Expense",
+      "pricing": "Pricing",
+      "channel": "Channel",
+      "catalog": "Catalog",
+      "wallet": "Wallet",
+      "refund": "Refund"
+    }
+  },
+  "header": {
+    "business": {
+      "button": {
+        "tooltip": "Open business selector",
+        "label": ""
+      },
+      "dialogBusinesses": {
+        "header": {
+          "title": "Select a business",
+          "button": {
+            "tooltip": "Create new business",
+            "label": "New business"
+          }
+        },
+        "body": {
+          "placeholderSearch": "Search businesses and organizations",
+          "tabs": {
+            "recent": "Recent",
+            "starred": "Starred",
+            "all": "All"
+          },
+          "thead": {
+            "name": "Name"
+          }
+        },
+        "footer": {
+          "select": "Select",
+          "navigate": "Navigate",
+          "close": "Close"
+        }
+      },
+      "dialogNewBusiness": {
+        "header": {
+          "title": "New project"
+        },
+        "body": {
+          "select": {
+            "label": "Select an organization:",
+            "optionDefault": "Choose an organization"
+          },
+          "input": {
+            "label": "Create new business:",
+            "placeholder": "New business name"
+          },
+          "button": "Create"
+        },
+        "tooltip": "Create new business"
+      }
+    },
+    "dialogSearch": {
+      "search": {
+        "label1": "Type",
+        "label2": "to search",
+        "placeholder": "Search [/] resources, products, and more"
+      },
+      "services": {
+        "vps": {
+          "title": "VPS Servers",
+          "description": "Hire VPS to host internal systems or websites with dedicated performance."
+        },
+        "bucket": {
+          "title": "Bucket Storage",
+          "description": "Store documents, package images, and client data securely and scalably."
+        },
+        "api": {
+          "title": "Integration APIs",
+          "description": "Hire APIs to integrate with booking, payment systems, and other platforms."
+        },
+        "database": {
+          "title": "Managed Database",
+          "description": "Deploy secure databases with automated backup to store critical information."
+        },
+        "shared_storage": {
+          "title": "Shared Storage",
+          "description": "Manage shared files and documents between branches and agents."
+        },
+        "payment": {
+          "title": "Payment Services",
+          "description": "Integrate solutions to process online payments easily and securely."
+        }
+      },
+      "footer": {
+        "select": "Select",
+        "navigate": "Navigate",
+        "close": "Close"
+      }
+    }
+  },
+  "channelsHub": {
+    "header": {
+      "inputSearch1": "Type",
+      "inputSearch2": "to search",
+      "drawerLeft": {
+        "repositories": "Repositories",
+        "menu": {
+          "home": "Home",
+          "issues": "Issues",
+          "pullRequests": "Pull Requests",
+          "projects": "Projects",
+          "discussions": "Discussions",
+          "codespaces": "Codespaces",
+          "copilot": "Copilot",
+          "explorer": "Explore",
+          "marketplace": "Marketplace"
+        },
+        "footer": {
+          "about": "About",
+          "blog": "Blog",
+          "terms": "Terms",
+          "privacy": "Privacy",
+          "security": "Security",
+          "status": "Status",
+          "doNotShare": "Do not share my personal information",
+          "manageCookies": "Manage cookies"
+        }
+      },
+      "drawerRight": {
+        "menu": {
+          "yourProfile": "Your profile",
+          "yourRepositories": "Your repositories",
+          "yourCopilot": "Your copilot",
+          "yourProjects": "Your projects",
+          "yourStars": "Your stars",
+          "yourGists": "Your gists",
+          "yourOrganizations": "Your organizations",
+          "yourEnterprises": "Your enterprises",
+          "yourSponsors": "Your sponsors",
+          "tryEnterprise": "Try Enterprise",
+          "free": "Free",
+          "featurePreview": "Feature preview",
+          "settings": "Settings",
+          "channelsWebsite": "Channels Website",
+          "channelsDocs": "Channels Docs",
+          "channelsSupport": "Channels Support",
+          "channelsCommunity": "Channels Community",
+          "signOut": "Sign out",
+          "tooltip": {
+            "accountSwitcher": "Switch account",
+            "close": "Close"
+          }
+        }
+      },
+      "drawerTop": {},
+      "popoverCopilot": {
+        "titleCopilot": "New conversation in",
+        "assistive": "Assistive",
+        "spaces": "Spaces",
+        "downloadFor": "Download for",
+        "yourCopilot": "Your copilot",
+        "free": "Free"
+      },
+      "tooltipCopilot": {
+        "chatWithCopilot": "Chat with Copilot",
+        "openCopilot": "Open Copilot"
+      },
+      "popoverRepository": {
+        "newRepository": "New repository",
+        "importRepository": "Import repository",
+        "newCodespace": "New codespace",
+        "newGist": "New gist",
+        "newOrganization": "New organization",
+        "newProject": "New project"
+      },
+      "tooltipRepository": {
+        "createNew": "Create new..."
+      },
+      "tooltipOthers": {
+        "yourIssues": "Your issues",
+        "yourPullRequests": "Your pull requests",
+        "notifications": "You have no unread notifications"
+      }
+    },
+    "home": {
+      "body": {
+        "asideLeft": {
+          "topRepositories": "Top repositories",
+          "new": "New",
+          "showMore": "Show more",
+          "placeholder": "Search a repository..."
+        },
+        "asideRight": {
+          "titleTimeline": "Latest changes",
+          "titleRepositories": "Explore repositories",
+          "exploreMore": "Explore more →",
+          "viewChangeLog": "View change log →"
+        },
+        "search": {
+          "title": "Home",
+          "placeholder": "Talk to Copilot",
+          "send": "Send",
+          "suggestion1": "Create a README for my profile",
+          "suggestion2": "Create an issue for a bug",
+          "suggestion3": "Summarize a pull request"
+        },
+        "feed": {
+          "title": "Updates",
+          "filter": "Filter",
+          "star": "Star"
+        }
+      },
+      "footer": {}
+    },
+    "settings": {
+      "personaDescription": "Your personal account",
+      "goPersonalProfile": "Go to your personal profile",
+      "menu": {
+        "profile": "Profile",
+        "appearance": "Appearance",
+        "account": "Account",
+        "organizations": "Organizations",
+        "notifications": "Notifications"
+      },
+      "appearance": {
+        "titleTheme": "Theme Preference",
+        "descriptionTheme": "Choose how ChannelsHub looks for you. Select a single theme or sync with your system and automatically switch between day and night themes. Selections apply immediately and are saved automatically.",
+        "subTitleTheme": "Theme mode",
+        "portuguese": "Portuguese",
+        "english": "English",
+        "spanish": "Spanish",
+        "lightDefault": "Light default",
+        "darkDefault": "Dark default",
+        "languageTheme": "Theme Preference"
+      },
+      "notifications": {
+        "title": "Notifications"
+      },
+      "organizations": {
+        "title": "Organizations"
+      },
+      "profile": {
+        "title": "Profile"
+      },
+      "account": {
+        "title": "Account"
+      }
+    }
+  }
+}
