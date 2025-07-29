@@ -7,6 +7,10 @@
 }
 
 @theme inline {
+    --breakpoint-lg: 1024px;   /* Valor padrão ou personalizado para 'lg' */
+  --breakpoint-xl: 1280px;   /* Valor padrão ou personalizado para 'xl' */
+  --breakpoint-2xl: 1536px;  /* Valor padrão ou personalizado para '2xl' */
+    --breakpoint-3xl: 1800px; 
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-geist-sans);

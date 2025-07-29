@@ -7,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
+import clsx from "clsx";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -38,7 +39,15 @@ export default async function RootLayout({
   
   return (
     <html lang={locale}>
-      <body className={`${jakarta.variable} flex  flex-col min-h-screen font-sans font-normal relative antialiased lg:ml-72 bg-neutral`}>
+      <body className={
+        clsx(
+          jakarta.variable,
+          "font-sans font-normal",
+          `min-h-screen relative antialiased  bg-neutral`,
+          //"lg:ml-[18.72rem]",
+          "flex flex-col"
+        )
+      }>
         <NextIntlClientProvider
           locale={locale}
           messages={messages}

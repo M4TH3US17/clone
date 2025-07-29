@@ -77,17 +77,19 @@ const CategoriesHome = () => {
       className={
         clsx(
           "relative",
-          "px-4 md:px-0"
+          "mx-0 px-4",
+          "xl:px-[12%]"
         )
       }
     >
       <h2 className={
         clsx(
-          "text-xl font-semibold text-gray-600 mb-4",
+          "text-xl font-medium text-gray-600 mb-4",
         )
       }> Todas as categorias </h2>
       <div
         className={clsx(
+          "pt-1",
           "flex flex-wrap justify-center gap-5 xl:max-w-[1084px]",
         )}
       >
