@@ -9,6 +9,7 @@ import { useDataStore } from "@/store/dataStore";
 import { HelpCenterData, Topic } from "@/types/sidebar";
 import { getLucideIcon } from "../ui/icon-wrapper";
 import { useRouter } from "next/navigation";
+import DialogHiddenScroll from "../ui/dialog/hidden-scroll";
 
 const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) => {
 
@@ -138,20 +139,29 @@ export const MdAccordionCategories = () => {
             value={openValueCategories}
             onValueChange={(val) => setOpenValueCategories(val)}
             collapsible
-        >
+            >
+            <DialogHiddenScroll isOpen={openValueCategories ? true : false}/>
             <Accordion.Item className="AccordionItem cursor-pointer " value={"categories"}>
                 <AccordionTrigger className={
                     clsx(
-                        "w-full flex items-center justify-between gap-1 p-3 pr-5 ",
-                        "hover:bg-gray-200 border-t border-gray-300",
+                        "w-full flex items-center justify-between gap-1",
+                        "p-3 py-[0.74rem] cursor-pointer",
+                        "group hover:bg-gray-100 border-t border-gray-300",
                         "font-semibold text-gray-600",
                     )
                 }>
-                    <div className="flex items-center gap-2">
-                        <List />
+                    <div className="flex items-center font-normal gap-2">
+                        <List size={20}/>
                         Categories
                     </div>
-                    <div className="hover:border-gray-200 rounded-[6px] hover:bg-gray-100">
+                    <div className={ // AQUI DEVE FICAR MAIS ESCURO AO PASSAR O MOUSE NO "<AccordionTrigger"
+                        clsx(
+                            "bg-[#eeeeee] hover:bg-gray-200",
+                            "group-hover:bg-gray-200",
+                            "cursor-pointer",
+                            "rounded-[6px] p-2" 
+                        )
+                    }>
                         <ChevronRight
                             className={
                                 clsx(

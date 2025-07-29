@@ -1,22 +1,29 @@
+'use client'
 import clsx from "clsx";
 import { Search, CircleCheck, ExternalLink } from "lucide-react";
 import Button from "../ui/button";
 import LogoPass from "../ui/logo-chumbo-pass";
 import { MdAccordionCategories } from "../aside-left";
+import { DialogSearch } from "../dialog-search";
+import { useState } from "react";
 
 const Header = () => {
+    
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <header
             className={
                 clsx(
                     "sticky top-0",
-                    "border-b border-gray-200 py-2.5 bg-neutral",
+                    "border-b border-gray-200 pt-[1.1rem] bg-neutral",
                     "border-b border-l border-gray-200 z-3"
                 )
             }
         >
-            <div className="flex items-center px-6 pb-3 justify-between w-full">
+            <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)}/>
+
+            <div className="flex items-center px-4 pb-3.5 justify-between w-full">
                 <div className="items-center gap-3 flex lg:hidden">
                     <LogoPass className="w-[110px]" />
                     <div className="border-r border-gray-400"></div>
@@ -35,34 +42,39 @@ const Header = () => {
                 <div
                     className={
                         clsx(
-                            "relative flex justify-between items-center",
+                            "cursor-pointer",
+                            "bg-white",
+                            " flex justify-center items-center gap-2",
                             "border border-gray-300 rounded-lg",
-                            "py-1.5 gap-2 bg-white px-3.5"
+                            "py-2 px-3",
+                            "text-text-light-1 text-center"
                         )
                     }
+                    onClick={() => setIsOpen(true)}
                 >
 
                     <Search
-                        className="text-black w-3.5 h-3.5"
+                        className="w-4 h-4"
                     />
+
                     <p className={
                         clsx(
-                            "text-gray-500 ",
-                            "mr-0 sm:mr-24",
-                            "text-sm sm:text-xs"
+                            "mr-0 lg:mr-24",
+                            "text-[1rem] font-medium"
                         )
                     }>Search</p>
-                    <div className="flex gap-1">
+                    
+                    <div className="hidden lg:flex">
                         <span
                             className={clsx(
                                 "font-semibold bg-gray-100  text-black",
-                                "px-2 py-0.5 rounded-full hidden lg:block text-[9px]"
+                                "px-2 py-0.5 rounded-full text-[9px]"
                             )}
                         > CTRL </span>
                         <span
                             className={clsx(
                                 "font-semibold bg-gray-100 text-black",
-                                "px-1.5 py-0.5 rounded hidden lg:block text-[9px]"
+                                "px-1.5 py-0.5 rounded text-[9px]"
                             )}
                         > K </span>
                     </div>

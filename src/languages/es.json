@@ -1,0 +1,274 @@
+{
+  "footer": {
+    "about": {
+      "title": "Acerca de",
+      "pass": "O Pass",
+      "infrastructure": "Infraestructura",
+      "security": "Seguridad",
+      "faq": "FAQ"
+    },
+    "products": {
+      "title": "Productos",
+      "connect": "Conectar",
+      "office": "Oficina",
+      "pay": "Pago",
+      "talk": "Hablar"
+    },
+    "resources": {
+      "title": "Recursos",
+      "blog": "Blog",
+      "career": "Carrera",
+      "compare": "Comparar",
+      "help": "Centro de ayuda"
+    },
+    "services": {
+      "title": "Servicios",
+      "billing": "Facturación",
+      "receipt": "Recibo",
+      "credit": "Crédito",
+      "expense": "Gasto",
+      "pricing": "Precios",
+      "channel": "Canal",
+      "catalog": "Catálogo",
+      "wallet": "Cartera",
+      "refund": "Reembolso"
+    }
+  },
+  "header": {
+    "business": {
+      "button": {
+        "tooltip": "Abrir selector de negocios",
+        "label": ""
+      },
+      "dialogBusinesses": {
+        "header": {
+          "title": "Seleccionar un negocio",
+          "button": {
+            "tooltip": "Crear nuevo negocio",
+            "label": "Nuevo negocio"
+          }
+        },
+        "body": {
+          "placeholderSearch": "Buscar negocios y organizaciones",
+          "tabs": {
+            "recent": "Reciente",
+            "starred": "Con estrella",
+            "all": "Todos"
+          },
+          "thead": {
+            "name": "Nombre"
+          }
+        },
+        "footer": {
+          "select": "Seleccionar",
+          "navigate": "Navegar",
+          "close": "Cerrar"
+        }
+      },
+      "dialogNewBusiness": {
+        "header": {
+          "title": "Nuevo proyecto"
+        },
+        "body": {
+          "select": {
+            "label": "Seleccione una organización:",
+            "optionDefault": "Elija una organización"
+          },
+          "input": {
+            "label": "Crear nuevo negocio:",
+            "placeholder": "Nombre del nuevo negocio"
+          },
+          "button": "Crear"
+        },
+        "tooltip": "Crear nuevo negocio"
+      }
+    },
+    "dialogSearch": {
+      "search": {
+        "label1": "Escriba",
+        "label2": "para buscar",
+        "placeholder": "Busque [/] recursos, productos y más"
+      },
+      "services": {
+        "vps": {
+          "title": "Servidores VPS",
+          "description": "Contrate VPS para alojar sistemas internos o sitios web con rendimiento dedicado."
+        },
+        "bucket": {
+          "title": "Almacenamiento en Bucket",
+          "description": "Almacene documentos, imágenes de paquetes y datos de clientes de forma segura y escalable."
+        },
+        "api": {
+          "title": "APIs de Integración",
+          "description": "Contrate APIs para integrarse con sistemas de reservas, pagos y otras plataformas."
+        },
+        "database": {
+          "title": "Base de Datos Gestionada",
+          "description": "Implemente bases de datos seguras con copia de seguridad automática para almacenar información crítica."
+        },
+        "shared_storage": {
+          "title": "Almacenamiento Compartido",
+          "description": "Gestione archivos y documentos compartidos entre sucursales y agentes."
+        },
+        "payment": {
+          "title": "Servicios de Pago",
+          "description": "Integre soluciones para procesar pagos en línea de manera fácil y segura."
+        }
+      },
+      "footer": {
+        "select": "Seleccionar",
+        "navigate": "Navegar",
+        "close": "Cerrar"
+      }
+    }
+  },
+  "channelsHub": {
+    "header": {
+      "inputSearch1": "Escriba",
+      "inputSearch2": "para buscar",
+      "drawerLeft": {
+        "repositories": "Repositorios",
+        "menu": {
+          "home": "Inicio",
+          "issues": "Problemas",
+          "pullRequests": "Solicitudes de extracción",
+          "projects": "Proyectos",
+          "discussions": "Discusiones",
+          "codespaces": "Espacios de código",
+          "copilot": "Copiloto",
+          "explorer": "Explorar",
+          "marketplace": "Mercado"
+        },
+        "footer": {
+          "about": "Acerca de",
+          "blog": "Blog",
+          "terms": "Términos",
+          "privacy": "Privacidad",
+          "security": "Seguridad",
+          "status": "Estado",
+          "doNotShare": "No compartir mi información personal",
+          "manageCookies": "Administrar cookies"
+        }
+      },
+      "drawerRight": {
+        "menu": {
+          "yourProfile": "Tu perfil",
+          "yourRepositories": "Tus repositorios",
+          "yourCopilot": "Tu copiloto",
+          "yourProjects": "Tus proyectos",
+          "yourStars": "Tus estrellas",
+          "yourGists": "Tus gists",
+          "yourOrganizations": "Tus organizaciones",
+          "yourEnterprises": "Tus empresas",
+          "yourSponsors": "Tus patrocinadores",
+          "tryEnterprise": "Probar Enterprise",
+          "free": "Gratis",
+          "featurePreview": "Vista previa de funciones",
+          "settings": "Configuraciones",
+          "channelsWebsite": "Sitio de Canales",
+          "channelsDocs": "Documentación de Canales",
+          "channelsSupport": "Soporte de Canales",
+          "channelsCommunity": "Comunidad de Canales",
+          "signOut": "Cerrar sesión",
+          "tooltip": {
+            "accountSwitcher": "Cambiar cuenta",
+            "close": "Cerrar"
+          }
+        }
+      },
+      "drawerTop": {},
+      "popoverCopilot": {
+        "titleCopilot": "Nueva conversación en",
+        "assistive": "Asistiva",
+        "spaces": "Espacios",
+        "downloadFor": "Descargar para",
+        "yourCopilot": "Tu copiloto",
+        "free": "Gratis"
+      },
+      "tooltipCopilot": {
+        "chatWithCopilot": "Chatear con Copiloto",
+        "openCopilot": "Abrir Copiloto"
+      },
+      "popoverRepository": {
+        "newRepository": "Nuevo repositorio",
+        "importRepository": "Importar repositorio",
+        "newCodespace": "Nuevo espacio de código",
+        "newGist": "Nuevo gist",
+        "newOrganization": "Nueva organización",
+        "newProject": "Nuevo proyecto"
+      },
+      "tooltipRepository": {
+        "createNew": "Crear nuevo..."
+      },
+      "tooltipOthers": {
+        "yourIssues": "Tus problemas",
+        "yourPullRequests": "Tus solicitudes de extracción",
+        "notifications": "No tienes notificaciones sin leer"
+      }
+    },
+    "home": {
+      "body": {
+        "asideLeft": {
+          "topRepositories": "Repositorios principales",
+          "new": "Nuevo",
+          "showMore": "Ver más",
+          "placeholder": "Buscar un repositorio..."
+        },
+        "asideRight": {
+          "titleTimeline": "Últimos cambios",
+          "titleRepositories": "Explorar repositorios",
+          "exploreMore": "Explorar más →",
+          "viewChangeLog": "Ver registro de cambios →"
+        },
+        "search": {
+          "title": "Inicio",
+          "placeholder": "Habla con Copiloto",
+          "send": "Enviar",
+          "suggestion1": "Crear un README para mi perfil",
+          "suggestion2": "Crear un problema para un error",
+          "suggestion3": "Resumir una solicitud de extracción"
+        },
+        "feed": {
+          "title": "Actualizaciones",
+          "filter": "Filtrar",
+          "star": "Estrella"
+        }
+      },
+      "footer": {}
+    },
+    "settings": {
+      "personaDescription": "Tu cuenta personal",
+      "goPersonalProfile": "Accede a tu perfil personal",
+      "menu": {
+        "profile": "Perfil",
+        "appearance": "Apariencia",
+        "account": "Cuenta",
+        "organizations": "Organizaciones",
+        "notifications": "Notificaciones"
+      },
+      "appearance": {
+        "titleTheme": "Preferencia de tema",
+        "descriptionTheme": "Elige cómo se ve ChannelsHub para ti. Selecciona un solo tema o sincronízalo con tu sistema y cambia automáticamente entre los temas diurno y nocturno. Las selecciones se aplican de inmediato y se guardan automáticamente.",
+        "subTitleTheme": "Modo de tema",
+        "portuguese": "Portugués",
+        "english": "Inglés",
+        "spanish": "Española",
+        "lightDefault": "Claro por defecto",
+        "darkDefault": "Oscuro por defecto",
+        "languageTheme": "Preferencia de tema"
+      },
+      "notifications": {
+        "title": "Notificaciones"
+      },
+      "organizations": {
+        "title": "Organizaciones"
+      },
+      "profile": {
+        "title": "Perfil"
+      },
+      "account": {
+        "title": "Cuenta"
+      }
+    }
+  }
+}
