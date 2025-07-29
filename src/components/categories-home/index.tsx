@@ -16,8 +16,8 @@ const CategoriesHome = () => {
       <Link
         href={topic.title}
         className={clsx(
-          "relative bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-3",
-          "flex-1 min-w-[220px] md:max-w-[350px] max-h-[240px]",
+          "relative bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-[20px]",
+          "flex-1 h-[225px] w-[256px]",//  min-w-[220px] md:max-w-[350px] max-h-[240px]
           "aspect-square py-4"
         )}
 
@@ -39,7 +39,7 @@ const CategoriesHome = () => {
             className={
               clsx(
                 "mb-0.5 leading-5",
-                "font-semibold text-gray-600 text-xl"
+                "text-gray-600 font-semibold text-[18px]"
               )
             }
 
@@ -51,7 +51,7 @@ const CategoriesHome = () => {
               className={
                 clsx(
                   "mb-2 lg:mb-3 leading-4.5 flex-1",
-                  "text-gray-600 text-[1rem] lg:text-sm",
+                  "text-gray-600 text-[13px]",
                 )
               }
             >

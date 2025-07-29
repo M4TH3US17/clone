@@ -18,7 +18,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
     const router = useRouter();
 
     return (
-        <Accordion.Item className="AccordionItem cursor-pointer " value={topic.title}>
+        <Accordion.Item className="AccordionItem cursor-pointer m-0" value={topic.title}>
             <AccordionTrigger className={
                 clsx(
                     "text-black-700 rounded-xl cursor-pointer",
@@ -26,13 +26,12 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                     "py-1 pl-3 w-full "
                 )
             }>
-                <div className="flex w-full items-center gap-2">
-                    <Icon className="w-4 h-4 text-secondary" />
+                <div className="flex w-full 2lg:text-[16px] h-[40px] items-center gap-2">
+                    <Icon className="w-4 h-4 text-gray-400 font-extrabold" />
                     <p className={
                         clsx(
-                            "text-secondary",
-                            "max-w-[11rem]",
-                            "text-lg sm:text-[1rem]",
+                            "text-gray-600",
+                            "max-w-[11rem] 2lg:text-[13px]",
                             "lg::overflow-hidden whitespace-nowrap",
                             "lg:truncate"
                         )
@@ -40,21 +39,20 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                 </div>
                 <div className={
                     clsx(
-                        "bg-[#eeeeee] hover:bg-gray-200",
+                        "hover:bg-gray-200",
                         "group-hover:bg-gray-200",
                         "cursor-pointer",
-                        "rounded-[6px] p-1" 
+                        "rounded-[6px] p-1"
                     )
                 }>
                     <ChevronRight
                         className={
                             clsx(
-                                "w-5 h-5 transition-transform duration-200",
+                                "w-4.5 h-4.5 transition-transform duration-200 text-gray-300 bg-neutral border-0",
                                 isOpen ? "rotate-90" : "rotate-0"
                             )
                         }
                     />
-
                 </div>
             </AccordionTrigger>
             <AccordionContent>
@@ -62,7 +60,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                     <ul className="ml-7 mt-1">
                         {
                             topic.articles.map((subitem, index) => (
-                                <li 
+                                <li
                                     key={index}
                                     onClick={() => {
                                         router.push(`/${topic.slug}/${subitem.slug}`)
@@ -97,7 +95,7 @@ const SideBarAccordion = () => {
             className={
                 clsx(
                     "AccordionRoot lg:max-h-[96%] overflow-y-auto xl:h-auto",
-                    "pt-4 lg:pb-2 space-y-2"
+                    "pt-4 lg:pb-2 space-y-3 gap-[8px] scrollbar-hide"
                 )
             }
             type="single"
@@ -119,8 +117,8 @@ const SideBarAccordion = () => {
 }
 
 const AsideLeft = () => {
-   
-    return ( 
+
+    return (
         <aside
             className={
                 clsx(
@@ -136,7 +134,8 @@ const AsideLeft = () => {
             <div
                 className={
                     clsx(
-                        "rounded-full text-primary border-none py-1.5 px-3",
+                        "rounded-full text-primary border-none",
+                        "pt-[19px] pb-[2px] pl-[15px] pr-[16px]",
                         "flex justify-between"
                     )
                 }
@@ -146,7 +145,7 @@ const AsideLeft = () => {
                 <span
                     className={
                         clsx(
-                            "mt-1 rounded-full px-3 py-2",
+                            "mt-1 rounded-full px-3",
                             "text-primary font-bold text-[12px]",
                             "bg-white cursor-pointer rounded"
                         )
@@ -161,8 +160,8 @@ const AsideLeft = () => {
 export const MdAccordionCategories = () => {
 
     const [openValueCategories, setOpenValueCategories] = useState<string>();
-   
-    return (   
+
+    return (
         <Accordion.Root
             className={
                 clsx(
@@ -176,7 +175,7 @@ export const MdAccordionCategories = () => {
             onValueChange={(val) => setOpenValueCategories(val)}
             collapsible
         >
-            <DialogHiddenScroll isOpen={openValueCategories ? true : false}/>
+            <DialogHiddenScroll isOpen={openValueCategories ? true : false} />
             <Accordion.Item className="AccordionItem cursor-pointer " value={"categories"}>
                 <AccordionTrigger className={
                     clsx(
@@ -187,7 +186,7 @@ export const MdAccordionCategories = () => {
                     )
                 }>
                     <div className="flex items-center font-normal gap-2">
-                        <List size={20}/>
+                        <List size={20} />
                         Categories
                     </div>
                     <div className={
@@ -195,7 +194,7 @@ export const MdAccordionCategories = () => {
                             "bg-[#eeeeee] hover:bg-gray-200",
                             "group-hover:bg-gray-200",
                             "cursor-pointer",
-                            "rounded-[6px] p-2" 
+                            "rounded-[6px] p-2"
                         )
                     }>
                         <ChevronRight
