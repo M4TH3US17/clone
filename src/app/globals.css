@@ -7,6 +7,8 @@
 }
 
 @theme inline {
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     /* Valor padrão ou personalizado para 'lg-1100px' */
     --breakpoint-2lg: 1100px;

@@ -22,13 +22,13 @@ const CategoriesHome = () => {
         )}
 
       >
-        <div className="flex flex-col gap-4 justify-start items-start">
+        <div className="flex flex-col gap-3  lg:gap-4 justify-start items-start">
           <div
             className={
               clsx(
                 "rounded-full bg-gray-100 p-2",
                 "flex items-center justify-center",
-                "w-15 h-15 lg:w-10 lg:h-10 text-gray-100 mb-3"
+                "h-12 w-12 lg:w-10 lg:h-10 text-gray-100 mb-3"
               )
             }
           >
@@ -38,7 +38,7 @@ const CategoriesHome = () => {
           <h3
             className={
               clsx(
-                "mb-0.5 leading-5",
+                "mb-1.5 leading-5",
                 "text-gray-600 font-semibold text-[18px]"
               )
             }
@@ -50,8 +50,8 @@ const CategoriesHome = () => {
             <p
               className={
                 clsx(
-                  "mb-2 lg:mb-3 leading-4.5 flex-1",
-                  "text-gray-600 text-[13px]",
+                  "leading-4.5 flex-1",
+                  "text-gray-600 md:text-[13px] mb-3",
                 )
               }
             >
@@ -61,7 +61,7 @@ const CategoriesHome = () => {
           <p
             className={
               clsx(
-                "absolute bottom-0 mb-4 text-[9px] text-black font-medium tracking-wide",
+                "absolute bottom-0 mb-4 text-[13px] md:text-[9px] text-black font-medium tracking-wide",
               )
             }
           >
@@ -78,7 +78,7 @@ const CategoriesHome = () => {
         clsx(
           "relative",
           "mx-0",
-          "lg:max-w-[532px] 2lg:max-w-[808px] xl:max-w-[1084px]"
+          "max-w-[532px] 2lg:max-w-[808px] xl:max-w-[1084px]"
         )
       }
     >
