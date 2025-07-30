@@ -6,12 +6,15 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import { useLanguageStore } from "@/store/languageStore";
 import { returnData } from "../../../public/assets/data/utils/data-utils";
+import { DialogSearch } from "@/components/dialog-search";
 
 export default function Home() {
 
   const currentLanguage = useLanguageStore((state) => state.language);
 
   const [data, setData] = useState<object>(returnData(currentLanguage))
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div id="content-main" className={
@@ -32,7 +35,8 @@ export default function Home() {
         )}
 
       >
-        <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
+        <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)}/>
+        <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]" onClick={() => setIsOpen(true)}>
           <h1
             className={clsx(
               "text-4xl xl:leading-[4rem] 2lg:text-[3.4rem] text-gray-700 ",

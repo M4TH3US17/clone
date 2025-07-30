@@ -6,10 +6,12 @@ import LogoPass from "../ui/logo-chumbo-pass";
 import { MdAccordionCategories } from "../aside-left";
 import { DialogSearch } from "../dialog-search";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
-    
+
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     return (
         <header
@@ -23,7 +25,7 @@ const Header = () => {
                 )
             }
         >
-            <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)}/>
+            <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)} />
 
             <div className={
                 clsx(
@@ -39,51 +41,56 @@ const Header = () => {
                             clsx(
                                 "hidden sm:block",
                                 "mt-1 py-1 px-2",
-                                "text-secondary font-bold text-xs flex",
-                                "bg-white cursor-pointer rounded"
+                                "text-stone-600 font-bold text-xs flex",
+                                "bg-white cursor-pointer rounded",
+                                "hover:text-stone-200" // Agora está no final, priorizando o hover
                             )
                         }
-                    >Help Center</span>
+                        onClick={() => { router.push(`/pt`) }}
+                    >
+                        Help Center
+                    </span>
                 </div>
 
                 <div
-                    className={
-                        clsx(
-                            "cursor-pointer",
-                            "bg-white",
-                            " flex justify-center items-center gap-2",
-                            "border border-gray-300 rounded-lg",
-                            "py-2 px-3",
-                            "text-text-light-1 text-center"
-                        )
-                    }
+                    className={clsx(
+                        "cursor-pointer group", // Adicione "group" aqui
+                        "flex justify-center items-center gap-2",
+                        "border border-gray-300 rounded-lg",
+                        "py-2 px-3",
+                        "text-text-light-1 text-center hover:border-gray-400" // Hover do container (opcional)
+                    )}
                     onClick={() => setIsOpen(true)}
                 >
-
                     <Search
-                        className="w-4 h-4"
+                        className="w-4 h-4 opacity-50 font-semibold group-hover:opacity-100 group-hover:border-stone-100"
                     />
 
-                    <p className={
-                        clsx(
-                            "mr-0 lg:mr-22",
-                            "text-[1rem] font-medium"
-                        )
-                    }>Search</p>
-                    
+                    <p className={clsx(
+                        "mr-0 lg:mr-22 opacity-50 font-medium",
+                        "text-[1rem] group-hover:opacity-100 group-hover:border-stone-100"
+                    )}>
+                        Search
+                    </p>
+
                     <div className="hidden lg:flex font-medium">
                         <span
                             className={clsx(
-                                "bg-gray-100  text-black",
-                                "px-2 py-0.5 rounded-full text-[13px]"
+                                "bg-stone-200 text-stone-900 opacity-50 font-semibold",
+                                "px-2 py-0.5 rounded mr-0.5 text-[13px] leading-4",
+                                "h-[22px]"
                             )}
-                        > CTRL </span>
+                        >
+                            CTRL
+                        </span>
                         <span
                             className={clsx(
-                                "bg-gray-100 text-black",
-                                "px-1.5 py-0.5 rounded text-[13px]"
+                                "bg-stone-200 text-stone-900 opacity-50 font-semibold",
+                                "px-1.5 py-0.5 rounded text-[13px] leading-4"
                             )}
-                        > K </span>
+                        >
+                            K
+                        </span>
                     </div>
                 </div>
 
@@ -107,7 +114,7 @@ const Header = () => {
 
                 </div>
             </div>
-            <MdAccordionCategories/>
+            <MdAccordionCategories />
         </header>
     )
 }
