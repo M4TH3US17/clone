@@ -95,21 +95,21 @@ const Header = () => {
                 </div>
 
                 <div className="hidden lg:flex gap-2 items-center space-x-2 lg:space-x-3">
-                    <div className="flex items-center space-x-1">
-                        <CircleCheck size={20} className="text-primary" />
+                    <div className="flex items-center space-x-1 group cursor-pointer">
+                        <CircleCheck size={20} className="text-stone-500 group-hover:text-green-500" />
                         <span
-                            className="text-primary font-semibold text-xs"
+                            className="text-stone-500 font-semibold group-hover:text-green-500 text-xs"
                         >All systems go</span>
                     </div>
                     <Button
                         label="Open app"
                         className={
                             clsx(
-                                "rounded-full text-primary border-none py-1.5 px-2",
-
+                                "rounded-lg py-1.5 px-2 border border-gray-300 bg-neutral group hover:text-black hover:border-gray-400",
+                                "text-stone-500"
                             )
                         }
-                        icon={<ExternalLink className="text-primary w-4 h-4" />}
+                        icon={<ExternalLink className="w-4 h-4 text-stone-500 group-hover:text-black" />}
                     />
 
                 </div>

@@ -32,10 +32,10 @@ export const DialogSearch: FC<{
                             <div className={clsx(
                                 "flex items-center",
                                 "border-b border-gray-300",
-                                "px-4 py-3 mb-1",
+                                "px-4 py-3",
                                 "transition-colors",
-                                "focus-within:ring-1 focus-within:ring-blue-500",
-                                "focus-within:border-blue-500"
+                                "focus-within:ring-1 focus-within:ring-blue-500 bg",
+                                "focus-within:border-blue-500 bg-white rounded-t-lg"
                             )}>
                                 <Search size={16} className="text-gray-600 dark:text-gray-400 mr-2 cursor-pointer" />
                                 <input
