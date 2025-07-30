@@ -35,8 +35,8 @@ export default function Home() {
         )}
 
       >
-        <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)}/>
-        <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]" onClick={() => setIsOpen(true)}>
+        <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)} />
+        <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
           <h1
             className={clsx(
               "text-4xl xl:leading-[4rem] 2lg:text-[3.4rem] text-gray-700 ",
@@ -71,7 +71,7 @@ export default function Home() {
             }
           // style={{border: "solid gray 1px"}}
           >
-            <div className="flex items-center">
+            <div className="flex items-center" onClick={() => setIsOpen(true)}>
               <Search
                 className="w-4 h-4 font-semibold"
               />
@@ -93,6 +93,7 @@ export default function Home() {
               )
             }>
               <div
+                onClick={() => setIsOpen(true)}
                 className={
                   clsx(
                     "bg-gray-100",
@@ -103,6 +104,7 @@ export default function Home() {
                 CTRL
               </div>
               <div
+                onClick={() => setIsOpen(true)}
                 className={
                   clsx(
                     "bg-gray-100",
