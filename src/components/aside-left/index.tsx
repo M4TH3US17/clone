@@ -125,8 +125,8 @@ const AsideLeft = () => {
                     "hidden lg:block",
                     "bg-[#F5F5F5] border-r border-gray-200",
                     "pl-5 pr-3 py-2 w-[18.72rem]",
-                    "fixed inset-y-0 left-0 z-50",
-                    "transform transition-transform duration-300 ease-in-out xl:transform-none",
+                    "fixed inset-y-0 left-0",
+                    "transform transition-transform duration-300 ease-in-out xl:transform-none z-1",
                 )
             }
         >
@@ -135,22 +135,22 @@ const AsideLeft = () => {
                 className={
                     clsx(
                         "rounded-full text-primary border-none",
-                        "pt-[19px] pb-[2px] pl-[15px] pr-[16px]",
-                        "flex justify-between"
+                        "pt-[15px] pb-[2px] pl-[15px] pr-[16px]",
+                        "flex justify-between "
                     )
                 }
             >
                 <LogoPass className="w-[100px]" />
                 <div className="border-r border-gray-200"></div>
-                <span
+                <div
                     className={
                         clsx(
-                            "mt-1 rounded-full px-3",
-                            "text-primary font-bold text-[12px]",
-                            "bg-white cursor-pointer rounded"
+                            "rounded-full px-4 py-0",
+                            "text-primary text-gray-400 text-[12px]",
+                            "bg-white font-medium cursor-pointer rounded"
                         )
                     }
-                >Help Center</span>
+                >Help Center</div>
             </div>
             <SideBarAccordion />
         </aside>
@@ -165,7 +165,7 @@ export const MdAccordionCategories = () => {
         <Accordion.Root
             className={
                 clsx(
-                    "space-y-2 z-20",
+                    "space-y-2",
                     "AccordionRoot",
                     "top-0 sticky lg:hidden"
                 )
