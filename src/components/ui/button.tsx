@@ -6,10 +6,9 @@ const Button: FC<{ icon: ReactElement, label: string, className?: string }> = ({
   return (
     <div className={
       clsx(
-        "bg-white p-2 flex gap-3 rounded-xl border border-gray-200",
+        "p-2 flex gap-3 border",
         "items-center cursor-pointer",
-        "text-gray-500 font-semibold text-[13px]",
-        "hover:text-gray-700 hover:border-gray-500",
+        " text-[13px]",
         className
       )
     }>
