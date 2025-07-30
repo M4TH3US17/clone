@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useKeyboardShortcuts } from "@/hooks/hook-keyboard-shortcuts";
 import { HelpCenterData } from "@/types/sidebar";
 import { useDataStore } from "@/store/dataStore";
+import { getLucideIcon } from "@/components/ui/icon-wrapper";
 
 export function SearchItemList({ items, selectedIndex }: {
   items: { icon: React.ReactNode; title: string; description: string }[];
@@ -18,26 +19,31 @@ export function SearchItemList({ items, selectedIndex }: {
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700 max-h-96 overflow-y-auto bg-white h-[350px] p-3">
-      {items.map((item, i) => (
-        <button
-          key={i}
-          className={clsx(
-            "focus:outline-none focus:ring-0 focus:border-transparent",
-            "flex items-center w-full cursor-pointer hover:border-blue-500 rounded-md border-2 border-[#0000] text-left p-[8px] transition",
-            i === selectedIndex
-              ? "bg-indigo-50 dark:bg-primary-dark"
-              : "hover:bg-indigo-50 dark:hover:bg-secondary-dark"
-          )}
-        >
-          <div className="text-primary 600 mr-2 mt-1 bg-neutral p-[7px]">
-            {item.icon}
-          </div>
-          <div>
-            <h4 className="font-medium text-[13px] text-gray-800 text-nowrap">{item.title}</h4>
-            <p className="text-sm text-[11px] text-gray-500 text-nowrap">{item.description}</p>
-          </div>
-        </button>
-      ))}
+      {sidebarTopics.map((item, i) => {
+
+        const Icon = getLucideIcon(item.icon);
+
+        return (
+          <button
+            key={i}
+            className={clsx(
+              "focus:outline-none focus:ring-0 focus:border-transparent",
+              "flex items-center w-full cursor-pointer hover:border-blue-500 rounded-md border-2 border-[#0000] text-left p-[8px] transition",
+              i === selectedIndex
+                ? "bg-indigo-50 dark:bg-primary-dark"
+                : "hover:bg-indigo-50 dark:hover:bg-secondary-dark"
+            )}
+          >
+            <div className="text-primary 600 mr-2 mt-1 bg-neutral p-[5px] rounded-md">
+              <Icon className="p-[4px]" />
+            </div>
+            <div>
+              <h4 className="font-medium text-[13px] text-gray-800 text-nowrap">{item.title}</h4>
+              <p className="text-sm text-[11px] text-gray-500 text-nowrap">{item.subtitle}</p>
+            </div>
+          </button>
+        )
+      })}
     </div>
   )
 }

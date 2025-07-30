@@ -21,17 +21,17 @@ const SearchFooter = () => {
             <div className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                     <span className={shortcutClass + "text-[1rem]"}>↵</span>
-                    <span className="text-xs font-medium text-stone-500">{t("select")}</span>
+                    <span className="text-[11.5px] font-medium text-stone-500">{t("select")}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                     <span className={shortcutClass}>↑</span>
                     <span className={shortcutClass}>↓</span>
-                    <span className="text-xs font-medium text-stone-500">{t("navigate")}</span>
+                    <span className="text-[11.5px] font-medium text-stone-500">{t("navigate")}</span>
                 </div>
             </div>
             <div className="flex items-center space-x-2">
-                <span className="text-xs font-medium text-stone-500">{t("close")}</span>
-                <span className={clsx("text-xs", shortcutClass)}>ESC</span>
+                <span className="text-[11.5px] font-medium text-stone-500">{t("close")}</span>
+                <span className={clsx("text-[9px]", shortcutClass)}>ESC</span>
             </div>
         </div>
     );
