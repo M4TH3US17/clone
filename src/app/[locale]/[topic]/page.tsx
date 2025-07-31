@@ -34,6 +34,7 @@ const TopicPage = ({ params }: any) => {
                     className={clsx(
                         "bg-neutral w-full",
                         "lg:w-[calc(100vw - 18.72rem)]",
+                        "pt-[40px] pr-[16px] pb-[120px] pl-[16px]",
                         "md:pt-[40px] md:pr-[64px] md:pl-[64px] md:pb-[120px]",
                         "xl:pt-[20px] 2xl:pr-[128px] 2xl:pl-[128px] xl:pb-[120px]",
                     )}
@@ -48,13 +49,14 @@ const TopicPage = ({ params }: any) => {
 
                     <h1
                         className={clsx(
-                            "md:pb-3.5 font-[500]",
-                            "md:text-5xl md:leading-14 xl:text-[3.8rem]"
+                            "w-[70%] md:w-full ",
+                            "pb-3.5 font-[500]",
+                            "text-5xl leading-14 xl:text-[3.8rem]"
                         )}>{topic.title}</h1>
 
                     <h3
                         className={clsx(
-                            "md:text-[20px] leading-6.5 mb-10 opacity-80"
+                            "text-[20px] leading-6 md:leading-6.5 mb-10 opacity-80"
                         )}
                     // style={{ fontWeight: "500" }}
                     >{topic.subtitle}</h3>
@@ -66,11 +68,11 @@ const TopicPage = ({ params }: any) => {
                                 onClick={() => handleCLick(article)}
                                 className={clsx(
                                     "bg-white flex justify-between items-center",
-                                    "md:py-3.5 md:px-5 border border-gray-200 rounded-md"
+                                    "py-3.5 px-5 border border-gray-200 rounded-md"
                                 )}
                             >
                                 <span
-                                    className="md:text-[16px]"
+                                    className="text-[16px] w-[70%] md:w-full truncate"
                                     style={{ fontWeight: "500" }}
                                 >{article.title}</span>
                                 <ChevronRight
