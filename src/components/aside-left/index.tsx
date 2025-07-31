@@ -30,20 +30,29 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                     onClick={() => router.push(`/${topic.slug}`)}
                     className="flex w-full 2lg:text-[16px] h-[40px] items-center gap-2"
                 >
-                    <Icon className="w-4 h-4 text-gray-400 font-extrabold" />
-                    <p className={
-                        clsx(
-                            "text-gray-600",
-                            "max-w-[11rem] 2lg:text-[13px]",
-                            "lg::overflow-hidden whitespace-nowrap",
-                            "lg:truncate"
-                        )
-                    }>{topic.title}</p>
+                    <Icon
+                        className={clsx(
+                            "w-4 h-4 text-gray-400 font-extrabold",
+                            isOpen ? "text-stone-900" : ""
+                        )}
+                        style={{ fontWeight: "900" }}
+                    />
+                    <p
+                        style={{ fontWeight: "500" }}
+                        className={
+                            clsx(
+                                "text-gray-600",
+                                "max-w-[11rem] 2lg:text-[13px]",
+                                "lg::overflow-hidden whitespace-nowrap",
+                                "lg:truncate",
+                                isOpen ? "text-stone-900" : ""
+                            )
+                        }
+                    >{topic.title}</p>
                 </div>
                 <div className={
                     clsx(
-                        "hover:bg-gray-200",
-                        "group-hover:bg-gray-200",
+                        "group hover:bg-gray-200 ",
                         "cursor-pointer",
                         "rounded-[6px] p-1"
                     )
@@ -51,8 +60,8 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                     <ChevronRight
                         className={
                             clsx(
-                                "w-4.5 h-4.5 transition-transform duration-200 text-gray-300 bg-neutral border-0",
-                                isOpen ? "rotate-90" : "rotate-0"
+                                "group-hover:bg-gray-200 group-hover:text-stone-500 w-4.5 h-4.5 transition-transform duration-200 text-gray-300 bg-neutral border-0",
+                                isOpen ? "rotate-90 text-stone-500" : "rotate-0"
                             )
                         }
                     />
@@ -70,11 +79,12 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                                     }}
                                     className={
                                         clsx(
-                                            "w-full text-primary",
+                                            "w-full text-gray-600",
                                             "overflow-hidden whitespace-nowrap",
-                                            "truncate text-xs"
+                                            "truncate text-xs ml-2"
                                         )
                                     }
+                                    style={{ fontWeight: "500" }}
                                 >
                                     {subitem.title}
                                 </li>
@@ -150,9 +160,10 @@ const AsideLeft = () => {
                         clsx(
                             "rounded-full px-4 py-0",
                             "text-primary text-gray-400 text-[12px]",
-                            "bg-white font-medium cursor-pointer rounded"
+                            "bg-white cursor-pointer rounded"
                         )
                     }
+                    style={{ fontWeight: "500" }}
                 >Help Center</div>
             </div>
             <SideBarAccordion />
