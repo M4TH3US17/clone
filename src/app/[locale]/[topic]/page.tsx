@@ -28,12 +28,14 @@ const TopicPage = ({ params }: any) => {
             <section className={clsx(
                 "lg:bg-amber-200 w-full flex lg:justify-end"
             )}>
-                <div className={clsx(
-                    "bg-neutral"
-                )}
+                <div
+                    className={clsx(
+                        "bg-neutral",
+                        "lg:p-[40px 64px 120px] xl:p-[20px 128px 120px]"
+                    )}
                     style={{
                         width: 'calc(100vw - 18.72rem)',
-                        padding: "40px 64px 120px"
+                        // padding: "40px 64px 120px"
                     }}
                 >
                     <div className="lg:h-[36px] lg:w-[36px] mb-5 rounded-md flex items-center justify-center bg-white">
@@ -49,7 +51,7 @@ const TopicPage = ({ params }: any) => {
                         className={clsx(
                             "lg:text-[20px] leading-6.5 mb-10 opacity-80"
                         )}
-                        // style={{ fontWeight: "500" }}
+                    // style={{ fontWeight: "500" }}
                     >{topic.subtitle}</h3>
 
                     <ul className="flex flex-col w-full gap-[8px]">
