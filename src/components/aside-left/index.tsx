@@ -108,7 +108,8 @@ const SideBarAccordion = () => {
             className={
                 clsx(
                     "AccordionRoot lg:max-h-[96%] overflow-y-auto xl:h-auto",
-                    "pt-4 lg:pb-2 space-y-3 gap-[8px] scrollbar-hide"
+                    "pt-4 lg:pb-2 space-y-3 gap-[8px]",
+                    "scrollbar-hide"
                 )
             }
             type="single"

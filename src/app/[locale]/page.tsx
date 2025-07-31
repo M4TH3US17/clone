@@ -39,7 +39,7 @@ export default function Home() {
         <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
           <h1
             className={clsx(
-              "text-4xl xl:leading-[4rem] 2lg:text-[3.4rem] text-gray-700 ",
+              "text-[2.5rem] xl:leading-[4rem] 2lg:text-[3.4rem] text-gray-700 ",
               "font-bold mb-2.5 text-left md:text-center"
             )}
           >Como podemos ajudar?</h1>
@@ -51,7 +51,7 @@ export default function Home() {
                 "px-1 md:px-0 text-left",       // Base (mobile)
                 "lg:leading-[1.5rem]",          // lg: ≥1024px
                 "xl:leading-[1.6rem]",          // xl: ≥1280px
-                "text-lg max-w-[400px] m-auto md:text-center"
+                "text-[1.2rem] max-w-[460px] m-auto md:text-center"
               )
             }
           >
