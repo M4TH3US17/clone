@@ -48,6 +48,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                                 isOpen ? "text-stone-900" : ""
                             )
                         }
+                        onClick={() => router.push(`/${topic.slug}`)}
                     >{topic.title}</p>
                 </div>
                 <div className={

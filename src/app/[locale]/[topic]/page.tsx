@@ -22,34 +22,39 @@ const TopicPage = ({ params }: any) => {
 
     return (
         <main className={clsx(
-            "bg-neutral text-primary",
-            "flex min-h-screen flex-[1] relative"
+            "bg-neutral text-primary ml-0 lg:ml-[18.72rem]",
+            "flex min-h-screen flex-[1] relative",
+            "2xl:flex 2xl:justify-center",
         )}>
             <section className={clsx(
-                "lg:bg-amber-200 w-full flex lg:justify-end"
+                "lg:flex lg:justify-center",
+                "w-full flex lg:justify-end lg:max-w-[1148px]",
             )}>
                 <div
                     className={clsx(
-                        "bg-neutral",
-                        "lg:p-[40px 64px 120px] xl:p-[20px 128px 120px]"
+                        "bg-neutral w-full",
+                        "lg:w-[calc(100vw - 18.72rem)]",
+                        "md:pt-[40px] md:pr-[64px] md:pl-[64px] md:pb-[120px]",
+                        "xl:pt-[20px] 2xl:pr-[128px] 2xl:pl-[128px] xl:pb-[120px]",
                     )}
                     style={{
-                        width: 'calc(100vw - 18.72rem)',
+                        width: '',
                         // padding: "40px 64px 120px"
                     }}
                 >
-                    <div className="lg:h-[36px] lg:w-[36px] mb-5 rounded-md flex items-center justify-center bg-white">
-                        <Icon className="lg:h-[20px] lg:w-[20px]" />
+                    <div className="h-[36px] w-[36px] mb-5 rounded-md flex items-center justify-center bg-white">
+                        <Icon className="h-[20px] w-[20px]" />
                     </div>
 
                     <h1
                         className={clsx(
-                            "lg:text-5xl lg:leading-14 lg:pb-3.5"
+                            "md:pb-3.5 font-[500]",
+                            "md:text-5xl md:leading-14 xl:text-[3.8rem]"
                         )}>{topic.title}</h1>
 
                     <h3
                         className={clsx(
-                            "lg:text-[20px] leading-6.5 mb-10 opacity-80"
+                            "md:text-[20px] leading-6.5 mb-10 opacity-80"
                         )}
                     // style={{ fontWeight: "500" }}
                     >{topic.subtitle}</h3>
@@ -61,11 +66,11 @@ const TopicPage = ({ params }: any) => {
                                 onClick={() => handleCLick(article)}
                                 className={clsx(
                                     "bg-white flex justify-between items-center",
-                                    "lg:py-3.5 lg:px-5 border border-gray-200 rounded-md"
+                                    "md:py-3.5 md:px-5 border border-gray-200 rounded-md"
                                 )}
                             >
                                 <span
-                                    className="lg:text-[16px]"
+                                    className="md:text-[16px]"
                                     style={{ fontWeight: "500" }}
                                 >{article.title}</span>
                                 <ChevronRight
