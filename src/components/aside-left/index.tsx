@@ -130,6 +130,7 @@ const SideBarAccordion = () => {
 }
 
 const AsideLeft = () => {
+    const router = useRouter();
 
     return (
         <aside
@@ -164,6 +165,7 @@ const AsideLeft = () => {
                         )
                     }
                     style={{ fontWeight: "500" }}
+                    onClick={() => router.push(`/`)}
                 >Help Center</div>
             </div>
             <SideBarAccordion />
