@@ -13,7 +13,8 @@
     /* Valor padrão ou personalizado para 'lg-1100px' */
     --breakpoint-2lg: 1100px;
     /* Valor padrão ou personalizado para 'lg' */
-    --breakpoint-xl: 1440px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1440px;
     /* Valor padrão ou personalizado para 'xl' */
     --breakpoint-2xl: 1536px;
     /* Valor padrão ou personalizado para '2xl' */
