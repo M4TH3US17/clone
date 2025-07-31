@@ -26,7 +26,10 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                     "py-1 pl-3 w-full "
                 )
             }>
-                <div className="flex w-full 2lg:text-[16px] h-[40px] items-center gap-2">
+                <div
+                    onClick={() => router.push(`/${topic.slug}`)}
+                    className="flex w-full 2lg:text-[16px] h-[40px] items-center gap-2"
+                >
                     <Icon className="w-4 h-4 text-gray-400 font-extrabold" />
                     <p className={
                         clsx(
