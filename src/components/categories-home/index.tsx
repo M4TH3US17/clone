@@ -3,6 +3,7 @@ import { HelpCenterData, Topic } from "@/types/sidebar";
 import clsx from "clsx";
 import Link from "next/link";
 import { getLucideIcon } from "../ui/icon-wrapper";
+import { useRouter } from "next/navigation";
 
 const CategoriesHome = () => {
 
@@ -10,17 +11,17 @@ const CategoriesHome = () => {
 
   const TopicItem = ({ topic }: { topic: Topic }) => {
 
+    const router = useRouter();
     const Icon = getLucideIcon(topic.icon);
 
     return (
-      <Link
-        href={topic.title}
+      <div
         className={clsx(
           "relative bg-white rounded-[3%] border border-gray-300 cursor-pointer flex flex-col p-[20px]",
           "flex-1 h-[225px] w-[256px]",//  min-w-[220px] md:max-w-[350px] max-h-[240px]
           "aspect-square py-4"
         )}
-
+        onClick={() => router.push(`/${topic.slug}`)}
       >
         <div className="flex flex-col gap-3  lg:gap-4 justify-start items-start">
           <div
@@ -68,7 +69,7 @@ const CategoriesHome = () => {
             {`(${topic.articles.length} ARTIGOS)`}
           </p>
         </div>
-      </Link>
+      </div>
     )
   }
 

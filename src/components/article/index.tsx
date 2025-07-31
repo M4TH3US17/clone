@@ -13,7 +13,7 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
         <div className={clsx(
             "flex justify-center w-full",
             "lg:px-[8%] xl:px-[6%]",
-            "xl:w-[calc(100%-13rem)]"
+            "xl:w-[calc(100% - 13rem)]"
         )}>
             <ArticleContent article={article} />
         </div>

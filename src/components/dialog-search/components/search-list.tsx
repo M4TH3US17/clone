@@ -7,6 +7,7 @@ import { useKeyboardShortcuts } from "@/hooks/hook-keyboard-shortcuts";
 import { HelpCenterData } from "@/types/sidebar";
 import { useDataStore } from "@/store/dataStore";
 import { getLucideIcon } from "@/components/ui/icon-wrapper";
+import { useRouter } from "next/navigation";
 
 export function SearchItemList({ items, selectedIndex }: {
   items: { icon: React.ReactNode; title: string; description: string }[];
@@ -14,8 +15,7 @@ export function SearchItemList({ items, selectedIndex }: {
 }) {
 
   const sidebarTopics: HelpCenterData = useDataStore((state) => state.data.topics);
-
-  console.log(sidebarTopics)
+  const router = useRouter();
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700 max-h-96 overflow-y-auto bg-white h-[350px] p-3">
@@ -33,6 +33,7 @@ export function SearchItemList({ items, selectedIndex }: {
                 ? "bg-indigo-50 dark:bg-primary-dark"
                 : "hover:bg-indigo-50 dark:hover:bg-secondary-dark"
             )}
+            onClick={() => router.push(`/${item.slug}`)}
           >
             <div className="text-primary 600 mr-2 mt-1 bg-neutral p-[5px] rounded-md">
               <Icon className="p-[4px]" />
