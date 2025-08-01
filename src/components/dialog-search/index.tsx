@@ -37,7 +37,7 @@ export const DialogSearch: FC<{
                                 "focus-within:ring-1 focus-within:ring-blue-500 bg",
                                 "focus-within:border-blue-500 bg-white rounded-t-lg"
                             )}>
-                                <Search size={16} className="text-gray-600 dark:text-gray-400 mr-2 cursor-pointer" />
+                                <Search size={16} className="text-gray-600 mr-2 cursor-pointer" />
                                 <input
                                     ref={inputRef}
                                     type="text"
@@ -46,11 +46,11 @@ export const DialogSearch: FC<{
                                     placeholder={t("placeholder")}
                                     value={value}
                                     onChange={e => setValue(e.target.value)}
-                                    className="flex-1 outline-none bg-transparent text-light dark:text-dark placeholder-gray-600 text-[13px] w-full"
+                                    className="flex-1 outline-none bg-transparent text-gray-600 placeholder-gray-600 text-[13px] w-full"
                                 />
                                 {
                                     value && value.length > 0 ?
-                                        <CircleX size={16} className="cursor-pointer" onClick={() => setValue("")} /> : null
+                                        <CircleX size={16} className="cursor-pointer text-gray-600" onClick={() => setValue("")} /> : null
                                 }
 
                             </div>
