@@ -21,9 +21,9 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
         <Accordion.Item className="AccordionItem cursor-pointer m-0" value={topic.title}>
             <AccordionTrigger className={
                 clsx(
-                    "text-black-700 rounded-xl cursor-pointer",
+                    "text-black-700 cursor-pointer rounded-md",
                     "flex items-center justify-between gap-1",
-                    "py-1 pl-3 w-full "
+                    "py-0.5 pl-3 pr-3 w-full hover:bg-stone-200 group mb-1.5"
                 )
             }>
                 <div
@@ -32,6 +32,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                 >
                     <Icon
                         className={clsx(
+                            "group-hover:text-stone-900",
                             "w-4 h-4 text-gray-400 font-extrabold",
                             isOpen ? "text-stone-900" : ""
                         )}
@@ -41,7 +42,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                         style={{ fontWeight: "500" }}
                         className={
                             clsx(
-                                "text-gray-600",
+                                "text-gray-600 group-hover:text-stone-900",
                                 "max-w-[11rem] 2lg:text-[13px]",
                                 "lg::overflow-hidden whitespace-nowrap",
                                 "lg:truncate",
@@ -53,7 +54,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                 </div>
                 <div className={
                     clsx(
-                        "group hover:bg-gray-200 ",
+                        "group hover:bg-gray-300 ",
                         "cursor-pointer",
                         "rounded-[6px] p-1"
                     )
@@ -61,7 +62,8 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                     <ChevronRight
                         className={
                             clsx(
-                                "group-hover:bg-gray-200 group-hover:text-stone-500 w-4.5 h-4.5 transition-transform duration-200 text-gray-300 bg-neutral border-0",
+                                "group-hover:text-stone-600",
+                                "w-4.5 h-4.5 transition-transform duration-200 text-gray-300 border-0",
                                 isOpen ? "rotate-90 text-stone-500" : "rotate-0"
                             )
                         }
@@ -70,7 +72,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
             </AccordionTrigger>
             <AccordionContent>
                 {topic.articles && (
-                    <ul className="ml-7 mt-1">
+                    <ul className="ml-7 mt-1 mb-1">
                         {
                             topic.articles.map((subitem, index) => (
                                 <li
