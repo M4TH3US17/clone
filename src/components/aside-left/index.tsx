@@ -108,13 +108,16 @@ const SideBarAccordion = () => {
 
     return (
         <Accordion.Root
-            className={
-                clsx(
-                    "AccordionRoot lg:max-h-[96%] overflow-y-auto xl:h-auto",
-                    "pt-4 lg:pb-2 space-y-3 gap-[8px]",
-                    "scrollbar-hide"
-                )
-            }
+            className={clsx(
+                "[&::-webkit-scrollbar]:hidden",
+                "ms-overflow-style:none",
+                "scrollbar-width:none",
+                "overflow-y-auto",
+                "max-h-[96%]", // Altura máxima padrão para todos os breakpoints
+                "lg:max-h-[96%]", // Pode ser redundante, mas garante no lg
+                "xl:max-h-[96%]", // Garante altura máxima também no xl
+                "pt-4 lg:pb-2 space-y-3 gap-[8px] mt-2.5"
+            )}
             type="single"
             value={openValue}
             onValueChange={(val) => setOpenValue(val)}
@@ -154,7 +157,7 @@ const AsideLeft = () => {
                     clsx(
                         "rounded-full text-primary border-none",
                         "pt-[15px] pb-[2px] pl-[15px] pr-[16px]",
-                        "flex justify-between "
+                        "flex justify-between"
                     )
                 }
             >
