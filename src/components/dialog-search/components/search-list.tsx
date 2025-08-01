@@ -38,9 +38,13 @@ export function SearchItemList({ items, selectedIndex }: {
             <div className="text-primary 600 mr-2 mt-1 bg-neutral p-[5px] rounded-md">
               <Icon className="p-[4px]" />
             </div>
-            <div>
-              <h4 className="font-medium text-[13px] text-gray-800 text-nowrap">{item.title}</h4>
-              <p className="text-sm text-[11px] text-gray-500 text-nowrap">{item.subtitle}</p>
+            <div className="min-w-0"> {/* Adicione esta classe para evitar que o flex item cresça */}
+              <h4 className="font-medium text-[13px] text-gray-800 truncate"> {/* Adicione truncate aqui */}
+                {item.title}
+              </h4>
+              <p className="text-sm text-[11px] text-gray-500 truncate"> {/* Adicione truncate aqui */}
+                {item.subtitle}
+              </p>
             </div>
           </button>
         )
