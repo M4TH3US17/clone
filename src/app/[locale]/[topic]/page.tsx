@@ -5,6 +5,7 @@ import { Article, HelpCenterData } from "@/types/sidebar";
 import clsx from "clsx";
 import { ChevronRight } from "lucide-react";
 import { notFound, useRouter } from "next/navigation";
+import Breadcrumb from "../breadCrumb";
 
 const TopicPage = ({ params }: any) => {
     const helpCenter: HelpCenterData = useDataStore((state) => state.data.topics);
@@ -43,7 +44,8 @@ const TopicPage = ({ params }: any) => {
                         // padding: "40px 64px 120px"
                     }}
                 >
-                    <div className="h-[36px] w-[36px] mb-5 rounded-md flex items-center justify-center bg-white">
+                    <Breadcrumb />
+                    <div className="h-[36px] w-[36px] mt-10 mb-5 rounded-md flex items-center justify-center bg-white">
                         <Icon className="h-[20px] w-[20px]" />
                     </div>
 

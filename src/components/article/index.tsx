@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 import { ArticleContent } from "./content";
+import Breadcrumb from "@/app/[locale]/breadCrumb";
 
 export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
 
@@ -15,6 +16,7 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
             "lg:px-[8%] xl:px-[6%]",
             "xl:w-[calc(100% - 13rem)]"
         )}>
+            
             <ArticleContent article={article} />
         </div>
         <ArticleSummary sections={article.sections} />
@@ -28,6 +30,7 @@ const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
         "fixed right-0 h-full pt-6",
         "border-l border-gray-200 w-52 hidden xl:block"
     )}>
+        
         <h2 className="text-[0.8rem] pl-6 mb-4 font-semibold opacity-40">SUMMARY</h2>
         <ul >
             {sections.map((summaryItem, index: number) => <li
