@@ -7,6 +7,7 @@ import { MdAccordionCategories } from "../aside-left";
 import { DialogSearch } from "../dialog-search";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import LanguageSwitcherSimple from "../ui/languageSwitcherSimple";
 
 const Header = () => {
 
@@ -112,6 +113,7 @@ const Header = () => {
                         icon={<ExternalLink className="w-4 h-4 text-stone-500 group-hover:text-black" />}
                     />
 
+                <LanguageSwitcherSimple/>
                 </div>
             </div>
             <MdAccordionCategories />
