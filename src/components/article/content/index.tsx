@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 import { returnArticleDescription, returnArticleSection } from "../../../../public/assets/data/utils/data-ui-lib";
+import Breadcrumb from "@/app/[locale]/breadCrumb";
 
 export const ArticleContent: FC<{ article: any }> = ({ article }) => {
     // console.log(article)
@@ -9,7 +10,8 @@ export const ArticleContent: FC<{ article: any }> = ({ article }) => {
         "w-[100%] py-12",
         " lg:max-w-[700px] xl:max-w-[688px]"
     )}>
-        <h2 className="text-5xl text-primary font-extrabold mb-9 leading-13">{article.title}</h2>
+        <Breadcrumb />
+        <h2 className="text-5xl mt-6 text-primary font-extrabold mb-9 leading-13">{article.title}</h2>
 
         {
             returnArticleDescription(article.description, {
