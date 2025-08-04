@@ -7,12 +7,12 @@
             "subtitle": "Conheca o que e o PASS, seus modulos e como ele conecta",
             "articles": [
                 {
-                    "title": "Getting started with sequence diagrams",
+                    "title": "Getting started with flowcharts",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
                     "description": [
                         {
-                            "text": "A sequence diagram is a type of UML (Unified Modeling Language) diagram that shows the interactions between various components or objects in a system. It provides a visual representation of the order of messages or events over time."
+                            "text": "This article is a quick guide to help you get the most out of Whimsical flowcharts. For a more interactive experience, check out this template: How to make a Flowchart"
                         }
                     ],
                     "details": {
@@ -22,7 +22,7 @@
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
-                            "title": "Research, brainstorming & ideation",
+                            "title": "Making a flowchart",
                             "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -39,6 +39,38 @@
                                             "href": "link"
                                         }
                                     ]
+                                },
+                                {
+                                    "text": "DESCRICAO_LISTA #breakpoint1 DESCRICAO_LISTA",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1",
+                                            "href": "link"
+                                        }
+                                    ],
+                                    "list": {
+                                        "isUl": true,
+                                        "text": "DESCRICAO LISTAAAAAAAAAAAAAAA",
+                                        "items": [
+                                            {
+                                                "li": "Open the file or folder you want to customize",
+                                                "links": []
+                                            },
+                                            {
+                                                "li": "Click the default icon next to the name of the file or folder",
+                                                "links": []
+                                            },
+                                            {
+                                                "li": "An icon picker menu will pop up",
+                                                "links": []
+                                            },
+                                            {
+                                                "li": "Choose an icon from the icon picker and customize its color if desired",
+                                                "links": []
+                                            }
+                                        ]
+                                    }
                                 }
                             ],
                             "tables": [

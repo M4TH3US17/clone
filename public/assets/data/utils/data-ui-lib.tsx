@@ -28,7 +28,10 @@ export function returnArticleSection(section: any, props?: ISectionProps, key?: 
             props?.className
         )}>
 
-        <h2 className="text-xl font-semibold text-gray-600 mb-7">{section.title}</h2>
+        <h2
+            style={{ fontSize: "24px" }}
+            className="font-semibold text-primary mb-7"
+        >{section.title}</h2>
         <h3>{section.subtitle}</h3>
         {
             returnArticleDescription(section.description, { box: { className: "bg-amber-500" } })
@@ -51,13 +54,13 @@ function sectionBody(section: any, props?: ISectionProps) {
             const isTable = Object.prototype.hasOwnProperty.call(item, "rows");  // ou outra condição que identifique tabelas
             const isMedia = Object.prototype.hasOwnProperty.call(item, "type");   // ou outra condição que identifique mídias
 
-            if (isTable) 
+            if (isTable)
                 return table(item, props?.tables);
 
-            if (isMedia) 
+            if (isMedia)
                 return media(item, props?.medias);
 
-            return null; 
+            return null;
         })}
     </>
 }
@@ -131,7 +134,7 @@ export function table(table: any, props?: ITableProps[]) {
 export function media(media: any, props?: IMediaProps[]) {
     // console.log(props)
     if (media.type === "IMAGE" || media.type === "GIF") {
-        return <img src={media.link} key={media.order}/>
+        return <img src={media.link} key={media.order} />
     }
 
     if (media.type === "VIDEO") {
@@ -142,8 +145,8 @@ export function media(media: any, props?: IMediaProps[]) {
 /* Funcoes de utilidades gerais */
 function box(body: any, className: any) {
     return <div
-        style={{ borderRadius: "0.700rem" }}
-        className={clsx("border-gray-200 p-6 px-6", className)}
+        style={{ borderRadius: "0.700rem", padding: "1.25rem 1.25rem" }}
+        className={clsx("border border-gray-200 mb-10", className)}
     >{body}</div>
 }
 
