@@ -5,14 +5,13 @@ import Button from "../ui/button";
 import LogoPass from "../ui/logo-chumbo-pass";
 import { MdAccordionCategories } from "../aside-left";
 import { DialogSearch } from "../dialog-search";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import LanguageSwitcherSimple from "../ui/languageSwitcherSimple";
 
 const Header = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     return (
         <header
@@ -26,7 +25,11 @@ const Header = () => {
                 )
             }
         >
-            <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)} />
+            <DialogSearch
+                isOpen={isSearchOpen}
+                handleClose={() => setIsSearchOpen(false)}
+                handleOpen={() => setIsSearchOpen(true)}
+            />
 
             <div className={
                 clsx(
@@ -61,7 +64,7 @@ const Header = () => {
                         "py-2 px-3",
                         "text-text-light-1 text-center hover:border-gray-400" // Hover do container (opcional)
                     )}
-                    onClick={() => setIsOpen(true)}
+                    onClick={() => setIsSearchOpen(true)}
                 >
                     <Search
                         className="w-4 h-4 opacity-50 font-semibold group-hover:opacity-100 group-hover:border-stone-100"
@@ -113,7 +116,7 @@ const Header = () => {
                         icon={<ExternalLink className="w-4 h-4 text-stone-500 group-hover:text-black" />}
                     />
 
-                <LanguageSwitcherSimple/>
+                    <LanguageSwitcherSimple />
                 </div>
             </div>
             <MdAccordionCategories />

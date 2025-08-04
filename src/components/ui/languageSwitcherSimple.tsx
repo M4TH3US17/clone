@@ -81,8 +81,8 @@ const LanguageSwitcherSimple = ({
     }
   };
 
-  const dropdownClasses = dropdownPosition === "top" 
-    ? "bottom-full right-0 mb-2" 
+  const dropdownClasses = dropdownPosition === "top"
+    ? "bottom-full right-0 mb-2"
     : "top-full right-0 mt-2";
 
   return (
@@ -100,15 +100,16 @@ const LanguageSwitcherSimple = ({
         delay: 0.3,
       }}
     >
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center cursor-pointer"
       >
         <Image
           src={getCurrentLanguage().flag}
           alt={getCurrentLanguage().locale}
-          width={18}
-          height={18}
+          width={20}
+          height={20}
+          style={{ borderRadius: '50%' }}
         />
       </button>
 
@@ -117,13 +118,13 @@ const LanguageSwitcherSimple = ({
           <motion.div
             initial={{ opacity: 0, y: dropdownPosition === "top" ? 10 : -10 }}
             exit={{ opacity: 0, y: dropdownPosition === "top" ? 5 : -5 }}
-          
+
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.4,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className={`absolute overflow-hidden ${dropdownClasses} bg-white dark:bg-secondary-dark dark:border dark:border-bor-dark rounded-2xl p-3 shadow-lg min-w-[200px] z-10`}
+            className={`absolute overflow-hidden ${dropdownClasses} bg-white dark:bg-secondary-dark dark:border dark:border-bor-dark p-3 shadow-lg min-w-[200px] z-10`}
           >
             {languages.map((language, index) => (
               <motion.button
@@ -136,11 +137,10 @@ const LanguageSwitcherSimple = ({
                   ease: "easeOut",
                 }}
                 onClick={() => switchLanguage(language)}
-                className={`w-full px-4 py-2 my-2 text-muted rounded-2xl text-left hover:text-black flex items-center gap-3 cursor-pointer ${
-                  language.locale === currentLocale
-                    ? "bg-gray-200 dark:bg-neutral-800 text-muted"
-                    : "hover:bg-gray-100 dark:hover:bg-neutral-900"
-                }`}
+                className={`w-full px-4 py-2 my-2 text-muted rounded-lg text-left flex items-center gap-3 cursor-pointer ${language.locale === currentLocale
+                    ? "bg-gray-200 dark:bg-neutral text-muted"
+                    : "hover:bg-gray-100 dark:hover:bg-gray-100"
+                  }`}
               >
                 <Image
                   src={language.flag}
@@ -150,10 +150,10 @@ const LanguageSwitcherSimple = ({
                   className="rounded-sm"
                 />
                 <div className="flex flex-col">
-                  <span className="text-sm font-medium text-light dark:text-dark ">
+                  <span className="text-sm font-medium text-gray-600">
                     {language.name}
                   </span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                  <span className="text-xs text-gray-600">
                     {language.country}
                   </span>
                 </div>

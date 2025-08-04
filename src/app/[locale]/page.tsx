@@ -11,9 +11,7 @@ import { DialogSearch } from "@/components/dialog-search";
 export default function Home() {
 
   const currentLanguage = useLanguageStore((state) => state.language);
-
   const [data, setData] = useState<object>(returnData(currentLanguage))
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -35,7 +33,11 @@ export default function Home() {
         )}
 
       >
-        <DialogSearch isOpen={isOpen} handleClose={() => setIsOpen(false)} />
+        <DialogSearch
+          isOpen={isOpen}
+          handleClose={() => setIsOpen(false)}
+          handleOpen={() => setIsOpen(true)}
+        />
         <section className="text-center mb-[50px] xl:mb-[60px] lg:min-w-[532px]">
           <h1
             className={clsx(

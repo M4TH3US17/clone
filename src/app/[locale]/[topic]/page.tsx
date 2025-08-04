@@ -45,14 +45,14 @@ const TopicPage = ({ params }: any) => {
                     }}
                 >
                     <Breadcrumb />
-                    <div className="h-[36px] w-[36px] mt-10 mb-5 rounded-md flex items-center justify-center bg-white">
-                        <Icon className="h-[20px] w-[20px]" />
+                    <div className="h-[36px] w-[36px] mt-10 mb-8 rounded-md flex items-center justify-center bg-white">
+                        <Icon className="h-[22px] w-[24px]" />
                     </div>
 
                     <h1
                         className={clsx(
                             "w-[70%] md:w-full ",
-                            "pb-3.5 font-[500]",
+                            "pb-3.5 font-[500] mb-3",
                             "text-5xl leading-14 xl:text-[3.8rem]"
                         )}>{topic.title}</h1>
 
@@ -70,11 +70,11 @@ const TopicPage = ({ params }: any) => {
                                 onClick={() => handleCLick(article)}
                                 className={clsx(
                                     "bg-white flex justify-between items-center",
-                                    "py-3.5 px-5 border border-gray-200 rounded-md"
+                                    "py-3.5 px-5 border border-gray-200 rounded-md cursor-pointer"
                                 )}
                             >
                                 <span
-                                    className="text-[16px] w-[70%] md:w-full truncate"
+                                    className="text-[16px] w-[70%] md:w-full truncate cursor-pointer"
                                     style={{ fontWeight: "500" }}
                                 >{article.title}</span>
                                 <ChevronRight
