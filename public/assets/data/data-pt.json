@@ -41,36 +41,39 @@
                                     ]
                                 },
                                 {
+                                    "isUl": true,
                                     "text": "DESCRICAO_LISTA #breakpoint1 DESCRICAO_LISTA",
                                     "links": [
                                         {
                                             "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1",
+                                            "text": "TEXTO_DO_LINK_1.1",
                                             "href": "link"
                                         }
                                     ],
-                                    "list": {
-                                        "isUl": true,
-                                        "text": "DESCRICAO LISTAAAAAAAAAAAAAAA",
-                                        "items": [
-                                            {
-                                                "li": "Open the file or folder you want to customize",
-                                                "links": []
-                                            },
-                                            {
-                                                "li": "Click the default icon next to the name of the file or folder",
-                                                "links": []
-                                            },
-                                            {
-                                                "li": "An icon picker menu will pop up",
-                                                "links": []
-                                            },
-                                            {
-                                                "li": "Choose an icon from the icon picker and customize its color if desired",
-                                                "links": []
-                                            }
-                                        ]
-                                    }
+                                    "items": [
+                                        {
+                                            "li": "Open #breakpoint3 the file or folder you want to customize",
+                                            "links": [
+                                                {
+                                                    "breakpoint": "#breakpoint3",
+                                                    "text": "TEXTO_DO_LINK_3",
+                                                    "href": "link"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "li": "Click the default icon next to the name of the file or folder",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "An icon picker menu will pop up",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Choose an icon from the icon picker and customize its color if desired",
+                                            "links": []
+                                        }
+                                    ]
                                 }
                             ],
                             "tables": [
