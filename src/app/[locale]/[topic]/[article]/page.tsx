@@ -19,31 +19,35 @@ const ArticlePage = ({ params }: { params: Promise<{ topic: string; article: str
     <ArticleEstructure article={article} />
     return (
         <main className={clsx(
-            "bg-amber-950",
-            // "bg-neutral ",
+            // "bg-amber-950",
+            "bg-neutral ",
             "text-primary ml-0 lg:ml-[18.72rem]",
             "flex min-h-screen flex-[1] relative",
             "2xl:flex 2xl:justify-center",
         )}>
             <section className={clsx(
-                "bg-amber-200",
-                "w-full flex",
+                // "bg-amber-200 ",
+                "w-full",
+                "flex",
                 "lg:flex lg:justify-center",
+                "xl:justify-start"
             )}>
                 <div
                     className={clsx(
-                        "bg-amber-500 w-full",
+                        // "bg-amber-500 ",
+                        "w-full",
                         "pt-[40px] pr-[16px] pb-[120px] pl-[16px]",
                         "md:pt-[40px] md:pr-[64px] md:pl-[64px] md:pb-[120px]",
-                        "lg:w-[calc(100vw - 18.72rem)] lg:flex lg:justify-center",
+                        "lg:flex lg:justify-center",
+                        "xl:w-[calc(100vw-31.72rem)] xl:justify-center",
+                        "2xl:pt-[20px] 2xl:pr-[128px] 2xl:pb-[120px] 2xl:pl-[128px]",
                     )}
-                    style={{ width: '', }}
                 >
-                    <ArticleContent article={article}/>
+                    <ArticleContent article={article} />
                 </div>
                 <ArticleSummary sections={article.sections} />
             </section>
-            
+
         </main>
     )
 };
