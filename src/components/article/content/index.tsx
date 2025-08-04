@@ -6,7 +6,7 @@ import Breadcrumb from "@/app/[locale]/breadCrumb";
 export const ArticleContent: FC<{ article: any }> = ({ article }) => {
 
     return <div className={clsx(
-        " lg:max-w-[688px]",
+        "bg-amber-50 lg:max-w-[688px]",
     )}>
         <Breadcrumb />
         <h2 className="text-5xl mt-6 text-primary font-extrabold mb-9 leading-13">{article.title}</h2>

@@ -26,7 +26,7 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
     </main>
 }
 
-const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
+export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
     const handleScrollToSectionByID = (idSection: string) => console.log("Scrollar a pagina ate a secao de ID " + idSection)
 
     return <aside className={clsx(

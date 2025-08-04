@@ -49,11 +49,8 @@ const Breadcrumb = () => {
                 <span
                   className={clsx(
                     "mx-2 text-gray-400 lg:text-[0.8rem]",
-                    `
-                    ${isLast
-                      ? "text-neutral-900 font-semibold"
-                      : "text-neutral-500 font-semibold"
-                    }`
+                    
+                    "text-neutral-900 font-semibold"
                   )}
                   style={{fontWeight: "500"}}
                 >/</span>
