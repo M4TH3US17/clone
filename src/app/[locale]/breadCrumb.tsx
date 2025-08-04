@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useDataStore } from "@/store/dataStore";
 import { ParamValue } from "next/dist/server/request/params";
+import clsx from "clsx";
 
 const Breadcrumb = () => {
 
@@ -22,28 +23,40 @@ const Breadcrumb = () => {
 
   return (
     <nav className="text-sm">
-      <ol className="flex space-x-2">
+      <ol className="flex">
         {breadcrumbs.map((item, index) => {
           const isLast = index === breadcrumbs.length - 1;
           return (
             <li key={item.label} className="flex items-center text-[0.95rem] font-semibold">
               {item.href && !isLast ? (
-                <Link href={item.href} className="text-neutral-500 hover:text-neutral-600">
+                <Link href={item.href} className="text-neutral-500 hover:text-neutral-600 lg:text-[0.8rem]" style={{fontWeight: "500"}}>
                   {item.label}
                 </Link>
               ) : (
                 <span
-                  className={`${
-                    isLast
-                      ? "text-neutral-700 font-semibold"
+                  className={`
+                    lg:text-[0.8rem]
+                    ${isLast
+                      ? "text-neutral-900 font-semibold"
                       : "text-neutral-500 font-semibold"
-                  }`}
+                    }`}
+                    style={{fontWeight: "500"}}
                 >
                   {item.label}
                 </span>
               )}
               {index < breadcrumbs.length - 1 && (
-                <span className="mx-2 text-gray-400">/</span>
+                <span
+                  className={clsx(
+                    "mx-2 text-gray-400 lg:text-[0.8rem]",
+                    `
+                    ${isLast
+                      ? "text-neutral-900 font-semibold"
+                      : "text-neutral-500 font-semibold"
+                    }`
+                  )}
+                  style={{fontWeight: "500"}}
+                >/</span>
               )}
             </li>
           );

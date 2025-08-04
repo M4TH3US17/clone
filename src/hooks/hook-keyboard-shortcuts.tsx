@@ -2,12 +2,13 @@
 import { useEffect } from "react";
 
 export function useKeyboardShortcuts(handlers: {
-  onSelect?: () => void;
-  onNavigateUp?: () => void;
-  onNavigateDown?: () => void;
-  onNavigateRight?: () => void;
-  onNavigateLeft?: () => void;
-  onClose?: () => void;
+    onSelect?: () => void;
+    onNavigateUp?: () => void;
+    onNavigateDown?: () => void;
+    onNavigateRight?: () => void;
+    onNavigateLeft?: () => void;
+    onClose?: () => void;
+    onOpen?: () => void; 
 }) {
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -23,6 +24,9 @@ export function useKeyboardShortcuts(handlers: {
                 handlers.onNavigateLeft?.();
             } else if (e.key === "Escape") {
                 handlers.onClose?.();
+            } else if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                handlers.onOpen?.();
             }
         };
 
