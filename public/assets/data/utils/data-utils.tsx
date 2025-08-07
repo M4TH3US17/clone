@@ -33,8 +33,14 @@ function processDescriptions(data: any): any {
                 const description = data[key];
 
                 for (const textKey in description) {
-                    if (description[textKey]?.hasOwnProperty('links'))
+                    if (description[textKey]?.hasOwnProperty('paragraphs')) {
+                        const paragraphs = description[textKey].paragraphs.map((paragraph: any) => (paragraph.hasOwnProperty('links')) ? paragraph = adjustLink(paragraph) : {})
+                        description[textKey] = { ...description[textKey], paragraphs }
+                    }
+
+                    if (description[textKey]?.hasOwnProperty('links')) {
                         description[textKey] = adjustLink(description[textKey]);
+                    }
                 }
 
             } else {
@@ -49,7 +55,7 @@ function processDescriptions(data: any): any {
 
 function adjustLink(descriptionObject: any): any {
     descriptionObject.links.map((link: any) => descriptionObject.text = descriptionObject.text.replace(link.breakpoint, `<a href='${link.href}'>${link.text}</a>`))
-    
+
     const isListagem = descriptionObject.items
     if (isListagem) {
         const listagem = descriptionObject.items
@@ -69,5 +75,5 @@ function adjustLink(descriptionObject: any): any {
         return listagem_formatada;
     }
 
-    return { text: descriptionObject.text };
+    return { text: descriptionObject.text, props: descriptionObject.props };
 }

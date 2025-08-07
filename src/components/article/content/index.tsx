@@ -13,9 +13,7 @@ export const ArticleContent: FC<{ article: any }> = ({ article }) => {
         <h2 className="text-5xl mt-9 text-primary font-extrabold mb-9 leading-15">{article.title}</h2>
 
         {
-            returnArticleDescription(article.description, {
-                box: { className: "bg-amber-500" }
-            })
+            returnArticleDescription(article.description)
         }
 
         {
