@@ -10,12 +10,10 @@ export const ArticleContent: FC<{ article: any }> = ({ article }) => {
         " lg:max-w-[688px]",
     )}>
         <Breadcrumb />
-        <h2 className="text-5xl mt-6 text-primary font-extrabold mb-9 leading-13">{article.title}</h2>
+        <h2 className="text-5xl mt-9 text-primary font-extrabold mb-9 leading-15">{article.title}</h2>
 
         {
-            returnArticleDescription(article.description, {
-                box: { className: "bg-amber-500 mb-7" }
-            })
+            returnArticleDescription(article.description)
         }
 
         {

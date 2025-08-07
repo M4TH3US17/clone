@@ -1,41 +1,67 @@
 import clsx from "clsx";
 import { IDescriptionProps, IMediaProps, ISectionProps, ITableProps } from "./data-interfaces";
 import parse from 'html-react-parser';
+import { object } from "framer-motion/client";
 
 
 /* Funcoes de Manipulacao da Descricao */
-export function returnArticleDescription(description: any, props?: IDescriptionProps) {
-    const is_paragraph = (description.length !== 1)
+export function returnArticleDescription(description: any) {
+    const many_descriptions = (description.length !== 1)
+    const isList = (obj: any): boolean => obj.items ? true : false;
 
-    if (is_paragraph) {
-        const paragraphs = description.map((paragraph: any, index: number) => <p key={index} className={`mb-2 ${props?.className}`}> {parse(paragraph.text)} </p>)
-        if (props?.box) return box(paragraphs, props.box.className)
-        return <div className="mb-9">{paragraphs}</div>
+    // if (many_descriptions) {
+        return <div className="mb-9">
+            {
+                description.map((desc: any, index: number) => {
+                    if (isList(desc))
+                        return list(desc, desc.props)
 
-    } else {
-        const text = parse(description[0].text)
-        if (props?.box) return box(text, props.box.className)
-        return <p className={`mb-9 ${props?.className}`}>{parse(description[0].text)}</p>;
-    }
+                    if (desc.isParagraph) {
+                        const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`mb-2 ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
+
+                        if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
+
+                        return paragraphs
+                    }
+
+                    console.log()
+                    // console.log(desc.paragraphs[0])
+
+                    if(desc.props?.box)
+                        return box(<p key={index} className={`mb-2`}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
+
+                    return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
+                })
+            }
+        </div>
+
+    // } else {
+    //     const text = parse(description[0].text)
+    //     if (description.props?.box) return box(text)
+    //     return <p className={`mb-9 ${description.props?.className}`}>{parse(description[0].text)}</p>;
+    // }
 }
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
-export function returnArticleSection(section: any, props?: ISectionProps, key?: number) {
+export function returnArticleSection(section: any, key?: number) {
     return <div
         key={key}
         className={clsx(
             "mb-9",
-            props?.className
+            section.props?.className
         )}>
 
-        <h2 className="text-xl font-semibold text-gray-600 mb-7">{section.title}</h2>
+        <h2
+            style={{ fontSize: "24px" }}
+            className="font-semibold text-primary mb-7"
+        >{section.title}</h2>
         <h3>{section.subtitle}</h3>
         {
-            returnArticleDescription(section.description, { box: { className: "bg-amber-500" } })
+            returnArticleDescription(section.description)
         }
 
         {
-            sectionBody(section, props)
+            sectionBody(section)
         }
 
     </div>
@@ -51,13 +77,13 @@ function sectionBody(section: any, props?: ISectionProps) {
             const isTable = Object.prototype.hasOwnProperty.call(item, "rows");  // ou outra condição que identifique tabelas
             const isMedia = Object.prototype.hasOwnProperty.call(item, "type");   // ou outra condição que identifique mídias
 
-            if (isTable) 
+            if (isTable)
                 return table(item, props?.tables);
 
-            if (isMedia) 
+            if (isMedia)
                 return media(item, props?.medias);
 
-            return null; 
+            return null;
         })}
     </>
 }
@@ -131,7 +157,7 @@ export function table(table: any, props?: ITableProps[]) {
 export function media(media: any, props?: IMediaProps[]) {
     // console.log(props)
     if (media.type === "IMAGE" || media.type === "GIF") {
-        return <img src={media.link} key={media.order}/>
+        return <img src={media.link} key={media.order} />
     }
 
     if (media.type === "VIDEO") {
@@ -140,13 +166,32 @@ export function media(media: any, props?: IMediaProps[]) {
 }
 
 /* Funcoes de utilidades gerais */
-function box(body: any, className: any) {
+function box(body: any, className?: any) {
     return <div
-        style={{ borderRadius: "0.700rem" }}
-        className={clsx("border-gray-200 p-6 px-6", className)}
+        style={{ borderRadius: "0.700rem", padding: "1.25rem 1.25rem" }}
+        className={clsx("border border-gray-200 mb-10", className)}
     >{body}</div>
 }
 
-function list() {
-    return <></>
+function list(listagemObject: any, props?: any) {
+    const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-2">{parse(text)}</li>)
+    const listText = <p className="text-stone-900" style={{marginBottom: "1rem", fontWeight: "500"}}>{listagemObject.text}</p>
+
+    if (props.isUl) {
+        return (
+            <div>
+                {listText}
+                <ul className="list-inside list-disc pl-5 [&>li]:marker:text-blue-500 text-stone-900">
+                    {items}
+                </ul>
+            </div>)
+    } else {
+        return (
+            <div>
+                {listText}
+                <ol className="list-inside list-disc pl-5 [&>li]:marker:text-blue-500 text-stone-900">
+                    {items}
+                </ol>
+            </div>)
+    }
 }

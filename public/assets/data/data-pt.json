@@ -7,12 +7,24 @@
             "subtitle": "Conheca o que e o PASS, seus modulos e como ele conecta",
             "articles": [
                 {
-                    "title": "Getting started with sequence diagrams",
+                    "title": "Getting started with flowcharts",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
                     "description": [
                         {
-                            "text": "A sequence diagram is a type of UML (Unified Modeling Language) diagram that shows the interactions between various components or objects in a system. It provides a visual representation of the order of messages or events over time."
+                            "isParagraph": false,
+                            "props": {
+                                "box": {
+                                    "className": "bg-amber-500"
+                                }
+                            },
+                            "paragraphs": [
+                                {
+                                    "props": {},
+                                    "text": "This article is a quick guide to help you get the most out of Whimsical flowcharts. For a more interactive experience, check out this template: How to make a Flowchart",
+                                    "links": []
+                                }
+                            ]
                         }
                     ],
                     "details": {
@@ -22,21 +34,75 @@
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
-                            "title": "Research, brainstorming & ideation",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
+                            "title": "Making a flowchart",
+                            "props": {},
                             "description": [
                                 {
-                                    "text": "DESCRICAO_DA_SECAO_1 #breakpoint1 DESCRICAO_DA_SECAO_1",
+                                    "isParagraph": true,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-amber-500"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "PARAGRAFO_1 #breakpoint1 PARAGRAFO_1",
+                                            "links": [
+                                                {
+                                                    "breakpoint": "#breakpoint1",
+                                                    "text": "TEXTO_DO_PARAGRAFO_LINK_1",
+                                                    "href": "link"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "props": {},
+                                            "text": "PARAGRAFO_2 #breakpoint1 PARAGRAFO_2",
+                                            "links": [
+                                                {
+                                                    "breakpoint": "#breakpoint1",
+                                                    "text": "TEXTO_DO_PARAGRAFO_LINK_2",
+                                                    "href": "link"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "DESCRICAO_LISTA #breakpoint1 DESCRICAO_LISTA",
                                     "links": [
                                         {
                                             "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1",
+                                            "text": "TEXTO_DO_LINK_1.1",
                                             "href": "link"
+                                        }
+                                    ],
+                                    "items": [
+                                        {
+                                            "li": "Open #breakpoint3 the file or folder you want to customize",
+                                            "links": [
+                                                {
+                                                    "breakpoint": "#breakpoint3",
+                                                    "text": "TEXTO_DO_LINK_3",
+                                                    "href": "link"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "breakpoint": "#breakpoint2",
-                                            "text": "TEXTO_DO_LINK_2",
-                                            "href": "link"
+                                            "li": "Click the default icon next to the name of the file or folder",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "An icon picker menu will pop up",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Choose an icon from the icon picker and customize its color if desired",
+                                            "links": []
                                         }
                                     ]
                                 }
@@ -153,7 +219,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -247,7 +312,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -341,7 +405,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -435,7 +498,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -513,12 +575,35 @@
             "subtitle": "Configure contas, receba pagamentos e antecipe.",
             "articles": [
                 {
-                    "title": "TITULO_DO_ARTIGO",
+                    "title": "Conta a Pagar",
                     "slug": "titulo-do-artigo",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
                     "description": [
                         {
-                            "text": "DESCRICAO_DO_ARTIGO"
+                            "isParagraph": false,
+                            "props": {
+                                "box": {
+                                    "className": "bg-amber-500"
+                                }
+                            },
+                            "paragraphs": [
+                                {
+                                    "props": {},
+                                    "text": "O módulo Conta a Pagar é utilizado para o registro, controle e acompanhamento de lançamentos financeiros relacionados a despesas da empresa. A seguir, você confere uma explicação simples sobre cada seção do formulário.",
+                                    "links": []
+                                },
+                                {
+                                    "props": {},
+                                    "text": "PARAGRAFO_2 #breakpoint1 PARAGRAFO_2",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_PARAGRAFO_LINK_2",
+                                            "href": "link"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "details": {
@@ -528,73 +613,265 @@
                     "sections": [
                         {
                             "idSection": "TITULO_DA_SECAO_1",
-                            "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
+                            "title": "Dados Gerais",
+                            "props": {},
                             "description": [
                                 {
-                                    "text": "DESCRICAO_DA_SECAO_1",
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Esta seção contém as informações básicas da conta a pagar:",
                                     "links": [
                                         {
                                             "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1",
+                                            "text": "TEXTO_DO_LINK_1.1",
                                             "href": "link"
+                                        }
+                                    ],
+                                    "items": [
+                                        {
+                                            "li": "Conta: Código identificador do lançamento.",
+                                            "links": []
                                         },
                                         {
-                                            "breakpoint": "#breakpoint2",
-                                            "text": "TEXTO_DO_LINK_2",
+                                            "li": "Lançamento: Data e hora do registro da conta.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Status: Situação atual do pagamento (ex: Pendente, Pago).",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Classificação: Plano de contas contábil associado.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Documento/Contrato: Número do contrato ou outro documento de referência.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Conta/Grupo: Identificador agrupador do lançamento.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Referência: Palavras-chave para facilitar buscas e filtros.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_2",
+                            "title": "Referente",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Define quem está envolvido no pagamento:",
+                                    "links": [
+                                        {
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1.1",
                                             "href": "link"
                                         }
-                                    ]
-                                }
-                            ],
-                            "tables": [
-                                {
-                                    "order": 1,
-                                    "title": "TITULO_TABELA_1",
-                                    "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": [
-                                        {
-                                            "text": "DESCRICAO_TABELA_1"
-                                        }
                                     ],
-                                    "rows": [
+                                    "items": [
                                         {
-                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                            "description": "DESCRICAO_DO_FIELD",
-                                            "example": "EXEMPLO_DE_USO (JSON)",
-                                            "field": "NOME_DO_CAMPO",
-                                            "fields": [
-                                                {
-                                                    "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                    "description": "DESCRICAO_DO_FIELD",
-                                                    "field": "NOME_DO_CAMPO",
-                                                    "fields": [
-                                                        {
-                                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                            "description": "DESCRICAO_DO_FIELD",
-                                                            "field": "NOME_DO_CAMPO"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
+                                            "li": "Credor: Quem receberá o valor.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Devedor: Quem pagará o valor.",
+                                            "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "medias": [
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_3",
+                            "title": "Pagamento",
+                            "props": {},
+                            "description": [
                                 {
-                                    "order": 2,
-                                    "type": "GIF VIDEO IMAGEM ETC (enum)",
-                                    "title": "TITULO_MIDIA_1",
-                                    "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": [
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Detalha quando e como o pagamento será feito:",
+                                    "links": [
                                         {
-                                            "text": "DESCRICAO_MIDIA_1"
+                                            "breakpoint": "#breakpoint1",
+                                            "text": "TEXTO_DO_LINK_1.1",
+                                            "href": "link"
                                         }
                                     ],
-                                    "link": "BASE64_DA_MIDIA_1"
+                                    "items": [
+                                        {
+                                            "li": "Competência: Data do período a que o lançamento se refere.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Previsão: Indica se o pagamento é previsto ou confirmado.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Vencimento: Data original do vencimento da conta.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Vencimento Alterado: Caso a data de vencimento tenha sido modificada.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Nº da Parcela: Número atual da parcela.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Forma de Pagamento: Método que será utilizado (ex: Boleto, PIX).",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Transação: Informações automática e adicionais sobre a transação financeira.(não preencher)",
+                                            "links": []
+                                        }
+                                    ]
                                 }
-                            ]
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_4",
+                            "title": "Quitação",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Usada para confirmar quando uma conta foi paga:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Data de Quitação: Data em que o valor foi efetivamente quitado.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Caixa/Conta: Conta bancária ou caixa responsável pelo pagamento.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_5",
+                            "title": "Totais",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Resumo financeiro do lançamento:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Valor: Valor bruto da conta.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Desconto (-): Desconto aplicado ao valor.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Juros (+): Juros acrescidos ao valor.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Total: Valor final após acréscimos e descontos.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_6",
+                            "title": "Centro de Custo",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Permite a distribuição do valor da conta entre diferentes áreas da empresa:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Checklist: Lista onde é possível informar o centro de custo, companhia e valor correspondente.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_7",
+                            "title": "Arquivos",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Espaço para anexar documentos:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Clique aqui para inserir anexos: Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "idSection": "TITULO_DA_SECAO_8",
+                            "title": "Notas",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": true
+                                    },
+                                    "text": "Espaço livre para observações:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "(Campo em branco): Área onde o usuário pode escrever observações ou observações internas.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
                         }
                     ]
                 }
@@ -623,7 +900,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -717,7 +993,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -811,7 +1086,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -905,7 +1179,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -999,7 +1272,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1093,7 +1365,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1187,7 +1458,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1281,7 +1551,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1375,7 +1644,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1469,7 +1737,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1563,7 +1830,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1657,7 +1923,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1751,7 +2016,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",
@@ -1845,7 +2109,6 @@
                         {
                             "idSection": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
-                            "subtitle": "SUBTITULO_DA_SECAO_1",
                             "description": [
                                 {
                                     "text": "DESCRICAO_DA_SECAO_1",

@@ -29,18 +29,26 @@ const Breadcrumb = () => {
           return (
             <li key={item.label} className="flex items-center text-[0.95rem] font-semibold">
               {item.href && !isLast ? (
-                <Link href={item.href} className="text-neutral-500 hover:text-neutral-600 lg:text-[0.8rem]" style={{fontWeight: "500"}}>
+                <Link
+                  href={item.href}
+                  className={clsx(
+                    "text-neutral-500 hover:text-neutral-600 lg:text-[16px]",
+                    "2xl:text-[13px]"
+                  )}
+                  style={{ fontWeight: "500" }}
+                >
                   {item.label}
                 </Link>
               ) : (
                 <span
                   className={`
-                    lg:text-[0.8rem]
+                    lg:text-[16px]
+                    2xl:text-[13px]
                     ${isLast
                       ? "text-neutral-900 font-semibold"
                       : "text-neutral-500 font-semibold"
                     }`}
-                    style={{fontWeight: "500"}}
+                  style={{ fontWeight: "500" }}
                 >
                   {item.label}
                 </span>
@@ -49,10 +57,10 @@ const Breadcrumb = () => {
                 <span
                   className={clsx(
                     "mx-2 text-gray-400 lg:text-[0.8rem]",
-                    
+
                     "text-neutral-900 font-semibold"
                   )}
-                  style={{fontWeight: "500"}}
+                  style={{ fontWeight: "500" }}
                 >/</span>
               )}
             </li>
