@@ -583,7 +583,7 @@
                             "isParagraph": false,
                             "props": {
                                 "box": {
-                                    "className": "bg-amber-500"
+                                    "className": "bg-white"
                                 }
                             },
                             "paragraphs": [
