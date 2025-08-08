@@ -9,37 +9,27 @@ export function returnArticleDescription(description: any) {
     const many_descriptions = (description.length !== 1)
     const isList = (obj: any): boolean => obj.items ? true : false;
 
-    // if (many_descriptions) {
-        return <div className="mb-9">
-            {
-                description.map((desc: any, index: number) => {
-                    if (isList(desc))
-                        return list(desc, desc.props)
+    return <div className="mb-9">
+        {
+            description.map((desc: any, index: number) => {
+                if (isList(desc))
+                    return list(desc, desc.props)
 
-                    if (desc.isParagraph) {
-                        const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`mb-2 ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
+                if (desc.isParagraph) {
+                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`mb-2 ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
 
-                        if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
+                    if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
 
-                        return paragraphs
-                    }
+                    return paragraphs
+                }
 
-                    console.log()
-                    // console.log(desc.paragraphs[0])
+                if (desc.props?.box)
+                    return box(<p key={index} className={`mb-2`}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
 
-                    if(desc.props?.box)
-                        return box(<p key={index} className={`mb-2`}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
-
-                    // return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
-                })
-            }
-        </div>
-
-    // } else {
-    //     const text = parse(description[0].text)
-    //     if (description.props?.box) return box(text)
-    //     return <p className={`mb-9 ${description.props?.className}`}>{parse(description[0].text)}</p>;
-    // }
+                // return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
+            })
+        }
+    </div>
 }
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
@@ -168,20 +158,20 @@ export function media(media: any, props?: IMediaProps[]) {
 /* Funcoes de utilidades gerais */
 function box(body: any, className?: any) {
     return <div
-        style={{ borderRadius: "0.700rem", padding: "1.25rem 1.25rem" }}
-        className={clsx("border border-gray-200 mb-10", className)}
+        style={{ borderRadius: "0.700rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
+        className={clsx("border border-gray-300 mb-10", className)}
     >{body}</div>
 }
 
 function list(listagemObject: any, props?: any) {
-    const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-2">{parse(text)}</li>)
-    const listText = <p className="text-stone-900" style={{marginBottom: "1rem", fontWeight: "500"}}>{listagemObject.text}</p>
-
+    const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-1"  style={{ fontWeight: "500" }}>{parse(text)}</li>)
+    const listText = <p className="text-stone-900" style={{ marginBottom: "1rem", fontWeight: "500" }}>{listagemObject.text}</p>
+// [&>li]:marker:text-blue-500
     if (props.isUl) {
         return (
             <div>
                 {listText}
-                <ul className="list-inside list-disc pl-5 [&>li]:marker:text-blue-500 text-stone-900">
+                <ul className="list-inside list-disc pl-5 [&>li]:marker:text-[2px] text-stone-900">
                     {items}
                 </ul>
             </div>)
