@@ -193,6 +193,140 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "title": "Getting started with wireframes",
+                    "slug": "wireframes",
+                    "subtitle": "",
+                    "description": [
+                        {
+                            "isParagraph": false,
+                            "props": {
+                                "box": {
+                                    "className": "bg-white"
+                                }
+                            },
+                            "paragraphs": [
+                                {
+                                    "props": {},
+                                    "text": "Here's a quick start guide to help you get the most out of Whimsical wireframes.",
+                                    "links": []
+                                }
+                            ]
+                        }
+                    ],
+                    "details": {
+                        "createdAt": "2023-01-01T00:00:00.000Z",
+                        "createdBy": "AUTOR_DO_ARTIGO"
+                    },
+                    "sections": [
+                        {
+                            "idSection": "",
+                            "title": "",
+                            "props": {},
+                            "description": [],
+                            "tables": [],
+                            "medias": [
+                                {
+                                    "order": 1,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/07f7003329c5ae88774364cbec4cccb9f1ad46fd-1400x629.webp"
+                                }
+                            ]
+                        },
+                        {
+                            "idSection": "",
+                            "title": "Entering and exiting wireframe mode",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "isUl": false
+                                    },
+                                    "text": "There are three ways to enter wireframe mode:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Click the wireframe icon in the toolbar",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Use the shortcut <code>W</code>",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "From the <strong>All tools</strong> menu (➕ sign in the toolbar) - The <strong>All tools</strong> menu can also be accessed with the shortcut <code>/</code>",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": [
+                                {
+                                    "order": 1,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [
+                                        {
+                                            "text": "To exit wireframe mode, select the ⬅️ arrow or use the keyboard shortcut Q :"
+                                        }
+                                    ],
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/536229bf6df6929cd4a67e1e627ac027b3b1bb99-552x671.webp"
+                                }
+                            ]
+                        },
+                        {
+                            "idSection": "",
+                            "title": "",
+                            "props": {},
+                            "description": [],
+                            "tables": [],
+                            "medias": [
+                                {
+                                    "order": 1,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/07f7003329c5ae88774364cbec4cccb9f1ad46fd-1400x629.webp"
+                                }
+                            ]
+                        },
+                        {
+                            "idSection": "",
+                            "title": "",
+                            "props": {},
+                            "description": [],
+                            "tables": [],
+                            "medias": [
+                                {
+                                    "order": 1,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_MIDIA_1"
+                                        }
+                                    ],
+                                    "link": "https://cdn.sanity.io/images/xye5jv54/production/07f7003329c5ae88774364cbec4cccb9f1ad46fd-1400x629.webp"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
