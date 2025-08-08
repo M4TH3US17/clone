@@ -16,7 +16,7 @@ export function returnArticleDescription(description: any) {
                     return list(desc, desc.props)
 
                 if (desc.isParagraph) {
-                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`mb-2 ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
+                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`${(desc.paragraphs.length - 1 === key)? "" : "mb-2"} ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
 
                     if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
 
@@ -24,7 +24,7 @@ export function returnArticleDescription(description: any) {
                 }
 
                 if (desc.props?.box)
-                    return box(<p key={index} className={`mb-2`}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
+                    return box(<p key={index}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
 
                 // return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
             })
@@ -164,14 +164,14 @@ function box(body: any, className?: any) {
 }
 
 function list(listagemObject: any, props?: any) {
-    const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-1"  style={{ fontWeight: "500" }}>{parse(text)}</li>)
+    const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-1" style={{ fontWeight: "500" }}>{parse(text)}</li>)
     const listText = <p className="text-stone-900" style={{ marginBottom: "1rem", fontWeight: "500" }}>{listagemObject.text}</p>
-// [&>li]:marker:text-blue-500
+    // [&>li]:marker:text-blue-500
     if (props.isUl) {
         return (
             <div>
                 {listText}
-                <ul className="list-inside list-disc pl-5 [&>li]:marker:text-[2px] text-stone-900">
+                <ul className="list-inside list-disc pl-5 [&>li]:marker:text-[2px] [&>li]:marker:mr-5 text-stone-900">
                     {items}
                 </ul>
             </div>)
