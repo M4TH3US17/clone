@@ -8,7 +8,7 @@
             "articles": [
                 {
                     "title": "Getting started with flowcharts",
-                    "slug": "titulo-do-artigo",
+                    "slug": "introducao-ao-pass",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
                     "description": [
                         {
@@ -576,7 +576,7 @@
             "articles": [
                 {
                     "title": "Conta a Pagar",
-                    "slug": "titulo-do-artigo",
+                    "slug": "conta-a-pagar",
                     "subtitle": "SUBTITULO_DO_ARTIGO",
                     "description": [
                         {
