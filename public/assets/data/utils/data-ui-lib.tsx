@@ -30,7 +30,7 @@ export function returnArticleDescription(description: any) {
                     if(desc.props?.box)
                         return box(<p key={index} className={`mb-2`}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
 
-                    return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
+                    // return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
                 })
             }
         </div>
