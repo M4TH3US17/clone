@@ -6,7 +6,6 @@ import { object } from "framer-motion/client";
 
 /* Funcoes de Manipulacao da Descricao */
 export function returnArticleDescription(description: any) {
-    const many_descriptions = (description.length !== 1)
     const isList = (obj: any): boolean => obj.items ? true : false;
 
     return <div className="mb-9">
@@ -16,7 +15,11 @@ export function returnArticleDescription(description: any) {
                     return list(desc, desc.props)
 
                 if (desc.isParagraph) {
-                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`${(desc.paragraphs.length - 1 === key)? "" : "mb-2"} ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
+                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
+                        const paragraph = <p key={key} className={`${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"} ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>
+                        if (paragraphObject.props.box) return box(paragraph, paragraphObject.props?.box?.className)
+                        return paragraph
+                    })
 
                     if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
 
@@ -24,9 +27,9 @@ export function returnArticleDescription(description: any) {
                 }
 
                 if (desc.props?.box)
-                    return box(<p key={index}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
+                    return box(<p key={index}> {parse(desc?.paragraphs[0].text)} </p>, desc.props?.box.className)
 
-                // return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
+                return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc?.paragraphs[0].text)} </p>
             })
         }
     </div>
@@ -145,9 +148,18 @@ export function table(table: any, props?: ITableProps[]) {
 }
 
 export function media(media: any, props?: IMediaProps[]) {
-    // console.log(props)
     if (media.type === "IMAGE" || media.type === "GIF") {
-        return <img src={media.link} key={media.order} />
+        return (
+            <div className="w-full">
+                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
+
+                <div className="w-full flex justify-center mb-7">
+                    <img src={media.link} key={media.order} className="border border-gray-300" />
+                </div>
+
+                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
+            </div>
+        );
     }
 
     if (media.type === "VIDEO") {

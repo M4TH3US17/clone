@@ -3,7 +3,7 @@ import { FC, useEffect } from "react"
 
 const DialogHiddenScroll: FC<{ isOpen: boolean }> = ({ isOpen }) => {
 
-  console.log("Dialog está", isOpen ? "aberto" : "fechado")
+  // console.log("Dialog está", isOpen ? "aberto" : "fechado")
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('overflow-hidden')
