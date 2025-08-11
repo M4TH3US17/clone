@@ -237,29 +237,7 @@
                             "idSection": "",
                             "title": "Entering and exiting wireframe mode",
                             "props": {},
-                            "description": [
-                                {
-                                    "props": {
-                                        "isUl": false
-                                    },
-                                    "text": "There are three ways to enter wireframe mode:",
-                                    "links": [],
-                                    "items": [
-                                        {
-                                            "li": "Click the wireframe icon in the toolbar",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "Use the shortcut <code>W</code>",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "From the <strong>All tools</strong> menu (➕ sign in the toolbar) - The <strong>All tools</strong> menu can also be accessed with the shortcut <code>/</code>",
-                                            "links": []
-                                        }
-                                    ]
-                                }
-                            ],
+                            "description": [],
                             "tables": [],
                             "medias": [
                                 {
@@ -269,14 +247,23 @@
                                     "subtitle": "SUBTITULO_MIDIA_1",
                                     "description": [
                                         {
-                                            "isParagraph": false,
                                             "props": {
-                                                "verticalPosition": "BOTTOM"
+                                                "verticalPosition": "TOP",
+                                                "isUl": false
                                             },
-                                            "paragraphs": [
+                                            "text": "There are three ways to enter wireframe mode:",
+                                            "links": [],
+                                            "items": [
                                                 {
-                                                    "props": {},
-                                                    "text": "To exit wireframe mode, select the ⬅️ arrow or use the keyboard shortcut Q :",
+                                                    "li": "Click the wireframe icon in the toolbar",
+                                                    "links": []
+                                                },
+                                                {
+                                                    "li": "Use the shortcut <code>W</code>",
+                                                    "links": []
+                                                },
+                                                {
+                                                    "li": "From the <strong>All tools</strong> menu (➕ sign in the toolbar) - The <strong>All tools</strong> menu can also be accessed with the shortcut <code>/</code>",
                                                     "links": []
                                                 }
                                             ]
@@ -293,12 +280,12 @@
                                         {
                                             "isParagraph": false,
                                             "props": {
-                                                "verticalPosition": ""
+                                                "verticalPosition": "TOP"
                                             },
                                             "paragraphs": [
                                                 {
                                                     "props": {},
-                                                    "text": "T",
+                                                    "text": "To exit wireframe mode, select the ⬅️ arrow or use the keyboard shortcut Q :",
                                                     "links": []
                                                 }
                                             ]
@@ -312,19 +299,7 @@
                             "idSection": "",
                             "title": "Building wireframes",
                             "props": {},
-                            "description": [
-                                {
-                                    "isParagraph": false,
-                                    "props": {},
-                                    "paragraphs": [
-                                        {
-                                            "props": {},
-                                            "text": "Whimsical has a variety of frames and elements to choose from to build your wireframes. Choose a frame from the <strong>Frames</strong> option in the toolbar, or with the keyboard shortcut F:",
-                                            "links": []
-                                        }
-                                    ]
-                                }
-                            ],
+                            "description": [],
                             "tables": [],
                             "medias": [
                                 {
@@ -332,7 +307,21 @@
                                     "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": [],
+                                    "description": [
+                                        {
+                                            "isParagraph": false,
+                                            "props": {
+                                                "verticalPosition": "TOP"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {},
+                                                    "text": "Whimsical has a variety of frames and elements to choose from to build your wireframes. Choose a frame from the <strong>Frames</strong> option in the toolbar, or with the keyboard shortcut F:",
+                                                    "links": []
+                                                }
+                                            ]
+                                        }
+                                    ],
                                     "link": "https://cdn.sanity.io/images/xye5jv54/production/4326c9b9b2b41bc835e2f0f765636953871c33c5-582x375.webp"
                                 }
                             ]
@@ -391,6 +380,82 @@
                                     "link": "https://cdn.sanity.io/images/xye5jv54/production/0cc355328dadd2bf9319275fabde6eb3c4fbe623-489x351.webp"
                                 }
                             ]
+                        },
+                        {
+                            "idSection": "",
+                            "title": "Wireframe characteristics",
+                            "props": {},
+                            "description": [
+                                {
+                                    "isParagraph": false,
+                                    "props": {
+                                        "className": "mb-7"
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "Most frames and elements have their own options in the contextbar that appears when you select them. We’ve built in unique characteristics in the frames and elements, so you don’t have to do additional work.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": false,
+                                        "className": ""
+                                    },
+                                    "text": "For example:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Switching the status bar and keyboard on and off on a phone frame.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Changing the state of a button.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Adding and editing menu options and tabs.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Swapping 'Lorem ipsum' placeholder text with block text.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": false,
+                                    "props": {
+                                        "className": "",
+                                        "box": {
+                                            "className": "bg-white"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Tip:</strong> Check out this template for a quick look at all the frames and elements.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "Wondering why the wireframe colors are toned down? This article explains. 👌",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
                         }
                     ]
                 }

@@ -8,7 +8,7 @@ import { object } from "framer-motion/client";
 export function returnArticleDescription(description: any) {
     const isList = (obj: any): boolean => obj.items ? true : false;
 
-    return <div className="mb-9">
+    return <div className="mb-7">
         {
             description.map((desc: any, index: number) => {
                 if (isList(desc))
@@ -40,7 +40,7 @@ export function returnArticleSection(section: any, key?: number) {
     return <div
         key={key}
         className={clsx(
-            "mb-9",
+            "mb-7",
             section.props?.className
         )}>
 
@@ -179,9 +179,10 @@ function list(listagemObject: any, props?: any) {
     const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-1" style={{ fontWeight: "500" }}>{parse(text)}</li>)
     const listText = <p className="text-stone-900" style={{ marginBottom: "1rem", fontWeight: "500" }}>{listagemObject.text}</p>
     // [&>li]:marker:text-blue-500
+
     if (props.isUl) {
         return (
-            <div>
+            <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ul className="list-inside list-disc pl-5 [&>li]:marker:text-[2px] [&>li]:marker:mr-5 text-stone-900">
                     {items}
@@ -189,7 +190,7 @@ function list(listagemObject: any, props?: any) {
             </div>)
     } else {
         return (
-            <div>
+            <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ol className="list-inside list-disc pl-5 [&>li]:marker:text-blue-500 text-stone-900">
                     {items}
