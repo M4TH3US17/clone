@@ -176,7 +176,7 @@ function box(body: any, className?: any) {
 }
 
 function list(listagemObject: any, props?: any) {
-    const items = listagemObject.items.map((text: string, key: number) => <li className="relative pl-3 before:absolute before:left-0 before:top-2.5 before:w-0.5 before:h-0.5 before:rounded-full before:bg-blue-500">{parse(text)}</li>)
+    const items = listagemObject.items.map((text: string, key: number) => <li >{parse(text)}</li>)
     const listText = <p className="text-stone-900" style={{ marginBottom: "1rem" }}>{listagemObject.text}</p>
 
     if (props.isUl) {
@@ -191,7 +191,7 @@ function list(listagemObject: any, props?: any) {
         return (
             <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
-                <ol className="list-inside list-decimal pl-5 [&>li]:marker:text-blue-500 text-stone-900">
+                <ol className="list-inside list-decimal pl-5 text-stone-900">
                     {items}
                 </ol>
             </div>)
