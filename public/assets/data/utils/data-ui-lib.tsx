@@ -183,7 +183,7 @@ function list(listagemObject: any, props?: any) {
         return (
             <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
-                <ul className="list-inside list-disc pl-5 text-stone-900">
+                <ul className="pl-5 text-stone-900 custom-disc">
                     {items}
                 </ul>
             </div>)
