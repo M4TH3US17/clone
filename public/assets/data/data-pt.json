@@ -838,7 +838,7 @@
                             "paragraphs": [
                                 {
                                     "props": {},
-                                    "text": "O módulo Conta a Pagar é utilizado para o registro, controle e acompanhamento de lançamentos financeiros relacionados a despesas da empresa. A seguir, você confere uma explicação simples sobre cada seção do formulário.",
+                                    "text": "O módulo <strong>Conta a Pagar</strong> é utilizado para o registro, controle e acompanhamento de lançamentos financeiros relacionados a despesas da empresa. A seguir, você confere uma explicação simples sobre cada seção do formulário.",
                                     "links": []
                                 },
                                 {
@@ -879,31 +879,31 @@
                                     ],
                                     "items": [
                                         {
-                                            "li": "Conta: Código identificador do lançamento.",
+                                            "li": "<strong>Conta:</strong> Código identificador do lançamento.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Lançamento: Data e hora do registro da conta.",
+                                            "li": "<strong>Lançamento:</strong> Data e hora do registro da conta.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Status: Situação atual do pagamento (ex: Pendente, Pago).",
+                                            "li": "<strong>Status:</strong> Situação atual do pagamento (ex: Pendente, Pago).",
                                             "links": []
                                         },
                                         {
-                                            "li": "Classificação: Plano de contas contábil associado.",
+                                            "li": "<strong>Classificação:</strong> Plano de contas contábil associado.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Documento/Contrato: Número do contrato ou outro documento de referência.",
+                                            "li": "<strong>Documento/Contrato:</strong> Número do contrato ou outro documento de referência.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Conta/Grupo: Identificador agrupador do lançamento.",
+                                            "li": "<strong>Conta/Grupo:</strong> Identificador agrupador do lançamento.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Referência: Palavras-chave para facilitar buscas e filtros.",
+                                            "li": "<strong>Referência:</strong> Palavras-chave para facilitar buscas e filtros.",
                                             "links": []
                                         }
                                     ]
@@ -931,11 +931,11 @@
                                     ],
                                     "items": [
                                         {
-                                            "li": "Credor: Quem receberá o valor.",
+                                            "li": "<strong>Credor:</strong> Quem receberá o valor.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Devedor: Quem pagará o valor.",
+                                            "li": "<strong>Devedor:</strong> Quem pagará o valor.",
                                             "links": []
                                         }
                                     ]
@@ -963,31 +963,31 @@
                                     ],
                                     "items": [
                                         {
-                                            "li": "Competência: Data do período a que o lançamento se refere.",
+                                            "li": "<strong>Competência:</strong> Data do período a que o lançamento se refere.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Previsão: Indica se o pagamento é previsto ou confirmado.",
+                                            "li": "<strong>Previsão:</strong> Indica se o pagamento é previsto ou confirmado.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Vencimento: Data original do vencimento da conta.",
+                                            "li": "<strong>Vencimento:</strong> Data original do vencimento da conta.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Vencimento Alterado: Caso a data de vencimento tenha sido modificada.",
+                                            "li": "<strong>Vencimento Alterado:</strong> Caso a data de vencimento tenha sido modificada.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Nº da Parcela: Número atual da parcela.",
+                                            "li": "<strong>Nº da Parcela:</strong> Número atual da parcela.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Forma de Pagamento: Método que será utilizado (ex: Boleto, PIX).",
+                                            "li": "<strong>Forma de Pagamento:</strong> Método que será utilizado (ex: Boleto, PIX).",
                                             "links": []
                                         },
                                         {
-                                            "li": "Transação: Informações automática e adicionais sobre a transação financeira.(não preencher)",
+                                            "li": "<strong>Transação:</strong> Informações automática e adicionais sobre a transação financeira.(não preencher)",
                                             "links": []
                                         }
                                     ]
@@ -1009,11 +1009,11 @@
                                     "links": [],
                                     "items": [
                                         {
-                                            "li": "Data de Quitação: Data em que o valor foi efetivamente quitado.",
+                                            "li": "<strong>Data de Quitação:</strong> Data em que o valor foi efetivamente quitado.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Caixa/Conta: Conta bancária ou caixa responsável pelo pagamento.",
+                                            "li": "<strong>Caixa/Conta:</strong> Conta bancária ou caixa responsável pelo pagamento.",
                                             "links": []
                                         }
                                     ]
@@ -1035,19 +1035,19 @@
                                     "links": [],
                                     "items": [
                                         {
-                                            "li": "Valor: Valor bruto da conta.",
+                                            "li": "<strong>Valor:</strong> Valor bruto da conta.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Desconto (-): Desconto aplicado ao valor.",
+                                            "li": "<strong>Desconto (-):</strong> Desconto aplicado ao valor.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Juros (+): Juros acrescidos ao valor.",
+                                            "li": "<strong>Juros (+):</strong> Juros acrescidos ao valor.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Total: Valor final após acréscimos e descontos.",
+                                            "li": "<strong>Total:</strong> Valor final após acréscimos e descontos.",
                                             "links": []
                                         }
                                     ]
@@ -1069,7 +1069,7 @@
                                     "links": [],
                                     "items": [
                                         {
-                                            "li": "Checklist: Lista onde é possível informar o centro de custo, companhia e valor correspondente.",
+                                            "li": "<strong>Checklist:</strong> Lista onde é possível informar o centro de custo, companhia e valor correspondente.",
                                             "links": []
                                         }
                                     ]
@@ -1091,7 +1091,7 @@
                                     "links": [],
                                     "items": [
                                         {
-                                            "li": "Clique aqui para inserir anexos: Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
+                                            "li": "<strong>Clique aqui para inserir anexos:</strong> Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
                                             "links": []
                                         }
                                     ]
@@ -1113,7 +1113,7 @@
                                     "links": [],
                                     "items": [
                                         {
-                                            "li": "(Campo em branco): Área onde o usuário pode escrever observações ou observações internas.",
+                                            "li": "<strong>(Campo em branco):</strong> Área onde o usuário pode escrever observações ou observações internas.",
                                             "links": []
                                         }
                                     ]

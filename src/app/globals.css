@@ -116,6 +116,10 @@ th {
     padding-right: 0.5rem;
 }
 
+strong {
+    color: rgb(40, 40, 40);
+}
+
 .shadow-xl-none {
     box-shadow: none !important;
 }
