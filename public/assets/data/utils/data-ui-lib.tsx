@@ -6,17 +6,20 @@ import { object } from "framer-motion/client";
 
 /* Funcoes de Manipulacao da Descricao */
 export function returnArticleDescription(description: any) {
-    const many_descriptions = (description.length !== 1)
     const isList = (obj: any): boolean => obj.items ? true : false;
 
-    return <div className="mb-9">
+    return <div className="mb-7">
         {
             description.map((desc: any, index: number) => {
                 if (isList(desc))
                     return list(desc, desc.props)
 
                 if (desc.isParagraph) {
-                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => <p key={key} className={`${(desc.paragraphs.length - 1 === key)? "" : "mb-2"} ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>)
+                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
+                        const paragraph = <p key={key} className={`${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"} ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>
+                        if (paragraphObject.props.box) return box(paragraph, paragraphObject.props?.box?.className)
+                        return paragraph
+                    })
 
                     if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
 
@@ -24,9 +27,9 @@ export function returnArticleDescription(description: any) {
                 }
 
                 if (desc.props?.box)
-                    return box(<p key={index}> {parse(desc.paragraphs[0].text)} </p>, desc.props?.box.className)
+                    return box(<p key={index}> {parse(desc?.paragraphs[0].text)} </p>, desc.props?.box.className)
 
-                // return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc.paragraphs[0].text)} </p>
+                return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc?.paragraphs[0].text)} </p>
             })
         }
     </div>
@@ -37,7 +40,7 @@ export function returnArticleSection(section: any, key?: number) {
     return <div
         key={key}
         className={clsx(
-            "mb-9",
+            "mb-7",
             section.props?.className
         )}>
 
@@ -145,9 +148,18 @@ export function table(table: any, props?: ITableProps[]) {
 }
 
 export function media(media: any, props?: IMediaProps[]) {
-    // console.log(props)
     if (media.type === "IMAGE" || media.type === "GIF") {
-        return <img src={media.link} key={media.order} />
+        return (
+            <div className="w-full">
+                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
+
+                <div className="w-full flex justify-center mb-7">
+                    <img src={media.link} key={media.order} className="border border-gray-300" />
+                </div>
+
+                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
+            </div>
+        );
     }
 
     if (media.type === "VIDEO") {
@@ -167,9 +179,10 @@ function list(listagemObject: any, props?: any) {
     const items = listagemObject.items.map((text: string, key: number) => <li className="text-stone-900 pl-1" style={{ fontWeight: "500" }}>{parse(text)}</li>)
     const listText = <p className="text-stone-900" style={{ marginBottom: "1rem", fontWeight: "500" }}>{listagemObject.text}</p>
     // [&>li]:marker:text-blue-500
+
     if (props.isUl) {
         return (
-            <div>
+            <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ul className="list-inside list-disc pl-5 [&>li]:marker:text-[2px] [&>li]:marker:mr-5 text-stone-900">
                     {items}
@@ -177,7 +190,7 @@ function list(listagemObject: any, props?: any) {
             </div>)
     } else {
         return (
-            <div>
+            <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ol className="list-inside list-disc pl-5 [&>li]:marker:text-blue-500 text-stone-900">
                     {items}
