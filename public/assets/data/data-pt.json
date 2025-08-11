@@ -402,7 +402,7 @@
                                 {
                                     "props": {
                                         "verticalPosition": "TOP",
-                                        "isUl": false,
+                                        "isUl": true,
                                         "className": ""
                                     },
                                     "text": "For example:",
