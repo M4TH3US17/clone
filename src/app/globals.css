@@ -103,11 +103,10 @@ body {
 td,
 tr,
 th {
-    border: 1px solid #e5e5e5;
-    background: var(--color-light);
+    /* border: 1px solid #e5e5e5; */
+    /* background: var(--color-light); */
+      border: 1px solid #c5c5c5;
 }
-
-th {}
 
 td,
 th {

@@ -8,6 +8,8 @@ import { object } from "framer-motion/client";
 export function returnArticleDescription(description: any) {
     const isList = (obj: any): boolean => obj.items ? true : false;
 
+    console.log(description)
+
     return <div className="mb-7">
         {
             description.map((desc: any, index: number) => {
@@ -16,7 +18,12 @@ export function returnArticleDescription(description: any) {
 
                 if (desc.isParagraph) {
                     const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
-                        const paragraph = <p key={key} className={`${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"} ${paragraphObject.props?.className}`}> {parse(paragraphObject.text)} </p>
+                        const paragraph = <p key={key} className={clsx(
+                            `${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"}`,
+                            `${paragraphObject.props?.className}`)
+                        }>
+                            {parse(paragraphObject.text)}
+                        </p>
                         if (paragraphObject.props.box) return box(paragraph, paragraphObject.props?.box?.className)
                         return paragraph
                     })
@@ -37,6 +44,7 @@ export function returnArticleDescription(description: any) {
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
 export function returnArticleSection(section: any, key?: number) {
+    // console.log(section)
     return <div
         key={key}
         className={clsx(
@@ -81,20 +89,22 @@ function sectionBody(section: any, props?: ISectionProps) {
     </>
 }
 
-export function table(table: any, props?: ITableProps[]) {
-    // console.log(props)
-    return <div className="w-full overflow-x-scroll">
-        <table className="w-full" key={table.order}>
-            <thead className="">
+export function table(table: any, props?: ITableProps[]) {//style={{border: "1px solid #c5c5c5", borderRadius: "10px"}}
+    // console.log(table)
+    return <div className={clsx(
+        "w-full",
+        table?.props?.className
+    )}>
+        <table className="w-full overflow-hidden border-separate border-spacing-0 shadow-sm" key={table.order}>
+            <thead className="bg-gray-100">
                 <tr>
-                    <th className="text-left text-[0.8rem] text-secondary">Campo</th>
-                    <th className="text-left text-[0.8rem] text-secondary">Tipo</th>
-                    <th className="text-left text-[0.8rem] text-secondary">Descrição</th>
-                    {/* <th className="text-left text-gray-500">Exemplo</th> */}
+                    <th className="text-left text-[0.8rem] text-secondary p-3">Campo</th>
+                    {table?.type && <th className="text-left text-[0.8rem] text-secondary p-3">Tipo</th>}
+                    <th className="text-left text-[0.8rem] text-secondary p-3">Descrição</th>
                 </tr>
             </thead>
 
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200">
                 {
                     table.rows.map((row: any, index: number) => {
                         if ('fields' in row) {
@@ -107,21 +117,21 @@ export function table(table: any, props?: ITableProps[]) {
                                             <p className="mb-2 text-[0.8rem] text-secondary font-semibold">{row.description}</p>
                                         }
                                         <table className="w-full divide-y divide-gray-200">
-                                            <thead className=" bg-gray-100">
+                                            <thead className="bg-gray-100">
                                                 <tr>
                                                     <th className="text-left text-[0.8rem] text-secondary">Campo</th>
-                                                    <th className="text-left text-[0.8rem] text-secondary">Tipo</th>
+                                                    {table?.type ? <th className="text-left text-[0.8rem] text-secondary">Tipo</th> : <></>}
                                                     <th className="text-left text-[0.8rem] text-secondary">Descrição</th>
                                                     {/* <th className="text-left  uppercase">Exemplo</th> */}
                                                 </tr>
                                             </thead>
 
-                                            <tbody className=" bg-white divide-y divide-gray-200">
+                                            <tbody className="divide-y divide-gray-200">
                                                 {
                                                     row.fields.map((subRow: any, subIndex: number) => (
                                                         <tr key={`subrow-${index}-${subIndex}`} className="">
                                                             <td className="whitespace-nowrap text-[0.8rem]">{subRow.field}</td>
-                                                            <td className="whitespace-nowrap text-[0.8rem] ">{subRow.type}</td>
+                                                            {table?.type ? <td className="whitespace-nowrap text-[0.8rem] ">{subRow.type}</td> : <></>}
                                                             <td className=" text-[0.8rem]">{subRow.description}</td>
                                                             {/* <td className="whitespace-nowrap ">{subRow.example}</td> */}
                                                         </tr>
@@ -135,7 +145,7 @@ export function table(table: any, props?: ITableProps[]) {
                         } else {
                             return (<tr key={`row-${index}`} className="">
                                 <td className="whitespace-nowrap text-[0.8rem]">{row.field}</td>
-                                <td className="whitespace-nowrap text-[0.8rem] ">{row.type}</td>
+                                {table?.type ? <td className="whitespace-nowrap text-[0.8rem] ">{row.type}</td> : <></>}
                                 <td className=" text-[0.8rem]">{row.description}</td>
                                 {/* <td className="whitespace-nowrap text-gray-500">{row.example}</td> */}
                             </tr>)
@@ -168,9 +178,9 @@ export function media(media: any, props?: IMediaProps[]) {
 }
 
 /* Funcoes de utilidades gerais */
-function box(body: any, className?: any) {
+function box(body: any, className?: any) {// borderRadius: "0.700rem",
     return <div
-        style={{ borderRadius: "0.700rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
+        style={{ borderRadius: "0.3rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
         className={clsx("border border-gray-300 mb-10", className)}
     >{body}</div>
 }

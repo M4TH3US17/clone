@@ -861,56 +861,62 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "order": 1,
                             "title": "Dados Gerais",
-                            "props": {},
+                            "subtitle": "",
                             "description": [
                                 {
+                                    "isParagraph": false,
                                     "props": {
-                                        "isUl": true
+                                        "className": ""
                                     },
-                                    "text": "Esta seção contém as informações básicas da conta a pagar:",
-                                    "links": [
+                                    "paragraphs": [
                                         {
-                                            "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1.1",
-                                            "href": "link"
-                                        }
-                                    ],
-                                    "items": [
-                                        {
-                                            "li": "<strong>Conta:</strong> Código identificador do lançamento.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Lançamento:</strong> Data e hora do registro da conta.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Status:</strong> Situação atual do pagamento (ex: Pendente, Pago).",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Classificação:</strong> Plano de contas contábil associado.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Documento/Contrato:</strong> Número do contrato ou outro documento de referência.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Conta/Grupo:</strong> Identificador agrupador do lançamento.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Referência:</strong> Palavras-chave para facilitar buscas e filtros.",
+                                            "props": {
+                                                
+                                            },
+                                            "text": "Esta seção contém as informações básicas da conta a pagar",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
-                            "medias": []
+                            "tables": [
+                                {
+                                    "props": {
+                                    },
+                                    "rows": [
+                                        {
+                                            "description": "Código identificador do lançamento",
+                                            "field": "Conta"
+                                        },
+                                        {
+                                            "description": "Data e hora do registro da conta",
+                                            "field": "Lançamento"
+                                        },
+                                        {
+                                            "description": "Plano de contas contábil associado",
+                                            "field": "Classificação"
+                                        },
+                                        {
+                                            "description": "Número do contrato ou outro documento de referência",
+                                            "field": "Documento/Contrato"
+                                        },
+                                        {
+                                            "description": "Identificador agrupador do lançamento.",
+                                            "field": "Conta/Grupo"
+                                        },
+                                        {
+                                            "description": "Palavras-chave para facilitar buscas e filtros",
+                                            "field": "Referência"
+                                        },
+                                        {
+                                            "description": "Situação atual do pagamento (ex: Pendente, Pago)",
+                                            "field": "Status"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "idSection": "TITULO_DA_SECAO_2",
@@ -918,208 +924,249 @@
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Define quem está envolvido no pagamento:",
-                                    "links": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1.1",
-                                            "href": "link"
-                                        }
-                                    ],
-                                    "items": [
-                                        {
-                                            "li": "<strong>Credor:</strong> Quem receberá o valor.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Devedor:</strong> Quem pagará o valor.",
+                                            "props": {},
+                                            "text": "Define quem está envolvido no pagamento:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Quem receberá o valor",
+                                            "field": "Credor"
+                                        },
+                                        {
+                                            "description": "Quem pagará o valor",
+                                            "field": "Devedor"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_3",
+                            "idSection": "TITULO_DA_SECAO_2",
                             "title": "Pagamento",
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Detalha quando e como o pagamento será feito:",
-                                    "links": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1.1",
-                                            "href": "link"
-                                        }
-                                    ],
-                                    "items": [
-                                        {
-                                            "li": "<strong>Competência:</strong> Data do período a que o lançamento se refere.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Previsão:</strong> Indica se o pagamento é previsto ou confirmado.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Vencimento:</strong> Data original do vencimento da conta.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Vencimento Alterado:</strong> Caso a data de vencimento tenha sido modificada.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Nº da Parcela:</strong> Número atual da parcela.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Forma de Pagamento:</strong> Método que será utilizado (ex: Boleto, PIX).",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Transação:</strong> Informações automática e adicionais sobre a transação financeira.(não preencher)",
+                                            "props": {},
+                                            "text": "Detalha quando e como o pagamento será feito:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Data do período a que o lançamento se refere.",
+                                            "field": "Competência"
+                                        },
+                                        {
+                                            "description": "Indica se o pagamento é previsto ou confirmado.",
+                                            "field": "Previsão"
+                                        },
+                                        {
+                                            "description": "Data original do vencimento da conta.",
+                                            "field": "Vencimento"
+                                        },
+                                        {
+                                            "description": "Caso a data de vencimento tenha sido modificada.",
+                                            "field": "Vencimento Alterado"
+                                        },
+                                        {
+                                            "description": "Quem pagará o valor",
+                                            "field": "Vencimento Alterado"
+                                        },
+                                        {
+                                            "description": "Número atual da parcela.",
+                                            "field": "Nº da Parcela"
+                                        },
+                                        {
+                                            "description": "Método que será utilizado (ex: Boleto, PIX).",
+                                            "field": "Forma de Pagamento"
+                                        },
+                                        {
+                                            "description": "Informações automática e adicionais sobre a transação financeira.(não preencher)",
+                                            "field": "Transação"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_4",
+                            "idSection": "TITULO_DA_SECAO_2",
                             "title": "Quitação",
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Usada para confirmar quando uma conta foi paga:",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "<strong>Data de Quitação:</strong> Data em que o valor foi efetivamente quitado.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Caixa/Conta:</strong> Conta bancária ou caixa responsável pelo pagamento.",
+                                            "props": {},
+                                            "text": "Usada para confirmar quando uma conta foi paga:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Data em que o valor foi efetivamente quitado.",
+                                            "field": "Data de Quitação"
+                                        },
+                                        {
+                                            "description": "Conta bancária ou caixa responsável pelo pagamento.",
+                                            "field": "Caixa/Conta"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_5",
+                            "idSection": "TITULO_DA_SECAO_2",
                             "title": "Totais",
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Resumo financeiro do lançamento:",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "<strong>Valor:</strong> Valor bruto da conta.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Desconto (-):</strong> Desconto aplicado ao valor.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Juros (+):</strong> Juros acrescidos ao valor.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "<strong>Total:</strong> Valor final após acréscimos e descontos.",
+                                            "props": {},
+                                            "text": "Resumo financeiro do lançamento:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Valor bruto da conta",
+                                            "field": "Valor"
+                                        },
+                                        {
+                                            "description": "Desconto aplicado ao valor.",
+                                            "field": "Desconto (-)"
+                                        },
+                                        {
+                                            "description": "Juros acrescidos ao valor.",
+                                            "field": "Juros (+)"
+                                        },
+                                        {
+                                            "description": "Valor final após acréscimos e descontos.",
+                                            "field": "Total"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_6",
+                            "idSection": "TITULO_DA_SECAO_2",
                             "title": "Centro de Custo",
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Permite a distribuição do valor da conta entre diferentes áreas da empresa:",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "<strong>Checklist:</strong> Lista onde é possível informar o centro de custo, companhia e valor correspondente.",
+                                            "props": {},
+                                            "text": "Permite a distribuição do valor da conta entre diferentes áreas da empresa:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Lista onde é possível informar o centro de custo, companhia e valor correspondente.",
+                                            "field": "Checklist"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_7",
+                            "idSection": "TITULO_DA_SECAO_2",
                             "title": "Arquivos",
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Espaço para anexar documentos:",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "<strong>Clique aqui para inserir anexos:</strong> Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
+                                            "props": {},
+                                            "text": "Espaço para anexar documentos:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
+                                            "field": "Espaço para anexar documentos"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_8",
+                            "idSection": "TITULO_DA_SECAO_2",
                             "title": "Notas",
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "isUl": true
-                                    },
-                                    "text": "Espaço livre para observações:",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "<strong>(Campo em branco):</strong> Área onde o usuário pode escrever observações ou observações internas.",
+                                            "props": {},
+                                            "text": "Espaço livre para observações:",
                                             "links": []
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
+                            "tables": [
+                                {
+                                    "rows": [
+                                        {
+                                            "description": "Área onde o usuário pode escrever observações ou observações internas.",
+                                            "field": "(Campo em branco)"
+                                        }
+                                    ]
+                                }
+                            ],
                             "medias": []
                         }
                     ]
