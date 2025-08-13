@@ -867,11 +867,15 @@
                             "description": [
                                 {
                                     "isParagraph": false,
-                                    "props": {},
+                                    "props": {
+                                        "className": ""
+                                    },
                                     "paragraphs": [
                                         {
-                                            "props": {},
-                                            "text": "Esta seção contém as informações básicas da conta a pagar:",
+                                            "props": {
+                                                
+                                            },
+                                            "text": "Esta seção contém as informações básicas da conta a pagar",
                                             "links": []
                                         }
                                     ]
@@ -879,6 +883,8 @@
                             ],
                             "tables": [
                                 {
+                                    "props": {
+                                    },
                                     "rows": [
                                         {
                                             "description": "Código identificador do lançamento",
@@ -1126,7 +1132,7 @@
                                 {
                                     "rows": [
                                         {
-                                            "description": "Clique aqui para inserir anexos: Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
+                                            "description": "Permite adicionar arquivos como comprovantes, contratos ou notas fiscais.",
                                             "field": "Espaço para anexar documentos"
                                         }
                                     ]
