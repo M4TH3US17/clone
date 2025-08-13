@@ -37,6 +37,7 @@ export function returnArticleDescription(description: any) {
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
 export function returnArticleSection(section: any, key?: number) {
+    // console.log(section)
     return <div
         key={key}
         className={clsx(
@@ -82,13 +83,13 @@ function sectionBody(section: any, props?: ISectionProps) {
 }
 
 export function table(table: any, props?: ITableProps[]) {
-    // console.log(props)
+    console.log(table)
     return <div className="w-full overflow-x-scroll">
         <table className="w-full" key={table.order}>
             <thead className="">
                 <tr>
                     <th className="text-left text-[0.8rem] text-secondary">Campo</th>
-                    <th className="text-left text-[0.8rem] text-secondary">Tipo</th>
+                    {table?.type ? <th className="text-left text-[0.8rem] text-secondary">Tipo</th> : <></>}
                     <th className="text-left text-[0.8rem] text-secondary">Descrição</th>
                     {/* <th className="text-left text-gray-500">Exemplo</th> */}
                 </tr>
@@ -110,7 +111,7 @@ export function table(table: any, props?: ITableProps[]) {
                                             <thead className=" bg-gray-100">
                                                 <tr>
                                                     <th className="text-left text-[0.8rem] text-secondary">Campo</th>
-                                                    <th className="text-left text-[0.8rem] text-secondary">Tipo</th>
+                                                    {table?.type ? <th className="text-left text-[0.8rem] text-secondary">Tipo</th> : <></>}
                                                     <th className="text-left text-[0.8rem] text-secondary">Descrição</th>
                                                     {/* <th className="text-left  uppercase">Exemplo</th> */}
                                                 </tr>
@@ -121,7 +122,7 @@ export function table(table: any, props?: ITableProps[]) {
                                                     row.fields.map((subRow: any, subIndex: number) => (
                                                         <tr key={`subrow-${index}-${subIndex}`} className="">
                                                             <td className="whitespace-nowrap text-[0.8rem]">{subRow.field}</td>
-                                                            <td className="whitespace-nowrap text-[0.8rem] ">{subRow.type}</td>
+                                                            {table?.type ? <td className="whitespace-nowrap text-[0.8rem] ">{subRow.type}</td> : <></>}
                                                             <td className=" text-[0.8rem]">{subRow.description}</td>
                                                             {/* <td className="whitespace-nowrap ">{subRow.example}</td> */}
                                                         </tr>
@@ -135,7 +136,7 @@ export function table(table: any, props?: ITableProps[]) {
                         } else {
                             return (<tr key={`row-${index}`} className="">
                                 <td className="whitespace-nowrap text-[0.8rem]">{row.field}</td>
-                                <td className="whitespace-nowrap text-[0.8rem] ">{row.type}</td>
+                                {table?.type ? <td className="whitespace-nowrap text-[0.8rem] ">{row.type}</td> : <></>}
                                 <td className=" text-[0.8rem]">{row.description}</td>
                                 {/* <td className="whitespace-nowrap text-gray-500">{row.example}</td> */}
                             </tr>)
