@@ -8,8 +8,6 @@ import { object } from "framer-motion/client";
 export function returnArticleDescription(description: any) {
     const isList = (obj: any): boolean => obj.items ? true : false;
 
-    console.log(description)
-
     return <div className="mb-7">
         {
             description.map((desc: any, index: number) => {
@@ -36,7 +34,12 @@ export function returnArticleDescription(description: any) {
                 if (desc.props?.box)
                     return box(<p key={index}> {parse(desc?.paragraphs[0].text)} </p>, desc.props?.box.className)
 
-                return <p key={index} className={`mb-2 ${desc.props?.className}`}> {parse(desc?.paragraphs[0].text)} </p>
+                return <p
+                    key={index}
+                    className={clsx(
+                        (desc?.paragraphs[0].props?.className !== undefined) ? desc?.paragraphs[0].props?.className : `mb-2`
+                    )}
+                > {parse(desc?.paragraphs[0].text)} </p>
             })
         }
     </div>
@@ -44,7 +47,7 @@ export function returnArticleDescription(description: any) {
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
 export function returnArticleSection(section: any, key?: number) {
-    // console.log(section)
+    console.log(section)
     return <div
         key={key}
         className={clsx(
@@ -53,8 +56,11 @@ export function returnArticleSection(section: any, key?: number) {
         )}>
 
         <h2
-            style={{ fontSize: "24px" }}
-            className="font-semibold text-primary mb-7"
+            style={{ fontSize: "21px" }} // "24px"
+            className={clsx(
+                "font-semibold text-primary",
+                (section?.props?.title?.className !== undefined) ? section?.props?.title?.className : `mb-7`
+            )}
         >{section.title}</h2>
         <h3>{section.subtitle}</h3>
         {
@@ -65,7 +71,7 @@ export function returnArticleSection(section: any, key?: number) {
             sectionBody(section)
         }
 
-    </div>
+    </div >
 }
 
 function sectionBody(section: any, props?: ISectionProps) {
@@ -95,12 +101,12 @@ export function table(table: any, props?: ITableProps[]) {//style={{border: "1px
         "w-full",
         table?.props?.className
     )}>
-        <table className="w-full overflow-hidden border-separate border-spacing-0 shadow-sm" key={table.order}>
+        <table className="w-full overflow-hidden border-separate border-spacing-0 shadow-sm rounded-lg" key={table.order}>
             <thead className="bg-gray-100">
                 <tr>
-                    <th className="text-left text-[0.8rem] text-secondary p-3">Campo</th>
+                    <th className="text-left text-[0.8rem] text-secondary p-3 rounded-tl-lg">Campo</th>
                     {table?.type && <th className="text-left text-[0.8rem] text-secondary p-3">Tipo</th>}
-                    <th className="text-left text-[0.8rem] text-secondary p-3">Descrição</th>
+                    <th className="text-left text-[0.8rem] text-secondary p-3 rounded-tr-lg">Descrição</th>
                 </tr>
             </thead>
 
@@ -180,7 +186,7 @@ export function media(media: any, props?: IMediaProps[]) {
 /* Funcoes de utilidades gerais */
 function box(body: any, className?: any) {// borderRadius: "0.700rem",
     return <div
-        style={{ borderRadius: "0.3rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
+        style={{ borderRadius: "0.6rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
         className={clsx("border border-gray-300 mb-10", className)}
     >{body}</div>
 }

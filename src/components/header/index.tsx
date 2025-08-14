@@ -82,7 +82,7 @@ const Header = () => {
                             className={clsx(
                                 "bg-stone-200 text-stone-900 opacity-50 font-semibold",
                                 "px-2 py-0.5 rounded mr-0.5 text-[13px] leading-4",
-                                "h-[22px]"
+                                "h-[22px] rounded-2xl"
                             )}
                         >
                             CTRL
@@ -90,7 +90,7 @@ const Header = () => {
                         <span
                             className={clsx(
                                 "bg-stone-200 text-stone-900 opacity-50 font-semibold",
-                                "px-1.5 py-0.5 rounded text-[13px] leading-4"
+                                "px-1.5 py-0.5 rounded text-[13px] leading-4 rounded-2xl"
                             )}
                         >
                             K

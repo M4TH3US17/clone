@@ -27,7 +27,7 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
 }
 
 export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
-    const handleScrollToSectionByID = (idSection: string) => console.log("Scrollar a pagina ate a secao de ID " + idSection)
+    const handleScrollToSectionBySlug = (slug: string) => console.log("Scrollar a pagina ate a secao de ID " + slug)
 
     return <aside className={clsx(
         "fixed right-0 h-full pt-6",
@@ -38,12 +38,13 @@ export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
         <ul >
             {sections.map((summaryItem, index: number) => <li
                 key={index}
-                onClick={() => handleScrollToSectionByID(summaryItem.idSection)}
+                onClick={() => handleScrollToSectionBySlug(summaryItem.slug)}
                 className={
                     clsx(
-                        "cursor-pointer px-6 text-xs"
+                        "cursor-pointer px-6 py-1 text-xs hover:text-gray-800"
                     )
                 }
+                style={{ fontSize: "0.6rem" }}
             >
                 {summaryItem.title}
             </li>)}

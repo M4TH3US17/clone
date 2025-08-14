@@ -139,7 +139,7 @@ const LanguageSwitcherSimple = ({
                 onClick={() => switchLanguage(language)}
                 className={`w-full px-4 py-2 my-2 text-muted rounded-lg text-left flex items-center gap-3 cursor-pointer ${language.locale === currentLocale
                     ? "bg-gray-200 dark:bg-neutral text-muted"
-                    : "hover:bg-gray-100 dark:hover:bg-gray-100"
+                    : "hover:bg-stone-200 dark:hover:bg-stone-200"
                   }`}
               >
                 <Image

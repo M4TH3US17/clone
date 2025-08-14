@@ -33,7 +33,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "Making a flowchart",
                             "props": {},
                             "description": [
@@ -217,7 +217,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "",
+                            "slug": "",
                             "title": "",
                             "props": {},
                             "description": [],
@@ -234,7 +234,7 @@
                             ]
                         },
                         {
-                            "idSection": "",
+                            "slug": "",
                             "title": "Entering and exiting wireframe mode",
                             "props": {},
                             "description": [],
@@ -296,7 +296,7 @@
                             ]
                         },
                         {
-                            "idSection": "",
+                            "slug": "",
                             "title": "Building wireframes",
                             "props": {},
                             "description": [],
@@ -327,7 +327,7 @@
                             ]
                         },
                         {
-                            "idSection": "",
+                            "slug": "",
                             "title": "",
                             "props": {},
                             "description": [],
@@ -382,7 +382,7 @@
                             ]
                         },
                         {
-                            "idSection": "",
+                            "slug": "",
                             "title": "Wireframe characteristics",
                             "props": {},
                             "description": [
@@ -482,7 +482,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -571,7 +571,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -660,7 +660,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -749,7 +749,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -864,16 +864,22 @@
                             "order": 1,
                             "title": "Dados Gerais",
                             "subtitle": "",
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
                                     "props": {
-                                        "className": ""
+                                        "className": "mb-6.5"
                                     },
                                     "paragraphs": [
                                         {
                                             "props": {
-                                                
+                                                "className": "mb-0"
                                             },
                                             "text": "Esta seção contém as informações básicas da conta a pagar",
                                             "links": []
@@ -883,8 +889,7 @@
                             ],
                             "tables": [
                                 {
-                                    "props": {
-                                    },
+                                    "props": {},
                                     "rows": [
                                         {
                                             "description": "Código identificador do lançamento",
@@ -919,9 +924,14 @@
                             ]
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Referente",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -952,9 +962,14 @@
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Pagamento",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -1009,9 +1024,14 @@
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Quitação",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -1042,9 +1062,14 @@
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Totais",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -1083,9 +1108,14 @@
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Centro de Custo",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -1112,9 +1142,14 @@
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Arquivos",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -1141,9 +1176,14 @@
                             "medias": []
                         },
                         {
-                            "idSection": "TITULO_DA_SECAO_2",
+                            "slug": "TITULO_DA_SECAO_2",
                             "title": "Notas",
-                            "props": {},
+                            "props": {
+                                "className": "",
+                                "title": {
+                                    "className": "mb-4"
+                                }
+                            },
                             "description": [
                                 {
                                     "isParagraph": false,
@@ -1194,7 +1234,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1283,7 +1323,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1372,7 +1412,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1461,7 +1501,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1550,7 +1590,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1639,7 +1679,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1728,7 +1768,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1817,7 +1857,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1906,7 +1946,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -1995,7 +2035,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -2084,7 +2124,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -2173,7 +2213,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -2262,7 +2302,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
@@ -2351,7 +2391,7 @@
                     },
                     "sections": [
                         {
-                            "idSection": "TITULO_DA_SECAO_1",
+                            "slug": "TITULO_DA_SECAO_1",
                             "title": "TITULO_DA_SECAO_1",
                             "description": [
                                 {
