@@ -57,8 +57,7 @@ const Breadcrumb = () => {
                 <span
                   className={clsx(
                     "mx-2 text-gray-400 lg:text-[0.8rem]",
-
-                    "text-neutral-900 font-semibold"
+                    "font-semibold"
                   )}
                   style={{ fontWeight: "500" }}
                 >/</span>
