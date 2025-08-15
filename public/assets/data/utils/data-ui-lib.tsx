@@ -187,7 +187,11 @@ export function media(media: any, props?: IMediaProps[]) {
 function box(body: any, className?: any) {// borderRadius: "0.700rem",
     return <div
         style={{ borderRadius: "0.6rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
-        className={clsx("border border-gray-300 mb-10", className)}
+        // className={clsx(, className)}
+        className={clsx(
+            "border border-gray-300",
+            (className !== undefined) ? className : `mb-10`
+        )}
     >{body}</div>
 }
 
