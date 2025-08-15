@@ -1320,7 +1320,16 @@
                                 }
                             ],
                             "tables": [],
-                            "medias": []
+                            "medias": [
+                                {
+                                    "order": 1,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [],
+                                    "link": "/assets/images/articles/financeiro-pass-pay/Menu de acesso.svg"
+                                }
+                            ]
                         },
                         {
                             "slug": "",
@@ -1381,7 +1390,16 @@
                                     ]
                                 }
                             ],
-                            "medias": []
+                            "medias": [
+                                {
+                                    "order": 2,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [],
+                                    "link": "/assets/images/articles/financeiro-pass-pay/Contábil - Plano de Contas - Grid.svg"
+                                }
+                            ]
                         },
                         {
                             "slug": "",
@@ -1447,7 +1465,16 @@
                                 }
                             ],
                             "tables": [],
-                            "medias": []
+                            "medias": [
+                                {
+                                    "order": 2,
+                                    "type": "IMAGE",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "description": [],
+                                    "link": "/assets/images/articles/financeiro-pass-pay/Contábil - Plano de Contas - Cadastro.svg"
+                                }
+                            ]
                         },
                         {
                             "slug": "",

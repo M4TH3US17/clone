@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { IDescriptionProps, IMediaProps, ISectionProps, ITableProps } from "./data-interfaces";
 import parse from 'html-react-parser';
-import { object } from "framer-motion/client";
+import Image from 'next/image';
 
 
 /* Funcoes de Manipulacao da Descricao */
@@ -164,6 +164,9 @@ export function table(table: any, props?: ITableProps[]) {//style={{border: "1px
 }
 
 export function media(media: any, props?: IMediaProps[]) {
+    // console.log(media.link)
+    // const imageSrc = require(media.link);
+
     if (media.type === "IMAGE" || media.type === "GIF") {
         return (
             <div className="w-full">
@@ -171,6 +174,13 @@ export function media(media: any, props?: IMediaProps[]) {
 
                 <div className="w-full flex justify-center mb-7">
                     <img src={media.link} key={media.order} className="border border-gray-300" />
+                    {/* <Image
+                        src={media.link} // ex.: "/images/foto.png"
+                        width={800}
+                        height={600}
+                        className="border border-gray-300"
+                        alt="Descrição"
+                    /> */}
                 </div>
 
                 {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
