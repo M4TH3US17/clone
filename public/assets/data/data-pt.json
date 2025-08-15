@@ -1210,6 +1210,354 @@
                             "medias": []
                         }
                     ]
+                },
+                {
+                    "title": "Plano de Contas ",
+                    "slug": "plano-de-contas",
+                    "subtitle": "",
+                    "description": [
+                        {
+                            "isParagraph": false,
+                            "props": {
+                                "box": {
+                                    "className": "bg-white mb-7"
+                                }
+                            },
+                            "paragraphs": [
+                                {
+                                    "props": {},
+                                    "text": "O módulo de <strong>Plano de Contas</strong> permite cadastrar, organizar e manter todas as contas utilizadas pelo sistema, sejam elas contábeis ou financeiras. ",
+                                    "links": []
+                                }
+                            ]
+                        },
+                        {
+                            "props": {
+                                "verticalPosition": "TOP",
+                                "isUl": true,
+                                "className": ""
+                            },
+                            "text": "Neste artigo, você vai aprender a:",
+                            "links": [],
+                            "items": [
+                                {
+                                    "li": "Acessar o módulo;",
+                                    "links": []
+                                },
+                                {
+                                    "li": "Buscar contas cadastradas;",
+                                    "links": []
+                                },
+                                {
+                                    "li": "Incluir novas contas;",
+                                    "links": []
+                                },
+                                {
+                                    "li": "Alterar informações existentes;",
+                                    "links": []
+                                },
+                                {
+                                    "li": "Entender os tipos e status de contas.",
+                                    "links": []
+                                }
+                            ]
+                        }
+                    ],
+                    "details": {
+                        "createdAt": "2023-01-01T00:00:00.000Z",
+                        "createdBy": "AUTOR_DO_ARTIGO"
+                    },
+                    "sections": [
+                        {
+                            "slug": "",
+                            "title": "Pré-Requisitos",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": true
+                                    },
+                                    "text": "",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Ter acesso ao sistema e permissão para gerenciar o módulo Plano de Contas.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Conhecimento básico sobre a estrutura contábil utilizada na sua empresa.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Como acessar o módulo de plano de contas",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": false
+                                    },
+                                    "text": "",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Abra o sistema e localize o módulo <strong>Contábil</strong> e depois, <strong>Plano de Contas</strong> no menu principal.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "A tela inicial apresenta uma <strong>grid</strong> (tabela) com as contas já cadastradas.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Estrutura dos registros da tabela",
+                            "props": {},
+                            "description": [],
+                            "tables": [
+                                {
+                                    "order": 2,
+                                    "title": "TITULO_TABELA_1",
+                                    "subtitle": "SUBTITULO_TABELA_1",
+                                    "description": [
+                                        {
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
+                                    "rows": [
+                                        {
+                                            "description": "Código hierárquico em níveis, usado para agrupar contas.",
+                                            "field": "Código Estrutural"
+                                        },
+                                        {
+                                            "description": "Código externo usado para integração com sistemas de contabilidade de terceiros.",
+                                            "field": "Código Contábil"
+                                        },
+                                        {
+                                            "description": "Nome da conta",
+                                            "field": "Descrição"
+                                        },
+                                        {
+                                            "description": "Descricao Da Sub-tabela",
+                                            "field": "Tipo",
+                                            "fields": [
+                                                {
+                                                    "description": "contas que recebem lançamentos.",
+                                                    "field": "Analítico"
+                                                },
+                                                {
+                                                    "description": "contas de agrupamento que não recebem lançamentos.",
+                                                    "field": "Sintético"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "description": "Descricao Da Sub-tabela",
+                                            "field": "Status",
+                                            "fields": [
+                                                {
+                                                    "description": "disponível para lançamentos.",
+                                                    "field": "Ativo"
+                                                },
+                                                {
+                                                    "description": "não aparece nas telas de lançamento, mas continua visível em relatórios",
+                                                    "field": "Inativo"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Como Buscar uma Conta",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": true
+                                    },
+                                    "text": "",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Utilize o campo de busca na parte superior da tela.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Digite qualquer termo (código, descrição, tipo, etc.).",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "O sistema pesquisa em todos os campos da tabela.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Como Incluir uma Nova Conta",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": false
+                                    },
+                                    "text": "",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Clique no botão de ação no canto inferior direito.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Selecione Inserir.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Será aberta a tela de inclusão com os seguintes campos para preenchimento: ",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Após preencher, clique em Salvar.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Como Alterar uma Conta Existente",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": false
+                                    },
+                                    "text": "",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Na grid principal, clique sobre a conta que deseja editar.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "A tela de inclusão será aberta, mas no modo de alteração.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Ajuste as informações necessárias e clique em Salvar.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "props": {
+                                        "verticalPosition": "BOTTOM",
+                                        "isUl": false
+                                    },
+                                    "text": "OBS.:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Todos os campos podem ser alterados.",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "O campo status é responsável por ativar ou desativar uma conta. Uma vez desativada ela não será mais apresentada para receber lançamentos, porém, aparecerá em todos os relatórios onde ela já tenho sido lançada. ",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Conclusão",
+                            "props": {},
+                            "description": [
+                                {
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "Com o módulo de Plano de Contas, você consegue organizar de forma hierárquica todas as contas do sistema, garantindo que os lançamentos contábeis e financeiros sejam feitos corretamente. Agora que você sabe como incluir, buscar e alterar contas, pode manter seu plano sempre atualizado e consistente. ",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Conclusão",
+                            "props": {},
+                            "description": [
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": true
+                                    },
+                                    "text": "Módulos relacionados",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Cadastro de Centro de Custo",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Lançamentos de Contas a Pagar",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Lançamentos de Contas a Receber",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Lançamentos de Movimentação de Caixa/Banco ",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Módulos Contábeis",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        }
+                    ]
                 }
             ]
         },
