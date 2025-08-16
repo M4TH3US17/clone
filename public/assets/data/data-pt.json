@@ -1301,19 +1301,23 @@
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "verticalPosition": "TOP",
-                                        "isUl": false
-                                    },
-                                    "text": "",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "Abra o sistema e localize o módulo <strong>Contábil</strong> e depois, <strong>Plano de Contas</strong> no menu principal.",
+                                            "props": {},
+                                            "text": "<strong>Passo 1:</strong> Abra o sistema e localize o <strong>módulo Contábil</strong> e depois, <strong>Plano de Contas</strong> no menu principal.",
                                             "links": []
-                                        },
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "A tela inicial apresenta uma <strong>grid</strong> (tabela) com as contas já cadastradas.",
+                                            "props": {},
+                                            "text": "<strong>Passo 2:</strong> A tela inicial apresenta uma grid (tabela) com as contas já cadastradas.",
                                             "links": []
                                         }
                                     ]
@@ -1326,6 +1330,9 @@
                                     "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
+                                    "props": {
+                                        "className": "w-[50%] rounded-lg"
+                                    },
                                     "description": [],
                                     "link": "/assets/images/articles/financeiro-pass-pay/Menu de acesso.svg"
                                 }
@@ -1335,67 +1342,128 @@
                             "slug": "",
                             "title": "Estrutura dos registros da tabela",
                             "props": {},
-                            "description": [],
-                            "tables": [
+                            "description": [
                                 {
-                                    "order": 2,
-                                    "title": "TITULO_TABELA_1",
-                                    "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": [
-                                        {
-                                            "text": "DESCRICAO_TABELA_1"
+                                    "isParagraph": true,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-white mb-7"
                                         }
-                                    ],
-                                    "rows": [
+                                    },
+                                    "paragraphs": [
                                         {
-                                            "description": "Código hierárquico em níveis, usado para agrupar contas.",
-                                            "field": "Código Estrutural"
+                                            "props": {},
+                                            "text": "<strong>Código Estrutural</strong>",
+                                            "links": []
                                         },
                                         {
-                                            "description": "Código externo usado para integração com sistemas de contabilidade de terceiros.",
-                                            "field": "Código Contábil"
+                                            "props": {},
+                                            "text": " Código hierárquico em níveis, usado para agrupar contas.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": true,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-white mb-7"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Código Contábil</strong>",
+                                            "links": []
                                         },
                                         {
-                                            "description": "Nome da conta",
-                                            "field": "Descrição"
+                                            "props": {},
+                                            "text": "  Código externo usado para integração com sistemas de contabilidade de terceiros",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": true,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-white mb-7"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Descrição</strong>",
+                                            "links": []
                                         },
                                         {
-                                            "description": "Descricao Da Sub-tabela",
-                                            "field": "Tipo",
-                                            "fields": [
-                                                {
-                                                    "description": "contas que recebem lançamentos.",
-                                                    "field": "Analítico"
-                                                },
-                                                {
-                                                    "description": "contas de agrupamento que não recebem lançamentos.",
-                                                    "field": "Sintético"
-                                                }
-                                            ]
+                                            "props": {},
+                                            "text": "Nome da conta",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": true,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-white mb-7"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Tipo</strong>",
+                                            "links": []
                                         },
                                         {
-                                            "description": "Descricao Da Sub-tabela",
-                                            "field": "Status",
-                                            "fields": [
-                                                {
-                                                    "description": "disponível para lançamentos.",
-                                                    "field": "Ativo"
-                                                },
-                                                {
-                                                    "description": "não aparece nas telas de lançamento, mas continua visível em relatórios",
-                                                    "field": "Inativo"
-                                                }
-                                            ]
+                                            "props": {},
+                                            "text": "<strong className='text-gray-700'>Analítico:</strong> contas que recebem lançamentos.",
+                                            "links": []
+                                        },
+                                        {
+                                            "props": {},
+                                            "text": "<strong className='text-gray-700'>Sintético:</strong> contas de agrupamento que não recebem lançamentos.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": true,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-white mb-7"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Status</strong>",
+                                            "links": []
+                                        },
+                                        {
+                                            "props": {},
+                                            "text": "<strong className='text-gray-700'>Ativo:</strong> disponível para lançamentos.",
+                                            "links": []
+                                        },
+                                        {
+                                            "props": {},
+                                            "text": "<strong className='text-gray-700'>Inativo:</strong> não aparece nas telas de lançamento, mas continua visível em relatório históricos",
+                                            "links": []
                                         }
                                     ]
                                 }
                             ],
+                            "tables": [],
                             "medias": [
                                 {
                                     "order": 2,
                                     "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
+                                    "props": {
+                                        "className": "w-[70%] rounded-sm"
+                                    },
                                     "description": [],
                                     "link": "/assets/images/articles/financeiro-pass-pay/Contábil - Plano de Contas - Grid.svg"
                                 }
@@ -1455,7 +1523,21 @@
                                         },
                                         {
                                             "li": "Será aberta a tela de inclusão com os seguintes campos para preenchimento: ",
-                                            "links": []
+                                            "links": [],
+                                            "subList": {
+                                                "props": {
+                                                    "verticalPosition": "TOP",
+                                                    "isUl": false
+                                                },
+                                                "text": "SUBLIST-TEXT",
+                                                "links": [],
+                                                "items": [
+                                                    {
+                                                        "li": "HELLO, WORLD!",
+                                                        "links": []
+                                                    }
+                                                ]
+                                            }
                                         },
                                         {
                                             "li": "Após preencher, clique em Salvar.",
@@ -1471,6 +1553,9 @@
                                     "type": "IMAGE",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
+                                    "props": {
+                                        "className": "w-[30%] rounded-sm"
+                                    },
                                     "description": [],
                                     "link": "/assets/images/articles/financeiro-pass-pay/Contábil - Plano de Contas - Cadastro.svg"
                                 }
@@ -1482,41 +1567,43 @@
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "verticalPosition": "TOP",
-                                        "isUl": false
-                                    },
-                                    "text": "",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": true,
+                                    "paragraphs": [
                                         {
-                                            "li": "Na grid principal, clique sobre a conta que deseja editar.",
+                                            "props": {},
+                                            "text": "<strong>Passo 1:</strong> Na grid principal, clique sobre a conta que deseja editar",
                                             "links": []
                                         },
                                         {
-                                            "li": "A tela de inclusão será aberta, mas no modo de alteração.",
+                                            "props": {},
+                                            "text": "<strong>Passo 2:</strong> A tela de inclusão será aberta, mas no modo de alteração",
                                             "links": []
                                         },
                                         {
-                                            "li": "Ajuste as informações necessárias e clique em Salvar.",
+                                            "props": {
+                                                "className": "mb-7"
+                                            },
+                                            "text": "<strong>Passo 3:</strong> Ajuste as informações necessárias e clique em <strong>Salvar</strong>",
                                             "links": []
                                         }
                                     ]
                                 },
                                 {
+                                    "isParagraph": true,
                                     "props": {
-                                        "verticalPosition": "BOTTOM",
-                                        "isUl": false
+                                        "box": {
+                                            "className": "bg-white"
+                                        }
                                     },
-                                    "text": "OBS.:",
-                                    "links": [],
-                                    "items": [
+                                    "paragraphs": [
                                         {
-                                            "li": "Todos os campos podem ser alterados.",
+                                            "props": {},
+                                            "text": "⦁ Todos os campos podem ser alterados.",
                                             "links": []
                                         },
                                         {
-                                            "li": "O campo status é responsável por ativar ou desativar uma conta. Uma vez desativada ela não será mais apresentada para receber lançamentos, porém, aparecerá em todos os relatórios onde ela já tenho sido lançada. ",
+                                            "props": {},
+                                            "text": "⦁ O campo status é responsável por ativar ou desativar uma conta. Uma vez desativada ela não será mais apresentada para receber lançamentos, porém, aparecerá em todos os relatórios onde ela já tenho sido lançada.",
                                             "links": []
                                         }
                                     ]
@@ -1531,12 +1618,17 @@
                             "props": {},
                             "description": [
                                 {
-                                    "isParagraph": false,
+                                    "isParagraph": true,
                                     "props": {},
                                     "paragraphs": [
                                         {
-                                            "props": {},
+                                            "props": {"className": "mb-7"},
                                             "text": "Com o módulo de Plano de Contas, você consegue organizar de forma hierárquica todas as contas do sistema, garantindo que os lançamentos contábeis e financeiros sejam feitos corretamente. Agora que você sabe como incluir, buscar e alterar contas, pode manter seu plano sempre atualizado e consistente. ",
+                                            "links": []
+                                        },
+                                        {
+                                            "props": {},
+                                            "text": "Agora que você sabe como incluir, buscar e alterar contas, pode manter seu plano sempre atualizado e consistente.",
                                             "links": []
                                         }
                                     ]
@@ -1547,7 +1639,7 @@
                         },
                         {
                             "slug": "",
-                            "title": "Conclusão",
+                            "title": "Módulos relacionados",
                             "props": {},
                             "description": [
                                 {
@@ -1555,7 +1647,7 @@
                                         "verticalPosition": "TOP",
                                         "isUl": true
                                     },
-                                    "text": "Módulos relacionados",
+                                    "text": "",
                                     "links": [],
                                     "items": [
                                         {

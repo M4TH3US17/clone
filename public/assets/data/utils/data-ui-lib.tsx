@@ -47,7 +47,6 @@ export function returnArticleDescription(description: any) {
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
 export function returnArticleSection(section: any, key?: number) {
-    console.log(section)
     return <div
         key={key}
         className={clsx(
@@ -173,14 +172,7 @@ export function media(media: any, props?: IMediaProps[]) {
                 {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
 
                 <div className="w-full flex justify-center mb-7">
-                    <img src={media.link} key={media.order} className="border border-gray-300" />
-                    {/* <Image
-                        src={media.link} // ex.: "/images/foto.png"
-                        width={800}
-                        height={600}
-                        className="border border-gray-300"
-                        alt="Descrição"
-                    /> */}
+                    <img src={media.link} key={media.order} className={media.props?.className} />
                 </div>
 
                 {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}

@@ -23,4 +23,4 @@ export const ArticleContent: FC<{ article: any }> = ({ article }) => {
 
     </div>
 }
-// bg-amber-100 
+// bg-amber-100
