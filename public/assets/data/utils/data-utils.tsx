@@ -1,3 +1,4 @@
+
 import { DataENJSON, DataESJSON, DataPTJSON } from "../.."
 
 export function returnData(currentLanguage: string): object {
@@ -66,7 +67,11 @@ function adjustLink(descriptionObject: any): any {
             if (hasLinks) {
                 let links = listItemObject.links
                 links.map((link: any) => listItemObject.li = listItemObject.li.replace(link.breakpoint, `<a href='${link.href}'>${link.text}</a>`))
-                return listItemObject.li
+
+                // if (listItemObject.subList) {
+                //     return { li: listItemObject.li, subList: listItemObject.subList }
+                // }
+                return listItemObject.li 
             }
         })
 
