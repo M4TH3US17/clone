@@ -1,97 +1,97 @@
-'use client';
-import { getLucideIcon } from "@/components/ui/icon-wrapper";
-import { useDataStore } from "@/store/dataStore";
-import { Article, HelpCenterData } from "@/types/sidebar";
+"use client";
+
+import { useRouter, notFound } from "next/navigation";
 import clsx from "clsx";
 import { ChevronRight } from "lucide-react";
-import { notFound, useRouter } from "next/navigation";
 import Breadcrumb from "../breadCrumb";
+import { Article, HelpCenterData } from "@/types/sidebar";
+import { useDataStore } from "@/store/dataStore";
+import { getLucideIcon } from "@/components/ui/icon-wrapper";
+import { useParams } from "next/navigation";
+export default function TopicPage() {
 
-const TopicPage = ({ params }: any) => {
-    const helpCenter: HelpCenterData = useDataStore((state) => state.data.topics);
-    const topic = helpCenter.find(t => t.slug === params.topic);
-    const router = useRouter();
+  const { topic } = useParams<{ topic: string }>();
 
-    if (!topic)
-        return notFound();
+  const router = useRouter();
+  const helpCenter: HelpCenterData = useDataStore((state) => state.data.topics);
+  const topicCurrent = helpCenter.find((t) => t.slug === topic);
 
-    const handleCLick = (article: Article) => {
-        router.push(`/${topic.slug}/${article.slug}`)
-    }
+  if (!topicCurrent) return notFound();
 
-    const Icon = getLucideIcon(topic.icon);
+  const handleClick = (article: Article) => {
+    router.push(`/${topicCurrent.slug}/${article.slug}`);
+  };
 
-    return (
-        <main className={clsx(
-            "bg-neutral text-primary ml-0 lg:ml-[18.72rem]",
-            "flex min-h-screen flex-[1] relative",
-            "2xl:flex 2xl:justify-center",
-        )}>
-            <section className={clsx(
-                "lg:flex lg:justify-center",
-                "w-full flex lg:justify-end lg:max-w-[1148px]",
-            )}>
-                <div
-                    className={clsx(
-                        "bg-neutral w-full",
-                        "lg:w-[calc(100vw - 18.72rem)]",
-                        "pt-[40px] pr-[16px] pb-[120px] pl-[16px]",
-                        "md:pt-[40px] md:pr-[64px] md:pl-[64px] md:pb-[120px]",
-                        "xl:pt-[20px] 2xl:pr-[128px] 2xl:pl-[128px] xl:pb-[120px]",
-                    )}
-                    style={{
-                        width: '',
-                        // padding: "40px 64px 120px"
-                    }}
+  const Icon = getLucideIcon(topicCurrent.icon);
+
+  return (
+    <main
+      className={clsx(
+        "bg-neutral text-primary ml-0 lg:ml-[18.72rem]",
+        "flex min-h-screen flex-[1] relative",
+        "2xl:flex 2xl:justify-center"
+      )}
+    >
+      <section
+        className={clsx(
+          "lg:flex lg:justify-center",
+          "w-full flex lg:justify-end lg:max-w-[1148px]"
+        )}
+      >
+        <div
+          className={clsx(
+            "bg-neutral w-full",
+            "lg:w-[calc(100vw - 18.72rem)]",
+            "pt-[40px] pr-[16px] pb-[120px] pl-[16px]",
+            "md:pt-[40px] md:pr-[64px] md:pl-[64px] md:pb-[120px]",
+            "xl:pt-[20px] 2xl:pr-[128px] 2xl:pl-[128px] xl:pb-[120px]"
+          )}
+        >
+          <Breadcrumb />
+          <div className="h-[36px] w-[36px] mt-10 mb-8 rounded-md flex items-center justify-center bg-white">
+            <Icon className="h-[22px] w-[24px]" />
+          </div>
+
+          <h1
+            className={clsx(
+              "w-[70%] md:w-full ",
+              "pb-3.5 font-[500] mb-3",
+              "text-5xl leading-14 xl:text-[3.8rem]"
+            )}
+          >
+            {topicCurrent.title}
+          </h1>
+
+          <h3
+            className={clsx(
+              "text-[20px] leading-6 md:leading-6.5 mb-10 opacity-80"
+            )}
+          >
+            {topicCurrent.subtitle}
+          </h3>
+
+          <ul className="flex flex-col w-full gap-[8px]">
+            {topicCurrent.articles.map((article) => (
+              <li
+                key={article.title}
+                onClick={() => handleClick(article)}
+                className={clsx(
+                  "bg-white flex justify-between items-center",
+                  "py-3.5 px-5 border border-gray-200 rounded-md cursor-pointer"
+                )}
+              >
+                <span
+                  className="text-[16px] w-[70%] md:w-full truncate cursor-pointer"
+                  style={{ fontWeight: "500" }}
                 >
-                    <Breadcrumb />
-                    <div className="h-[36px] w-[36px] mt-10 mb-8 rounded-md flex items-center justify-center bg-white">
-                        <Icon className="h-[22px] w-[24px]" />
-                    </div>
-
-                    <h1
-                        className={clsx(
-                            "w-[70%] md:w-full ",
-                            "pb-3.5 font-[500] mb-3",
-                            "text-5xl leading-14 xl:text-[3.8rem]"
-                        )}>{topic.title}</h1>
-
-                    <h3
-                        className={clsx(
-                            "text-[20px] leading-6 md:leading-6.5 mb-10 opacity-80"
-                        )}
-                    // style={{ fontWeight: "500" }}
-                    >{topic.subtitle}</h3>
-
-                    <ul className="flex flex-col w-full gap-[8px]">
-                        {topic.articles.map(article => (
-                            <li
-                                key={article.title}
-                                onClick={() => handleCLick(article)}
-                                className={clsx(
-                                    "bg-white flex justify-between items-center",
-                                    "py-3.5 px-5 border border-gray-200 rounded-md cursor-pointer"
-                                )}
-                            >
-                                <span
-                                    className="text-[16px] w-[70%] md:w-full truncate cursor-pointer"
-                                    style={{ fontWeight: "500" }}
-                                >{article.title}</span>
-                                <ChevronRight
-                                    className={
-                                        clsx(
-                                            "w-4.5 h-4.5 transition-transform duration-200 text-gray-400 border-0",
-                                        )
-                                    }
-                                />
-                            </li>
-                        ))}
-                    </ul>
-
-                </div>
-            </section>
-        </main>
-    );
+                  {article.title}
+                </span>
+                <ChevronRight className="w-4.5 h-4.5 transition-transform duration-200 text-gray-400 border-0" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </main>
+  );
 }
-
-export default TopicPage
