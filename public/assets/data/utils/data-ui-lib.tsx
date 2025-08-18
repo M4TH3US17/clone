@@ -223,7 +223,7 @@ function box(body: any, className?: any) {// borderRadius: "0.700rem",
 }
 
 function list(listagemObject: any, props?: any) {
-    const items = listagemObject.items.map((text: string, key: number) => <li style={{ fontWeight: "500" }}>{parse(text)}</li>)
+    const items = listagemObject.items.map((text: string, key: number) => <li style={{ fontWeight: "500" }}>{parse(text)}</li>) 
     const listText = <p className="text-stone-900" style={{ marginBottom: "1rem", fontWeight: "500" }}>{listagemObject.text}</p>
 
     if (props.isUl) {
