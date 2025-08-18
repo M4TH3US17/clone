@@ -6,49 +6,74 @@ import Image from 'next/image';
 
 /* Funcoes de Manipulacao da Descricao */
 export function returnArticleDescription(description: any) {
-    const isList = (obj: any): boolean => obj.items ? true : false;
-
-    return <div className="mb-7">
-        {
-            description.map((desc: any, index: number) => {
-                if (isList(desc))
-                    return list(desc, desc.props)
-
-                if (desc.isParagraph) {
-                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
-                        const paragraph = <p key={key} className={clsx(
-                            `${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"}`,
-                            `${paragraphObject.props?.className}`)
-                        }>
-                            {parse(paragraphObject.text)}
-                        </p>
-                        if (paragraphObject.props.box) return box(paragraph, paragraphObject.props?.box?.className)
-                        return paragraph
-                    })
-
-                    if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
-
-                    return paragraphs
-                }
-
-                if (desc.props?.box)
-                    return box(<p key={index}> {parse(desc?.paragraphs[0].text)} </p>, desc.props?.box.className)
-
-                return <p
-                    key={index}
-                    className={clsx(
-                        (desc?.paragraphs[0].props?.className !== undefined) ? desc?.paragraphs[0].props?.className : `mb-2`
-                    )}
-                > {parse(desc?.paragraphs[0].text)} </p>
-            })
-        }
-    </div>
+    const isList = (obj: any): boolean => !!obj.items;
+  
+    return (
+      <div className="mb-7">
+        {description.map((desc: any, index: number) => {
+          if (!desc) return null;
+  
+          if (!desc?.paragraphs || desc.paragraphs.length === 0) {
+            return <></>;
+          }
+  
+          const firstParagraph = desc.paragraphs[0];
+  
+          if (isList(desc)) return list(desc, desc.props);
+  
+          if (desc.isParagraph && Array.isArray(desc.paragraphs)) {
+            const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
+              const paragraph = (
+                <p
+                  key={key}
+                  className={clsx(
+                    desc.paragraphs.length - 1 === key ? "" : "mb-2",
+                    paragraphObject.props?.className
+                  )}
+                >
+                  {typeof paragraphObject.text === "string" ? parse(paragraphObject.text) : ""}
+                </p>
+              );
+              if (paragraphObject.props?.box)
+                return box(paragraph, paragraphObject.props.box.className);
+  
+              return paragraph;
+            });
+  
+            if (desc.props?.box) return box(paragraphs, desc.props?.box?.className);
+  
+            return paragraphs;
+          }
+  
+          if (desc.props?.box)
+            return box(
+              <p key={index}>
+                {typeof firstParagraph.text === "string" ? parse(firstParagraph.text) : ""}
+              </p>,
+              desc.props?.box.className
+            );
+  
+          return (
+            <p
+              key={index}
+              className={clsx(
+                firstParagraph.props?.className !== undefined ? firstParagraph.props?.className : "mb-2"
+              )}
+            >
+              {typeof firstParagraph.text === "string" ? parse(firstParagraph.text) : ""}
+            </p>
+          );
+        })}
+      </div>
+    );
 }
+  
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
 export function returnArticleSection(section: any, key?: number) {
     return <div
         key={key}
+        id={section.slug}
         className={clsx(
             "mb-7",
             section.props?.className
