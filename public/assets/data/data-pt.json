@@ -1220,7 +1220,7 @@
                             "isParagraph": false,
                             "props": {
                                 "box": {
-                                    "className": "bg-white mb-7"
+                                    "className": "bg-custom-gradient mb-7"
                                 }
                             },
                             "paragraphs": [
@@ -1347,7 +1347,7 @@
                                     "isParagraph": true,
                                     "props": {
                                         "box": {
-                                            "className": "bg-white mb-7"
+                                            "className": "bg-cinza-custom-gradient mb-7"
                                         }
                                     },
                                     "paragraphs": [
@@ -1367,7 +1367,7 @@
                                     "isParagraph": true,
                                     "props": {
                                         "box": {
-                                            "className": "bg-white mb-7"
+                                            "className": "bg-cinza-custom-gradient mb-7"
                                         }
                                     },
                                     "paragraphs": [
@@ -1387,7 +1387,7 @@
                                     "isParagraph": true,
                                     "props": {
                                         "box": {
-                                            "className": "bg-white mb-7"
+                                            "className": "bg-cinza-custom-gradient mb-7"
                                         }
                                     },
                                     "paragraphs": [
@@ -1407,7 +1407,7 @@
                                     "isParagraph": true,
                                     "props": {
                                         "box": {
-                                            "className": "bg-white mb-7"
+                                            "className": "bg-cinza-custom-gradient mb-7"
                                         }
                                     },
                                     "paragraphs": [
@@ -1432,7 +1432,7 @@
                                     "isParagraph": true,
                                     "props": {
                                         "box": {
-                                            "className": "bg-white mb-7"
+                                            "className": "bg-cinza-custom-gradient mb-7"
                                         }
                                     },
                                     "paragraphs": [
@@ -1554,7 +1554,7 @@
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
                                     "props": {
-                                        "className": "w-[30%] rounded-sm"
+                                        "className": "rounded-sm"
                                     },
                                     "description": [],
                                     "link": "/assets/images/articles/financeiro-pass-pay/Contábil - Plano de Contas - Cadastro.svg"
@@ -1592,7 +1592,7 @@
                                     "isParagraph": true,
                                     "props": {
                                         "box": {
-                                            "className": "bg-white"
+                                            "className": "bg-custom-gradient"
                                         }
                                     },
                                     "paragraphs": [
