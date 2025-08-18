@@ -214,7 +214,7 @@ function list(listagemObject: any, props?: any) {
             <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ol className="list-inside list-decimal pl-5 text-stone-900">
-                    {items}
+                    {items} 
                 </ol>
             </div>)
     }
