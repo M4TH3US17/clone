@@ -30,7 +30,7 @@ export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
     const handleScrollToSectionBySlug = (slug: string) => console.log("Scrollar a pagina ate a secao de ID " + slug)
 
     return <aside className={clsx(
-        "fixed right-0 h-full pt-6",
+        "fixed right-0 h-full pt-6 bg-neutral",
         "border-l border-gray-200 w-52 hidden xl:block"
     )}>
 

@@ -20,7 +20,8 @@ const ArticlePage = ({ params }: { params: Promise<{ topic: string; article: str
     return (
         <main className={clsx(
             // "bg-amber-950",
-            "bg-neutral ",
+            // "bg-neutral ",
+            "bg-white",
             "text-primary ml-0 lg:ml-[18.72rem]",
             "flex min-h-screen flex-[1] relative",
             "2xl:flex 2xl:justify-center",
