@@ -2310,7 +2310,7 @@
                                             "paragraphs": [
                                                 {
                                                     "props": {
-                                                        "className": "mb-4"
+                                                        "className": "mb-4 mt-7"
                                                     },
                                                     "text": "<strong>Passo 1:</strong>&nbsp;&nbsp; Primeiro temos o nome da variável — <strong>superHeroes</strong>.",
                                                     "links": []
