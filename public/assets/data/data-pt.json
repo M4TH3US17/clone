@@ -1305,8 +1305,9 @@
                                     "props": {},
                                     "paragraphs": [
                                         {
-                                            "props": {},
-                                            "text": "<strong>Passo 1:</strong> Abra o sistema e localize o <strong>módulo Contábil</strong> e depois, <strong>Plano de Contas</strong> no menu principal.",
+                                            "props": {
+                                            },
+                                            "text": "<strong>Passo 1:</strong>&nbsp;&nbsp; Abra o sistema e localize o <strong>módulo Contábil</strong> e depois, <strong>Plano de Contas</strong> no menu principal.",
                                             "links": []
                                         }
                                     ]
@@ -1316,8 +1317,9 @@
                                     "props": {},
                                     "paragraphs": [
                                         {
-                                            "props": {},
-                                            "text": "<strong>Passo 2:</strong> A tela inicial apresenta uma grid (tabela) com as contas já cadastradas.",
+                                            "props": {
+                                            },
+                                            "text": "<strong>Passo 2:</strong>&nbsp;&nbsp; A tela inicial apresenta uma grid (tabela) com as contas já cadastradas.",
                                             "links": []
                                         }
                                     ]
@@ -1331,7 +1333,7 @@
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
                                     "props": {
-                                        "className": "w-[50%] rounded-lg"
+                                        "className": "w-[50%] rounded-lg mt-7"
                                     },
                                     "description": [],
                                     "link": "/assets/images/articles/financeiro-pass-pay/Menu de acesso.svg"
@@ -1475,72 +1477,17 @@
                             "props": {},
                             "description": [
                                 {
-                                    "props": {
-                                        "verticalPosition": "TOP",
-                                        "isUl": true
-                                    },
-                                    "text": "",
-                                    "links": [],
-                                    "items": [
+                                    "isParagraph": true,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "li": "Utilize o campo de busca na parte superior da tela.",
+                                            "props": {},
+                                            "text": "<strong>Passo 1:</strong>&nbsp;&nbsp;  Utilize o campo de busca na parte superior da tela.",
                                             "links": []
                                         },
                                         {
-                                            "li": "Digite qualquer termo (código, descrição, tipo, etc.).",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "O sistema pesquisa em todos os campos da tabela.",
-                                            "links": []
-                                        }
-                                    ]
-                                }
-                            ],
-                            "tables": [],
-                            "medias": []
-                        },
-                        {
-                            "slug": "",
-                            "title": "Como Incluir uma Nova Conta",
-                            "props": {},
-                            "description": [
-                                {
-                                    "props": {
-                                        "verticalPosition": "TOP",
-                                        "isUl": false
-                                    },
-                                    "text": "",
-                                    "links": [],
-                                    "items": [
-                                        {
-                                            "li": "Clique no botão de ação no canto inferior direito.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "Selecione Inserir.",
-                                            "links": []
-                                        },
-                                        {
-                                            "li": "Será aberta a tela de inclusão com os seguintes campos para preenchimento: ",
-                                            "links": [],
-                                            "subList": {
-                                                "props": {
-                                                    "verticalPosition": "TOP",
-                                                    "isUl": false
-                                                },
-                                                "text": "SUBLIST-TEXT",
-                                                "links": [],
-                                                "items": [
-                                                    {
-                                                        "li": "HELLO, WORLD!",
-                                                        "links": []
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "li": "Após preencher, clique em Salvar.",
+                                            "props": {},
+                                            "text": "<strong>Passo 2:</strong>&nbsp;&nbsp;  Digite qualquer termo (código, descrição, tipo, etc.).  O sistema pesquisa em todos os campos da tabela.",
                                             "links": []
                                         }
                                     ]
@@ -1571,19 +1518,19 @@
                                     "paragraphs": [
                                         {
                                             "props": {},
-                                            "text": "<strong>Passo 1:</strong> Na grid principal, clique sobre a conta que deseja editar",
+                                            "text": "<strong>Passo 1:</strong>&nbsp;&nbsp; Na grid principal, clique sobre a conta que deseja editar",
                                             "links": []
                                         },
                                         {
                                             "props": {},
-                                            "text": "<strong>Passo 2:</strong> A tela de inclusão será aberta, mas no modo de alteração",
+                                            "text": "<strong>Passo 2:</strong>&nbsp;&nbsp; A tela de inclusão será aberta, mas no modo de alteração",
                                             "links": []
                                         },
                                         {
                                             "props": {
                                                 "className": "mb-7"
                                             },
-                                            "text": "<strong>Passo 3:</strong> Ajuste as informações necessárias e clique em <strong>Salvar</strong>",
+                                            "text": "<strong>Passo 3:</strong>&nbsp;&nbsp; Ajuste as informações necessárias e clique em <strong>Salvar</strong>",
                                             "links": []
                                         }
                                     ]
@@ -1598,12 +1545,73 @@
                                     "paragraphs": [
                                         {
                                             "props": {},
-                                            "text": "⦁ Todos os campos podem ser alterados.",
+                                            "text": "⦁&nbsp; Todos os campos podem ser alterados.",
                                             "links": []
                                         },
                                         {
                                             "props": {},
-                                            "text": "⦁ O campo status é responsável por ativar ou desativar uma conta. Uma vez desativada ela não será mais apresentada para receber lançamentos, porém, aparecerá em todos os relatórios onde ela já tenho sido lançada.",
+                                            "text": "⦁&nbsp; O campo status é responsável por ativar ou desativar uma conta. Uma vez desativada ela não será mais apresentada para receber lançamentos, porém, aparecerá em todos os relatórios onde ela já tenho sido lançada.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Como Incluir uma Nova Conta",
+                            "props": {},
+                            "description": [
+                                {
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Passo 1</strong> &nbsp;&nbsp;Clique no botão de ação no canto inferior direito.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "<strong>Passo 2</strong>&nbsp;&nbsp; Selecione Inserir.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "props": {
+                                        "verticalPosition": "TOP",
+                                        "isUl": true
+                                    },
+                                    "text": "<strong>Passo 3</strong>&nbsp;&nbsp;Será aberta a tela de inclusão com os seguintes campos para preenchimento:",
+                                    "links": [],
+                                    "items": [
+                                        {
+                                            "li": "Código Estrutural",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Código Contábil",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Descrição",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Tipo (Analítico ou Sintético)",
+                                            "links": []
+                                        },
+                                        {
+                                            "li": "Status (Ativo ou Inativo)",
                                             "links": []
                                         }
                                     ]
@@ -1622,7 +1630,9 @@
                                     "props": {},
                                     "paragraphs": [
                                         {
-                                            "props": {"className": "mb-7"},
+                                            "props": {
+                                                "className": "mb-7"
+                                            },
                                             "text": "Com o módulo de Plano de Contas, você consegue organizar de forma hierárquica todas as contas do sistema, garantindo que os lançamentos contábeis e financeiros sejam feitos corretamente. Agora que você sabe como incluir, buscar e alterar contas, pode manter seu plano sempre atualizado e consistente. ",
                                             "links": []
                                         },
