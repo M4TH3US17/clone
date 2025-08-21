@@ -173,49 +173,8 @@ export function media(media: any, props?: IMediaProps[]) {
     // const imageSrc = require(media.link);
 
     if (media.type === "JSON") {
-        const formatJsonDisplay = (jsonString: string) => {
-            try {
-                const jsonObj: any = parse(jsonString);
-
-                return (
-                    <div>
-                        {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
-                        <div style={{
-                            backgroundColor: '#1E1E1E',
-                            color: '#D4D4D4',
-                            padding: '16px',
-                            borderRadius: '8px',
-                            fontSize: '14px',
-                            fontFamily: 'Monaco, Menlo, Consolas, monospace',
-                            overflow: 'auto',
-                            maxHeight: '400px',
-                            whiteSpace: 'pre-wrap'
-                        }}
-                        className="mb-7"
-                        >
-                            {jsonObj}
-                        </div>
-                        {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
-                    </div>
-                );
-            } catch (e: any) {
-                return (
-                    <div style={{
-                        backgroundColor: '#FFECEC',
-                        color: '#D00',
-                        padding: '16px',
-                        borderRadius: '8px',
-                        border: '1px solid #FCC'
-                    }}>
-                        JSON inválido: {(e as Error).message}
-                    </div>
-                );
-            }
-        };
-
-        return formatJsonDisplay(media.json);
-    }
-
+        return formatJsonDisplay(media);
+    };
     if (media.type === "IMAGE" || media.type === "GIF") {
         return (
             <div className="w-full">
@@ -273,3 +232,97 @@ function list(listagemObject: any, props?: any) {
             </div>)
     }
 }
+
+function formatJsonDisplay(media: any) {
+    const jsonObj = window.JSON.parse(media.json);
+    try {
+
+        return (
+            <div className="relative">
+                {/* Top Description */}
+                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
+
+                <div
+                    style={{
+                        position: 'relative',
+                        fontFamily: 'monospace',
+                        fontSize: '0.875rem',
+                        padding: '1.25rem',
+                        borderRadius: '0.5rem',
+                        borderWidth: '1px',
+                        borderColor: '#333',
+                        background: '#1E1E1E',
+                        color: '#D4D4D4',
+                        overflow: 'auto'
+                    }}
+                >
+                    <div>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: '0.5rem',
+                                left: '1rem',
+                                fontSize: '0.75rem',
+                                color: '#AAAAAA',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.05em'
+                            }}
+                        >
+                            JSON
+                        </div>
+
+                        <button
+                            onClick={() => navigator.clipboard.writeText(window.JSON.stringify(jsonObj, null, 2))}
+                            style={{
+                                position: 'absolute',
+                                top: '0.5rem',
+                                right: '1rem',
+                                fontSize: '0.75rem',
+                                color: 'white',
+                                backgroundColor: '#333',
+                                border: '1px solid #555',
+                                paddingLeft: '0.5rem',
+                                paddingRight: '0.5rem',
+                                paddingTop: '0.25rem',
+                                paddingBottom: '0.25rem',
+                                borderRadius: '0.25rem',
+                                cursor: 'pointer' // opcional: para indicar que é clicável
+                            }}
+                        >
+                            Copy
+                        </button>
+                    </div>
+
+
+                    <pre
+                        style={{
+                            marginTop: '1.5rem',
+                            whiteSpace: 'pre-wrap',
+                            wordBreak: 'break-word'
+                        }}
+                    >
+                        <code>
+                            {window.JSON.stringify(jsonObj, null, 2)}
+                        </code>
+                    </pre>
+
+                </div>
+
+                {/* Bottom Description */}
+                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
+            </div>
+        );
+    } catch (e: any) {
+        return (
+            <div style={{
+                backgroundColor: '#FFECEC',
+                color: '#D00',
+                padding: '16px',
+                borderRadius: '8px',
+                border: '1px solid #FCC'
+            }}>
+                JSON inválido: {(e as Error).message}
+            </div>
+        );
+    }
+};
