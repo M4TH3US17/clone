@@ -81,6 +81,7 @@ export function returnArticleSection(section: any, key?: number) {
 
         <h2
             style={{ fontSize: "21px" }} // "24px"
+            id={section.title}
             className={clsx(
                 "font-semibold text-primary",
                 (section?.props?.title?.className !== undefined) ? section?.props?.title?.className : `mb-7`
