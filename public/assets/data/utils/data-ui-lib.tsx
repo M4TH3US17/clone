@@ -245,7 +245,6 @@ function formatJsonDisplay(media: any) {
                 <div
                     style={{
                         position: 'relative',
-                        fontFamily: 'monospace',
                         fontSize: '0.875rem',
                         padding: '1.25rem',
                         borderRadius: '0.5rem',
@@ -265,7 +264,8 @@ function formatJsonDisplay(media: any) {
                                 fontSize: '0.75rem',
                                 color: '#AAAAAA',
                                 textTransform: 'uppercase',
-                                letterSpacing: '0.05em'
+                                letterSpacing: '0.05em',
+                                fontWeight: 600
                             }}
                         >
                             JSON
@@ -277,16 +277,14 @@ function formatJsonDisplay(media: any) {
                                 position: 'absolute',
                                 top: '0.5rem',
                                 right: '1rem',
-                                fontSize: '0.75rem',
-                                color: 'white',
-                                backgroundColor: '#333',
-                                border: '1px solid #555',
-                                paddingLeft: '0.5rem',
-                                paddingRight: '0.5rem',
-                                paddingTop: '0.25rem',
-                                paddingBottom: '0.25rem',
-                                borderRadius: '0.25rem',
-                                cursor: 'pointer' // opcional: para indicar que é clicável
+                                fontSize: '0.75rem', // text-xs
+                                color: '#CCCCCC', // texto acinzentado claro
+                                backgroundColor: 'rgba(255, 255, 255, 0.05)', // fundo translúcido
+                                padding: '0.25rem 0.5rem', // py-1 px-2
+                                border: 'none', // sem borda visível
+                                borderRadius: '9999px', // full border radius
+                                cursor: 'pointer',
+                                transition: 'background-color 0.2s ease-in-out'
                             }}
                         >
                             Copy
@@ -310,7 +308,7 @@ function formatJsonDisplay(media: any) {
 
                 {/* Bottom Description */}
                 {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
-            </div>
+            </div >
         );
     } catch (e: any) {
         return (
