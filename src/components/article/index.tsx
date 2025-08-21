@@ -27,7 +27,23 @@ export const ArticleEstructure: FC<{ article: any }> = ({ article }) => {
 }
 
 export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
-    const handleScrollToSectionBySlug = (slug: string) => console.log("Scrollar a pagina ate a secao de ID " + slug)
+    const handleScrollToSectionBySlug = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
+        } else {
+            console.warn(`Elemento com id "${id}" não encontrado`);
+        }
+    };
+
+
 
     return <aside className={clsx(
         "fixed right-0 h-full pt-6 bg-neutral",
@@ -38,7 +54,7 @@ export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
         <ul >
             {sections.map((summaryItem, index: number) => <li
                 key={index}
-                onClick={() => handleScrollToSectionBySlug(summaryItem.slug)}
+                onClick={() => handleScrollToSectionBySlug(summaryItem.title)}
                 className={
                     clsx(
                         "cursor-pointer px-6 py-1 text-xs hover:text-gray-800"

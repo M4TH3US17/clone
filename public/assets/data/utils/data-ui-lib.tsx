@@ -61,6 +61,7 @@ export function returnArticleSection(section: any, key?: number) {
 
         <h2
             style={{ fontSize: "21px" }} // "24px"
+            id={section.title}
             className={clsx(
                 "font-semibold text-primary",
                 (section?.props?.title?.className !== undefined) ? section?.props?.title?.className : `mb-7`
@@ -219,7 +220,7 @@ function list(listagemObject: any, props?: any) {
             <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ol className="list-inside list-decimal pl-5 text-stone-900">
-                    {items}
+                    {items} 
                 </ol>
             </div>)
     }
