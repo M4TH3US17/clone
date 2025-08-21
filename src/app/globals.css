@@ -152,3 +152,8 @@ th {
     background: rgb(237, 237, 237);
     border: none;
 }
+
+.link-article {
+    color: rgb(140, 82, 255);
+    text-decoration-line: underline;
+}

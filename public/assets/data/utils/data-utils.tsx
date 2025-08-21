@@ -55,7 +55,7 @@ function processDescriptions(data: any): any {
 }
 
 function adjustLink(descriptionObject: any): any {
-    descriptionObject.links.map((link: any) => descriptionObject.text = descriptionObject.text.replace(link.breakpoint, `<a href='${link.href}'>${link.text}</a>`))
+    descriptionObject.links.map((link: any) => descriptionObject.text = descriptionObject.text.replace(link.breakpoint, `<a href='${link.href}' class="link-article">${link.text}</a>`))
 
     const isListagem = descriptionObject.items
     if (isListagem) {

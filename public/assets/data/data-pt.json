@@ -832,7 +832,7 @@
                             "isParagraph": false,
                             "props": {
                                 "box": {
-                                    "className": "bg-white"
+                                    "className": "bg-custom-gradient"
                                 }
                             },
                             "paragraphs": [
@@ -1305,8 +1305,7 @@
                                     "props": {},
                                     "paragraphs": [
                                         {
-                                            "props": {
-                                            },
+                                            "props": {},
                                             "text": "<strong>Passo 1:</strong>&nbsp;&nbsp; Abra o sistema e localize o <strong>módulo Contábil</strong> e depois, <strong>Plano de Contas</strong> no menu principal.",
                                             "links": []
                                         }
@@ -1317,8 +1316,7 @@
                                     "props": {},
                                     "paragraphs": [
                                         {
-                                            "props": {
-                                            },
+                                            "props": {},
                                             "text": "<strong>Passo 2:</strong>&nbsp;&nbsp; A tela inicial apresenta uma grid (tabela) com as contas já cadastradas.",
                                             "links": []
                                         }
@@ -2142,12 +2140,35 @@
             "subtitle": "SUBTITULO_DO_TOPICO",
             "articles": [
                 {
-                    "title": "TITULO_DO_ARTIGO",
-                    "slug": "titulo-do-artigo",
-                    "subtitle": "SUBTITULO_DO_ARTIGO",
+                    "title": "Trabalhando com JSON",
+                    "slug": "trabalhando-com-json",
+                    "subtitle": "",
                     "description": [
                         {
-                            "text": "DESCRICAO_DO_ARTIGO"
+                            "isParagraph": false,
+                            "props": {
+                                "box": {
+                                    "className": "bg-custom-gradient mb-7"
+                                }
+                            },
+                            "paragraphs": [
+                                {
+                                    "props": {},
+                                    "text": "JavaScript Object Notation <strong>(JSON)</strong> é um formato baseado em texto padrão para representar dados estruturados com base na sintaxe do objeto JavaScript.",
+                                    "links": []
+                                }
+                            ]
+                        },
+                        {
+                            "isParagraph": false,
+                            "props": {},
+                            "paragraphs": [
+                                {
+                                    "props": {},
+                                    "text": "JavaScript Object Notation (JSON) é um formato baseado em texto padrão para representar dados estruturados com base na sintaxe do objeto JavaScript. É comumente usado para transmitir dados em aplicativos da Web (por exemplo, enviar alguns dados do servidor para o cliente, para que possam ser exibidos em uma página da Web ou vice-versa). Você se deparará com isso com bastante frequência, portanto, neste artigo, oferecemos tudo o que você precisa para trabalhar com o JSON usando JavaScript, incluindo a análise do JSON para que você possa acessar os dados dentro dele e criar o JSON.",
+                                    "links": []
+                                }
+                            ]
                         }
                     ],
                     "details": {
@@ -2156,69 +2177,294 @@
                     },
                     "sections": [
                         {
-                            "slug": "TITULO_DA_SECAO_1",
-                            "title": "TITULO_DA_SECAO_1",
+                            "slug": "",
+                            "title": "Pré-Requisitos",
+                            "props": {},
                             "description": [
                                 {
-                                    "text": "DESCRICAO_DA_SECAO_1",
-                                    "links": [
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
                                         {
-                                            "breakpoint": "#breakpoint1",
-                                            "text": "TEXTO_DO_LINK_1",
-                                            "href": "link"
-                                        },
-                                        {
-                                            "breakpoint": "#breakpoint2",
-                                            "text": "TEXTO_DO_LINK_2",
-                                            "href": "link"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "tables": [
-                                {
-                                    "order": 1,
-                                    "title": "TITULO_TABELA_1",
-                                    "subtitle": "SUBTITULO_TABELA_1",
-                                    "description": [
-                                        {
-                                            "text": "DESCRICAO_TABELA_1"
-                                        }
-                                    ],
-                                    "rows": [
-                                        {
-                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                            "description": "DESCRICAO_DO_FIELD",
-                                            "example": "EXEMPLO_DE_USO (JSON)",
-                                            "field": "NOME_DO_CAMPO",
-                                            "fields": [
+                                            "props": {},
+                                            "text": "Conhecimento básico em informática, conhecimento básico de HTML e CSS, conhecimento básico de JavaScript veja #breakpoint1 e #breakpoint2) e o básico de OOJS (veja #breakpoint3).",
+                                            "links": [
                                                 {
-                                                    "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                    "description": "DESCRICAO_DO_FIELD",
-                                                    "field": "NOME_DO_CAMPO",
-                                                    "fields": [
-                                                        {
-                                                            "type": "TIPO_DO_FIELD (string, integer, object, etc.)",
-                                                            "description": "DESCRICAO_DO_FIELD",
-                                                            "field": "NOME_DO_CAMPO"
-                                                        }
-                                                    ]
+                                                    "breakpoint": "#breakpoint1",
+                                                    "text": "Primeiros passos",
+                                                    "href": "link"
+                                                },
+                                                {
+                                                    "breakpoint": "#breakpoint2",
+                                                    "text": "Construindo blocos",
+                                                    "href": "link"
+                                                },
+                                                {
+                                                    "breakpoint": "#breakpoint3",
+                                                    "text": "Introdução a objetos",
+                                                    "href": "link"
                                                 }
                                             ]
                                         }
                                     ]
                                 }
                             ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "O que é JSON",
+                            "props": {},
+                            "description": [
+                                {
+                                    "isParagraph": true,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "#breakpoint1 é um formato de dados baseado em texto seguindo a sintaxe do objeto JavaScript, que foi popularizada por #breakpoint2. Mesmo que se assemelhe à sintaxe literal do objeto JavaScript, ele pode ser usado independentemente do JavaScript, e muitos ambientes de programação possuem a capacidade de ler (analisar) e gerar JSON",
+                                            "links": [
+                                                {
+                                                    "breakpoint": "#breakpoint1",
+                                                    "text": "JSON",
+                                                    "href": "link"
+                                                },
+                                                {
+                                                    "breakpoint": "#breakpoint2",
+                                                    "text": "Douglas Crockford",
+                                                    "href": "link"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "props": {
+                                                "className": "mb-7"
+                                            },
+                                            "text": "O JSON existe como uma string — útil quando você deseja transmitir dados por uma rede. Ele precisa ser convertido em um objeto JavaScript nativo quando você quiser acessar os dados. Isso não é um grande problema — o JavaScript fornece um objeto JSON global que possui métodos disponíveis para conversão entre os dois.",
+                                            "links": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "isParagraph": false,
+                                    "props": {
+                                        "box": {
+                                            "className": "bg-custom-gradient mb-7"
+                                        }
+                                    },
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "Nota: Converter uma string em um objeto nativo é chamado de análise, enquanto a conversão de um objeto nativo em uma string para que possa ser transmitida pela rede é chamada de stringification.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
+                        },
+                        {
+                            "slug": "",
+                            "title": "Estrutura JSON",
+                            "props": {},
+                            "description": [],
+                            "tables": [],
                             "medias": [
                                 {
-                                    "order": 2,
-                                    "type": "GIF VIDEO IMAGEM ETC (enum)",
+                                    "type": "JSON",
                                     "title": "TITULO_MIDIA_1",
                                     "subtitle": "SUBTITULO_MIDIA_1",
-                                    "description": [],
-                                    "link": "BASE64_DA_MIDIA_1"
+                                    "link": "BASE64_DA_MIDIA_1",
+                                    "json": "{\"quadName\": \"Super hero squad\", \"homeToom\": \"Metro City\", \"format\": 2003, \"accretBase\": \"Super tower\", \"active\": true, \"members\": [{\"name\": \"Molecule Man\", \"age\": 39, \"ascretIdentity\": \"Dan Jukes\", \"power\": [\"Radiation resistance\", \"Turning tiny\", \"Radiation blast\"]}, {\"name\": \"Madame Hypercut\", \"age\": 39, \"ascretIdentity\": \"Jane Wilson\", \"power\": [\"Million tonne punch\", \"Damage resistance\", \"Superhuman reflexes\"]}, {\"name\": \"Eternal Flame\", \"age\": 1000000, \"ascretIdentity\": \"Unknown\", \"power\": [\"Immortality\", \"base immunity\", \"introno\", \"Teleportation\", \"Interdimensional travel\"]}]}",
+                                    "description": []
+                                },
+                                {
+                                    "type": "JSON",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "link": "BASE64_DA_MIDIA_1",
+                                    "json": "{\"id\": \"70b28028-2005-418c-85f8-716a7e914dbc\", \"name\": \"Principal\", \"connection\": {\"master\": {\"host\": \"\", \"user\": \"master\", \"pass\": \"\", \"schema\": false}}}",
+                                    "description": [
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "TOP"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {
+                                                        "className": "mb-7"
+                                                    },
+                                                    "text": "Se nós carregássemos esse objeto em um programa JavaScript, analisado em uma variável chamada <strong>superHeroes</strong> por exemplo, poderíamos então acessar os dados dentro dele usando a mesma notação dot / bracket que observamos no artigo básico do objeto JavaScript. Por exemplo:",
+                                                    "links": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "BOTTOM"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {
+                                                        "className": "mb-4"
+                                                    },
+                                                    "text": "<strong>Passo 1:</strong>&nbsp;&nbsp; Primeiro temos o nome da variável — <strong>superHeroes</strong>.",
+                                                    "links": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "BOTTOM"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {
+                                                        "className": "mb-4"
+                                                    },
+                                                    "text": "<strong>Passo 2:</strong>&nbsp;&nbsp; Por dentro, queremos acessar a propriedade dos <strong>members</strong>, então usamos <strong>['members']</strong>.",
+                                                    "links": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "BOTTOM"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {
+                                                        "className": "mb-7"
+                                                    },
+                                                    "text": "<strong>Passo 3:</strong>&nbsp;&nbsp;<strong>members</strong> contém uma matriz preenchida por objetos. Queremos acessar o segundo objeto dentro da matriz, então usamos <strong>[1]</strong>.",
+                                                    "links": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "BOTTOM",
+                                                "box": {
+                                                    "className": "bg-custom-gradient"
+                                                }
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {},
+                                                    "text": "⦁&nbsp; Todos os campos podem ser alterados.",
+                                                    "links": []
+                                                },
+                                                {
+                                                    "props": {},
+                                                    "text": "⦁&nbsp; O campo status é responsável por ativar ou desativar uma conta. Uma vez desativada ela não será mais apresentada para receber lançamentos, porém, aparecerá em todos os relatórios onde ela já tenho sido lançada.",
+                                                    "links": []
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
+                        },
+                        {
+                            "slug": "",
+                            "title": "Obtendo JSON",
+                            "props": {},
+                            "description": [
+                                {
+                                    "isParagraph": false,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "Se nós carregássemos esse objeto em um programa JavaScript, analisado em uma variável chamada <strong>superHeroes</strong> por exemplo, poderíamos então acessar os dados dentro dele usando a mesma notação dot / bracket que observamos no artigo básico do objeto JavaScript. Por exemplo:",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": [
+                                {
+                                    "type": "JSON",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "link": "BASE64_DA_MIDIA_1",
+                                    "json": "{\"id\":\"70b28028-2005-418c-8578-716a7e014dbe\",\"name\":\"Principal\",\"connection\":{\"master\":{\"host\":\"\",\"user\":\"master\",\"pass\":\"\",\"schema\":false}}}",
+                                    "description": [
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "TOP"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {
+                                                        "className": "mb-7"
+                                                    },
+                                                    "text": "<strong>Passo 1</strong>&nbsp;&nbsp;&nbsp;&nbsp; Primeiro temos o nome da variável <strong>— superHeroes</strong>.",
+                                                    "links": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "JSON",
+                                    "title": "TITULO_MIDIA_1",
+                                    "subtitle": "SUBTITULO_MIDIA_1",
+                                    "link": "BASE64_DA_MIDIA_1",
+                                    "json": "{\"id\":\"70b28028-2005-418c-85f8-716a7e014dbc\",\"name\":\"Principal\",\"connection\":{\"master\":{\"host\":\"\",\"user\":\"master\",\"pass\":\"\",\"schema\":false}}}",
+                                    "description": [
+                                        {
+                                            "isParagraph": true,
+                                            "props": {
+                                                "verticalPosition": "TOP"
+                                            },
+                                            "paragraphs": [
+                                                {
+                                                    "props": {
+                                                        "className": "mb-7"
+                                                    },
+                                                    "text": "<strong>Passo 2</strong>&nbsp;&nbsp;&nbsp;&nbsp; Primeiro temos o nome da variável <strong>— superHeroes</strong>.",
+                                                    "links": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "",
+                            "title": "Conclusão",
+                            "props": {},
+                            "description": [
+                                {
+                                    "isParagraph": true,
+                                    "props": {},
+                                    "paragraphs": [
+                                        {
+                                            "props": {},
+                                            "text": "Com o módulo de Plano de Contas, você consegue organizar de forma hierárquica todas as contas do sistema, garantindo que os lançamentos contábeis e financeiros sejam feitos corretamente.",
+                                            "links": []
+                                        },
+                                        {
+                                            "props": {},
+                                            "text": "Agora que você sabe como incluir, buscar e alterar contas, pode manter seu plano sempre atualizado e consistente.",
+                                            "links": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "tables": [],
+                            "medias": []
                         }
                     ]
                 }

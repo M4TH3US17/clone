@@ -7,47 +7,47 @@ import Image from 'next/image';
 /* Funcoes de Manipulacao da Descricao */
 export function returnArticleDescription(description: any) {
     const isList = (obj: any): boolean => obj.items ? true : false;
-  
+
     return (
 
-     <div className="mb-7">
-        {
-            description.map((desc: any, index: number) => {
-                if (isList(desc))
-                    return list(desc, desc.props)
+        <div className="mb-7">
+            {
+                description.map((desc: any, index: number) => {
+                    if (isList(desc))
+                        return list(desc, desc.props)
 
-                if (desc.isParagraph) {
-                    const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
-                        const paragraph = <p key={key} className={clsx(
-                            `${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"}`,
-                            `${paragraphObject.props?.className}`)
-                        }>
-                            {parse(paragraphObject.text)}
-                        </p>
-                        if (paragraphObject.props.box) return box(paragraph, paragraphObject.props?.box?.className)
-                        return paragraph
-                    })
+                    if (desc.isParagraph) {
+                        const paragraphs = desc.paragraphs.map((paragraphObject: any, key: number) => {
+                            const paragraph = <p key={key} className={clsx(
+                                `${(desc.paragraphs.length - 1 === key) ? "" : "mb-2"}`,
+                                `${paragraphObject.props?.className}`)
+                            }>
+                                {parse(paragraphObject.text)}
+                            </p>
+                            if (paragraphObject.props.box) return box(paragraph, paragraphObject.props?.box?.className)
+                            return paragraph
+                        })
 
-                    if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
+                        if (desc.props?.box) return box(paragraphs, desc.props?.box?.className)
 
-                    return paragraphs
-                }
+                        return paragraphs
+                    }
 
-                if (desc.props?.box)
-                    return box(<p key={index}> {parse(desc?.paragraphs[0].text)} </p>, desc.props?.box.className)
+                    if (desc.props?.box)
+                        return box(<p key={index}> {parse(desc?.paragraphs[0].text)} </p>, desc.props?.box.className)
 
-                return <p
-                    key={index}
-                    className={clsx(
-                        (desc?.paragraphs[0].props?.className !== undefined) ? desc?.paragraphs[0].props?.className : `mb-2`
-                    )}
-                > {parse(desc?.paragraphs[0].text)} </p>
-            })
-        }
-    </div>
+                    return <p
+                        key={index}
+                        className={clsx(
+                            (desc?.paragraphs[0].props?.className !== undefined) ? desc?.paragraphs[0].props?.className : `mb-2`
+                        )}
+                    > {parse(desc?.paragraphs[0].text)} </p>
+                })
+            }
+        </div>
     );
 }
-  
+
 
 /* Funcoes de Manipulacao das Secoes do Artigo */
 export function returnArticleSection(section: any, key?: number) {
@@ -172,6 +172,50 @@ export function media(media: any, props?: IMediaProps[]) {
     // console.log(media.link)
     // const imageSrc = require(media.link);
 
+    if (media.type === "JSON") {
+        const formatJsonDisplay = (jsonString: string) => {
+            try {
+                const jsonObj: any = parse(jsonString);
+
+                return (
+                    <div>
+                        {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
+                        <div style={{
+                            backgroundColor: '#1E1E1E',
+                            color: '#D4D4D4',
+                            padding: '16px',
+                            borderRadius: '8px',
+                            fontSize: '14px',
+                            fontFamily: 'Monaco, Menlo, Consolas, monospace',
+                            overflow: 'auto',
+                            maxHeight: '400px',
+                            whiteSpace: 'pre-wrap'
+                        }}
+                        className="mb-7"
+                        >
+                            {jsonObj}
+                        </div>
+                        {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
+                    </div>
+                );
+            } catch (e: any) {
+                return (
+                    <div style={{
+                        backgroundColor: '#FFECEC',
+                        color: '#D00',
+                        padding: '16px',
+                        borderRadius: '8px',
+                        border: '1px solid #FCC'
+                    }}>
+                        JSON inválido: {(e as Error).message}
+                    </div>
+                );
+            }
+        };
+
+        return formatJsonDisplay(media.json);
+    }
+
     if (media.type === "IMAGE" || media.type === "GIF") {
         return (
             <div className="w-full">
@@ -191,6 +235,10 @@ export function media(media: any, props?: IMediaProps[]) {
     }
 }
 
+
+export function JSON() {
+    return <></>
+}
 /* Funcoes de utilidades gerais */
 function box(body: any, className?: any) {// borderRadius: "0.700rem",
     return <div
@@ -204,7 +252,7 @@ function box(body: any, className?: any) {// borderRadius: "0.700rem",
 }
 
 function list(listagemObject: any, props?: any) {
-    const items = listagemObject.items.map((text: string, key: number) => <li style={{ fontWeight: "500" }}>{parse(text)}</li>) 
+    const items = listagemObject.items.map((text: string, key: number) => <li style={{ fontWeight: "500" }}>{parse(text)}</li>)
     const listText = <p className="text-stone-900" style={{ marginBottom: "1rem", fontWeight: "500" }}>{parse(listagemObject.text)}</p>
 
     if (props.isUl) {
@@ -220,7 +268,7 @@ function list(listagemObject: any, props?: any) {
             <div className={clsx("mb-7", listagemObject?.props?.className)}>
                 {listText}
                 <ol className="list-inside list-decimal pl-5 text-stone-900">
-                    {items} 
+                    {items}
                 </ol>
             </div>)
     }
