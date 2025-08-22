@@ -1342,119 +1342,79 @@
                             "slug": "",
                             "title": "Estrutura dos registros da tabela",
                             "props": {},
-                            "description": [
+                            "description": [],
+                            "tables": [
                                 {
-                                    "isParagraph": true,
-                                    "props": {
-                                        "box": {
-                                            "className": "bg-cinza-custom-gradient mb-7"
-                                        }
-                                    },
-                                    "paragraphs": [
+                                    "order": 2,
+                                    "title": "TITULO_TABELA_1",
+                                    "subtitle": "SUBTITULO_TABELA_1",
+                                    "description": [
                                         {
-                                            "props": {},
-                                            "text": "<strong>Código Estrutural</strong>",
-                                            "links": []
+                                            "text": "DESCRICAO_TABELA_1"
+                                        }
+                                    ],
+                                    "rows": [
+                                        {
+                                            "type": "string",
+                                            "description": "Código hierárquico em níveis, usado para agrupar contas.",
+                                            "example": "",
+                                            "field": "Código Estrutural"
                                         },
                                         {
-                                            "props": {},
-                                            "text": " Código hierárquico em níveis, usado para agrupar contas.",
-                                            "links": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "isParagraph": true,
-                                    "props": {
-                                        "box": {
-                                            "className": "bg-cinza-custom-gradient mb-7"
-                                        }
-                                    },
-                                    "paragraphs": [
-                                        {
-                                            "props": {},
-                                            "text": "<strong>Código Contábil</strong>",
-                                            "links": []
+                                            "type": "string",
+                                            "description": "Nome da conta",
+                                            "example": "",
+                                            "field": "Descrição"
                                         },
                                         {
-                                            "props": {},
-                                            "text": "  Código externo usado para integração com sistemas de contabilidade de terceiros",
-                                            "links": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "isParagraph": true,
-                                    "props": {
-                                        "box": {
-                                            "className": "bg-cinza-custom-gradient mb-7"
-                                        }
-                                    },
-                                    "paragraphs": [
-                                        {
-                                            "props": {},
-                                            "text": "<strong>Descrição</strong>",
-                                            "links": []
+                                            "type": "string",
+                                            "description": "Código externo usado para integração com sistemas de contabilidade de terceiros",
+                                            "example": "",
+                                            "field": "Código Contábil"
                                         },
                                         {
-                                            "props": {},
-                                            "text": "Nome da conta",
-                                            "links": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "isParagraph": true,
-                                    "props": {
-                                        "box": {
-                                            "className": "bg-cinza-custom-gradient mb-7"
-                                        }
-                                    },
-                                    "paragraphs": [
-                                        {
-                                            "props": {},
-                                            "text": "<strong>Tipo</strong>",
-                                            "links": []
+                                            "type": "object",
+                                            "description": "Detalhes sobre Tipo",
+                                            "example": "EXEMPLO_DE_USO (JSON)",
+                                            "field": "Tipo",
+                                            "fields": [
+                                                {
+                                                    "type": "number",
+                                                    "description": "contas que recebem lançamentos.",
+                                                    "field": "Analítico",
+                                                    "example": ""
+                                                },
+                                                {
+                                                    "type": "number",
+                                                    "description": "contas de agrupamento que não recebem lançamentos.",
+                                                    "field": "Sintético",
+                                                    "example": ""
+                                                }
+                                            ]
                                         },
                                         {
-                                            "props": {},
-                                            "text": "<strong className='text-gray-700'>Analítico:</strong> contas que recebem lançamentos.",
-                                            "links": []
-                                        },
-                                        {
-                                            "props": {},
-                                            "text": "<strong className='text-gray-700'>Sintético:</strong> contas de agrupamento que não recebem lançamentos.",
-                                            "links": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "isParagraph": true,
-                                    "props": {
-                                        "box": {
-                                            "className": "bg-cinza-custom-gradient mb-7"
-                                        }
-                                    },
-                                    "paragraphs": [
-                                        {
-                                            "props": {},
-                                            "text": "<strong>Status</strong>",
-                                            "links": []
-                                        },
-                                        {
-                                            "props": {},
-                                            "text": "<strong className='text-gray-700'>Ativo:</strong> disponível para lançamentos.",
-                                            "links": []
-                                        },
-                                        {
-                                            "props": {},
-                                            "text": "<strong className='text-gray-700'>Inativo:</strong> não aparece nas telas de lançamento, mas continua visível em relatório históricos",
-                                            "links": []
+                                            "type": "object",
+                                            "description": "Informações a respeito de Status",
+                                            "example": "EXEMPLO_DE_USO (JSON)",
+                                            "field": "Status",
+                                            "fields": [
+                                                {
+                                                    "type": "number",
+                                                    "description": "disponível para lançamentos.",
+                                                    "field": "Ativo",
+                                                    "example": ""
+                                                },
+                                                {
+                                                    "type": "number",
+                                                    "description": "não aparece nas telas de lançamento, mas continua visível em relatório históricos",
+                                                    "field": "Inativo",
+                                                    "example": ""
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
                             ],
-                            "tables": [],
                             "medias": [
                                 {
                                     "order": 2,

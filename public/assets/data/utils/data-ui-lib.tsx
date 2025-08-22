@@ -128,7 +128,7 @@ export function table(table: any, props?: ITableProps[]) {//style={{border: "1px
                                         {
                                             <p className="mb-2 text-[0.8rem] text-secondary font-semibold">{row.description}</p>
                                         }
-                                        <table className="w-full divide-y divide-gray-200">
+                                        <table className="w-full divide-y divide-gray-200 border border-gray-300">
                                             <thead className="bg-gray-100">
                                                 <tr>
                                                     <th className="text-left text-[0.8rem] text-secondary">Campo</th>
