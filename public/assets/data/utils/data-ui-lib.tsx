@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { IDescriptionProps, IMediaProps, ISectionProps, ITableProps } from "./data-interfaces";
 import parse from 'html-react-parser';
 import Image from 'next/image';
+import { useState } from "react";
 
 
 /* Funcoes de Manipulacao da Descricao */
@@ -106,12 +107,12 @@ export function table(table: any, props?: ITableProps[]) {//style={{border: "1px
         "w-full",
         table?.props?.className
     )}>
-        <table className="w-full overflow-hidden border-separate border-spacing-0 shadow-sm rounded-lg" key={table.order}>
+        <table className="w-full overflow-hidden border-separate border-spacing-0 rounded-lg" key={table.order}>
             <thead className="bg-gray-100">
                 <tr>
-                    <th className="text-left text-[0.8rem] text-secondary p-3 rounded-tl-lg">Campo</th>
-                    {table?.type && <th className="text-left text-[0.8rem] text-secondary p-3">Tipo</th>}
-                    <th className="text-left text-[0.8rem] text-secondary p-3 rounded-tr-lg">Descrição</th>
+                    <th className="text-left text-[0.8rem] text-secondary p-3 rounded-tl-lg" style={{ width: table?.type ? "33.33%" : "30%" }}>Campo</th>
+                    {table?.type && <th className="text-left text-[0.8rem] text-secondary p-3" style={{ width: table?.type ? "33.33%" : "" }}>Tipo</th>}
+                    <th className="text-left text-[0.8rem] text-secondary p-3 rounded-tr-lg" style={{ width: table?.type ? "33.33%" : "70%" }}>Descrição</th>
                 </tr>
             </thead>
 
@@ -121,7 +122,7 @@ export function table(table: any, props?: ITableProps[]) {//style={{border: "1px
                         if ('fields' in row) {
                             return <tr key={`row-${index}`}>
                                 <td className="whitespace-nowrap text-[0.8rem]">{row.field}</td>
-                                <td className="whitespace-nowrap text-[0.8rem] ">object</td>
+                                {table?.type ? <td className="whitespace-nowrap text-[0.8rem] ">object</td> : <></>}
                                 <td className="" colSpan={2}>
                                     <div className="p-2">
                                         {
@@ -201,7 +202,7 @@ export function JSON() {
 /* Funcoes de utilidades gerais */
 function box(body: any, className?: any) {// borderRadius: "0.700rem",
     return <div
-        style={{ borderRadius: "0.6rem", padding: "1.25rem 1.25rem", fontWeight: "500" }}
+        style={{ borderRadius: "0.6rem", padding: "1.25rem 1.25rem" }}
         // className={clsx(, className)}
         className={clsx(
             "border border-gray-300",
@@ -234,13 +235,28 @@ function list(listagemObject: any, props?: any) {
 }
 
 function formatJsonDisplay(media: any) {
-    const jsonObj = window.JSON.parse(media.json);
     try {
+        const jsonObj = window.JSON.parse(media.json);
+
+        const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+            navigator.clipboard.writeText(window.JSON.stringify(jsonObj, null, 2));
+            const button = e.currentTarget;
+            const originalText = button.textContent;
+            button.textContent = 'Copiado';
+
+            setTimeout(() => {
+                if (button) button.textContent = originalText || 'Copiar';
+            }, 2000);
+        };
 
         return (
             <div className="relative">
                 {/* Top Description */}
-                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "TOP"))}
+                {returnArticleDescription(
+                    media?.description?.filter(
+                        (desc: any) => desc?.props?.verticalPosition === 'TOP'
+                    )
+                )}
 
                 <div
                     style={{
@@ -252,7 +268,7 @@ function formatJsonDisplay(media: any) {
                         borderColor: '#333',
                         background: '#1E1E1E',
                         color: '#D4D4D4',
-                        overflow: 'auto'
+                        overflow: 'auto',
                     }}
                 >
                     <div>
@@ -265,62 +281,64 @@ function formatJsonDisplay(media: any) {
                                 color: '#AAAAAA',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
-                                fontWeight: 600
+                                fontWeight: 600,
                             }}
                         >
                             JSON
                         </div>
 
                         <button
-                            onClick={() => navigator.clipboard.writeText(window.JSON.stringify(jsonObj, null, 2))}
+                            onClick={handleCopy}
                             style={{
                                 position: 'absolute',
                                 top: '0.5rem',
                                 right: '1rem',
-                                fontSize: '0.75rem', // text-xs
-                                color: '#CCCCCC', // texto acinzentado claro
-                                backgroundColor: 'rgba(255, 255, 255, 0.05)', // fundo translúcido
-                                padding: '0.25rem 0.5rem', // py-1 px-2
-                                border: 'none', // sem borda visível
-                                borderRadius: '9999px', // full border radius
+                                fontSize: '0.75rem',
+                                color: '#CCCCCC',
+                                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                padding: '0.25rem 0.5rem',
+                                border: 'none',
+                                borderRadius: '9999px',
                                 cursor: 'pointer',
-                                transition: 'background-color 0.2s ease-in-out'
+                                transition: 'background-color 0.2s ease-in-out',
                             }}
                         >
-                            Copy
+                            Copiar
                         </button>
                     </div>
-
 
                     <pre
                         style={{
                             marginTop: '1.5rem',
                             whiteSpace: 'pre-wrap',
-                            wordBreak: 'break-word'
+                            wordBreak: 'break-word',
                         }}
                     >
-                        <code>
-                            {window.JSON.stringify(jsonObj, null, 2)}
-                        </code>
+                        <code>{window.JSON.stringify(jsonObj, null, 2)}</code>
                     </pre>
-
                 </div>
 
                 {/* Bottom Description */}
-                {returnArticleDescription(media?.description?.filter((desc: any) => desc?.props?.verticalPosition === "BOTTOM"))}
-            </div >
+                {returnArticleDescription(
+                    media?.description?.filter(
+                        (desc: any) => desc?.props?.verticalPosition === 'BOTTOM'
+                    )
+                )}
+            </div>
         );
     } catch (e: any) {
         return (
-            <div style={{
-                backgroundColor: '#FFECEC',
-                color: '#D00',
-                padding: '16px',
-                borderRadius: '8px',
-                border: '1px solid #FCC'
-            }}>
-                JSON inválido: {(e as Error).message}
+            <div
+                style={{
+                    backgroundColor: '#FFECEC',
+                    color: '#D00',
+                    padding: '16px',
+                    borderRadius: '8px',
+                    border: '1px solid #FCC',
+                }}
+            >
+                JSON inválido: {e.message}
             </div>
         );
     }
-};
+}

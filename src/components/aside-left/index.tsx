@@ -72,7 +72,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
             </AccordionTrigger>
             <AccordionContent>
                 {topic.articles && (
-                    <ul className="ml-7 mt-1 mb-1">
+                    <ul className="ml-7 mt-1">
                         {
                             topic.articles.map((subitem, index) => (
                                 <li
@@ -84,7 +84,7 @@ const SideBarItem: FC<{ topic: Topic, isOpen: boolean }> = ({ topic, isOpen }) =
                                         clsx(
                                             "w-full text-gray-600",
                                             "overflow-hidden whitespace-nowrap",
-                                            "truncate text-xs ml-2"
+                                            "truncate text-[13px] ml-2 mb-[0.5rem]"
                                         )
                                     }
                                     style={{ fontWeight: "500" }}
@@ -166,12 +166,12 @@ const AsideLeft = () => {
                 <div
                     className={
                         clsx(
-                            "rounded-full px-4 py-0",
+                            "rounded-full",
                             "text-primary text-gray-400 text-[12px]",
                             "bg-white cursor-pointer rounded"
                         )
                     }
-                    style={{ fontWeight: "500" }}
+                    style={{ fontWeight: "500", padding: "5px 10px" }}
                     onClick={() => router.push(`/`)}
                 >Help Center</div>
             </div>

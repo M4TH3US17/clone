@@ -8,6 +8,7 @@
 
 @theme inline {
     --breakpoint-sm: 640px;
+    --breakpoint-520: 520px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     /* Valor padrão ou personalizado para 'lg-1100px' */
@@ -106,7 +107,11 @@ tr,
 th {
     /* border: 1px solid #e5e5e5; */
     /* background: var(--color-light); */
-    border: 1px solid #c5c5c5;
+    /* border: 1px solid #c5c5c5; */
+}
+
+th, td {
+    border-bottom: 1px solid #e0e0e0;
 }
 
 td,

@@ -50,17 +50,17 @@ export const ArticleSummary: FC<{ sections: any[] }> = ({ sections }) => {
         "border-l border-gray-200 w-52 hidden xl:block"
     )}>
 
-        <h2 className="text-[0.8rem] pl-6 mb-4 font-semibold opacity-40">SUMMARY</h2>
+        <h2 className="text-[0.9rem] pl-5 mb-3 font-semibold opacity-40">SUMMARY</h2>
         <ul >
             {sections.map((summaryItem, index: number) => <li
                 key={index}
                 onClick={() => handleScrollToSectionBySlug(summaryItem.title)}
                 className={
                     clsx(
-                        "cursor-pointer px-6 py-1 text-xs hover:text-gray-800"
+                        "cursor-pointer px-5 py-1 text-xs hover:text-gray-800"
                     )
                 }
-                style={{ fontSize: "0.6rem" }}
+                style={{ fontSize: "11px" }}
             >
                 {summaryItem.title}
             </li>)}

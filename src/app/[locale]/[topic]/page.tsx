@@ -54,9 +54,9 @@ export default function TopicPage() {
 
           <h1
             className={clsx(
-              "w-[70%] md:w-full ",
+              "w-[70%] md:w-full 520:w-[100%] 520:text-[2.5rem]",
               "pb-3.5 font-[500] mb-3",
-              "text-5xl leading-14 xl:text-[3.8rem]"
+              "leading-14 xl:text-[2.5rem]"
             )}
           >
             {topicCurrent.title}
@@ -64,7 +64,7 @@ export default function TopicPage() {
 
           <h3
             className={clsx(
-              "text-[20px] leading-6 md:leading-6.5 mb-10 opacity-80"
+              "text-[20px] leading-6 md:leading-6.5 mb-10 opacity-80 520:text-[1rem]"
             )}
           >
             {topicCurrent.subtitle}
