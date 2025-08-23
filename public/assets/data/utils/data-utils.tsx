@@ -1,4 +1,5 @@
 
+import { ArticleDescription } from "@/components/article/section/components/article-description"
 import { DataENJSON, DataESJSON, DataPTJSON } from "../.."
 
 export function returnData(currentLanguage: string): object {
@@ -71,7 +72,7 @@ function adjustLink(descriptionObject: any): any {
                 // if (listItemObject.subList) {
                 //     return { li: listItemObject.li, subList: listItemObject.subList }
                 // }
-                return listItemObject.li 
+                return listItemObject.li
             }
         })
 
@@ -81,4 +82,107 @@ function adjustLink(descriptionObject: any): any {
     }
 
     return { text: descriptionObject.text, props: descriptionObject.props };
+}
+
+export function formatJsonDisplay(media: any) {
+    try {
+        const jsonObj = window.JSON.parse(media.json);
+
+        const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+            navigator.clipboard.writeText(window.JSON.stringify(jsonObj, null, 2));
+            const button = e.currentTarget;
+            const originalText = button.textContent;
+            button.textContent = 'Copiado';
+
+            setTimeout(() => {
+                if (button) button.textContent = originalText || 'Copiar';
+            }, 2000);
+        };
+
+        return (
+            <div className="relative">
+                <ArticleDescription description={media?.description?.filter(
+                    (desc: any) => desc?.props?.verticalPosition === 'TOP'
+                )} />
+
+                <div
+                    style={{
+                        position: 'relative',
+                        fontSize: '0.875rem',
+                        padding: '1.25rem',
+                        borderRadius: '0.5rem',
+                        borderWidth: '1px',
+                        borderColor: '#333',
+                        background: '#1E1E1E',
+                        color: '#D4D4D4',
+                        overflow: 'auto',
+                    }}
+                >
+                    <div>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: '0.5rem',
+                                left: '1rem',
+                                fontSize: '0.75rem',
+                                color: '#AAAAAA',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.05em',
+                                fontWeight: 600,
+                            }}
+                        >
+                            JSON
+                        </div>
+
+                        <button
+                            onClick={handleCopy}
+                            style={{
+                                position: 'absolute',
+                                top: '0.5rem',
+                                right: '1rem',
+                                fontSize: '0.75rem',
+                                color: '#CCCCCC',
+                                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                padding: '0.25rem 0.5rem',
+                                border: 'none',
+                                borderRadius: '9999px',
+                                cursor: 'pointer',
+                                transition: 'background-color 0.2s ease-in-out',
+                            }}
+                        >
+                            Copiar
+                        </button>
+                    </div>
+
+                    <pre
+                        style={{
+                            marginTop: '1.5rem',
+                            whiteSpace: 'pre-wrap',
+                            wordBreak: 'break-word',
+                        }}
+                    >
+                        <code>{window.JSON.stringify(jsonObj, null, 2)}</code>
+                    </pre>
+                </div>
+
+                <ArticleDescription description={media?.description?.filter(
+                    (desc: any) => desc?.props?.verticalPosition === 'BOTTOM'
+                )} />
+            </div>
+        );
+    } catch (e: any) {
+        return (
+            <div
+                style={{
+                    backgroundColor: '#FFECEC',
+                    color: '#D00',
+                    padding: '16px',
+                    borderRadius: '8px',
+                    border: '1px solid #FCC',
+                }}
+            >
+                JSON inválido: {e.message}
+            </div>
+        );
+    }
 }
